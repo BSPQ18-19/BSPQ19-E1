@@ -23,7 +23,9 @@
 hs_err_pid*
 
 # IntelliJ
-out/
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
 *.iml
 
 # mpeltonen/sbt-idea plugin
