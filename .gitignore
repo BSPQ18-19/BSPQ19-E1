@@ -22,11 +22,26 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
-# IntelliJ
-/.idea/workspace.xml
-/.idea/libraries
-.DS_Store
-*.iml
+# Python
 
-# mpeltonen/sbt-idea plugin
-.idea_modules/
+
+# IntelliJ project files 
+*.iml
+*.iws
+*.ipr
+.idea/
+bin/
+out/
+log/
+
+# Eclipse project file
+.settings/
+.classpath
+.project
+
+
+
+
+
+
+
