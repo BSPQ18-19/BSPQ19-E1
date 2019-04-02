@@ -1,0 +1,14 @@
+#Switch to a branch
+git checkout [branch name]
+#Merge a branch into the active branch
+git merge [branch name]
+#Merge a branch into a target branch
+git merge [source branch] [target branch]
+#Commit changes
+git commit -m "[commit message]"
+#List all branches (local and remote)
+git branch -a
+#Update local repository to the newest commit 
+git pull
+#Pull changes from remote repository
+git pull origin [branch name]
