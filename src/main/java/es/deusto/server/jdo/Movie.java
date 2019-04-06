@@ -5,7 +5,7 @@ import java.util.List;
 
 import javax.jdo.annotations.*;
 
-@PersistenceCapable
+@PersistenceCapable(detachable = "true")
 public class Movie {
 	
 	@Unique
@@ -27,6 +27,8 @@ public class Movie {
 		this.cast = cast;
 		this.director = director;
 	}
+	
+	
 	
 	
 	public Movie() {

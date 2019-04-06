@@ -41,42 +41,28 @@ public class DAO {
 	}
 	
 	public List<Movie> getMovies(){
-		begin();
 		Extent<Movie> ex = pm.getExtent(Movie.class, false);
 		Query<Movie> q = pm.newQuery(ex);
 		Collection<Movie> col = (Collection<Movie>) q.execute();
 		List<Movie> list = new ArrayList<>(col);
-		end();
 		return list;
 	}
 	
 	public Movie getMovie(String title) {
-		if (tx == null || !tx.isActive()) 
-			begin();
 		Query<Movie> q = pm.newQuery(Movie.class);
 		q.setUnique(true);
-		q.setFilter("title == my_title");
-		q.declareParameters("java.lang.String my_title");
+		q.setFilter("title == '" + title + "'");
+		//q.setParameters(title);
 		Movie movie = q.executeUnique();
 		return movie;
 	}
 	
-	public boolean deleteMovie(String title) {
-		begin();
+	public void deleteMovie(String title) {
 		Query<Movie> q = pm.newQuery(Movie.class);
 		q.setUnique(true);
 		q.setFilter("title == my_title");
 		q.declareParameters("java.lang.String my_title");
 		long number = q.deletePersistentAll(title);
-		if (number == 1) {
-			end();
-			return true;
-		}
-		else
-		{
-			rollback();
-			return false;
-		}
 	}
 	
 	public void cleanDatabase() {
