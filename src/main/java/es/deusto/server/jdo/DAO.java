@@ -51,9 +51,9 @@ public class DAO {
 	public Movie getMovie(String title) {
 		Query<Movie> q = pm.newQuery(Movie.class);
 		q.setUnique(true);
-		q.setFilter("title == '" + title + "'");
-		//q.setParameters(title);
-		Movie movie = q.executeUnique();
+		q.setFilter("title == my_title");
+		q.declareParameters("java.lang.String my_title");
+		Movie movie = q.setParameters(title).executeUnique();
 		return movie;
 	}
 	
