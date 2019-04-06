@@ -31,7 +31,11 @@ public class DAO {
         pm.close();
 	}
 	
-	private void rollback() {
+	public void detachOnCommit() {
+		pm.setDetachAllOnCommit(true);
+	}
+	
+	public void rollback() {
 		tx.rollback();
 		pm.close();
 	}
