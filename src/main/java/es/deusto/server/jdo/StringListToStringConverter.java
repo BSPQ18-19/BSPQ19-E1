@@ -17,7 +17,6 @@ public class StringListToStringConverter implements AttributeConverter<List<Stri
 	public List<String> convertToAttribute(String datastoreValue) {
 		if (datastoreValue == null) return null;
 		String[] values = datastoreValue.split(",");
-		System.out.println(datastoreValue);
 		return Arrays.asList(values);
 	}
 
