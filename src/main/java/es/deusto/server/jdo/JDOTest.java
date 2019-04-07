@@ -6,7 +6,8 @@ import java.util.List;
 public class JDOTest {
 	public static void main(String[] args) {
 		DAO dao = new DAO();
-		
+		dao.cleanDatabase(Session.class);
+		dao.cleanDatabase(Movie.class);
 		dao.begin();
 		System.out.println("Creating new movie");
 		Movie movie = new Movie();
@@ -23,11 +24,21 @@ public class JDOTest {
 		
 		dao.begin();
 		Movie movie2 = dao.getMovie("movie");
-		System.out.println(movie2 == null);
-		System.out.println("Title: " + movie2.getTitle());
-		System.out.println("Director: " + movie2.getDirector());
-		System.out.println("Cast: " + String.join(",", movie2.getCast()));
-		dao.deleteMovie(movie2.getTitle());
+		Session s = new Session(2019, 04, 21, 17, 30);
+		Session s2 = new Session(2019, 04, 21, 19, 00);
+		s.setMovie(movie2);
+		s2.setMovie(movie2);
+		movie2.getSessions().add(s);
+		movie2.getSessions().add(s2);
 		dao.end();
+		
+		dao.begin();
+		System.out.println("Getting sessions");
+		List<Session> sessions = dao.getSessions(2019, 04, 21);
+		for(Session ses : sessions) {
+			System.out.println(ses.getMovie().getTitle());
+			System.out.println(ses.getTime().toString());
+		}
+		
 	}
 }

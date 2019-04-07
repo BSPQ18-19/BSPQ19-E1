@@ -1,7 +1,10 @@
 package es.deusto.server.jdo;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Collection;
+import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.List;
 
 import javax.jdo.*;
@@ -61,19 +64,40 @@ public class DAO {
 		return movie;
 	}
 	
-	public void deleteMovie(String title) {
-		Query<Movie> q = pm.newQuery(Movie.class);
-		q.setUnique(true);
-		q.setFilter("title == my_title");
-		q.declareParameters("java.lang.String my_title");
-		long number = q.deletePersistentAll(title);
+	public Movie getMovie(long id) {
+		Movie movie = pm.getObjectById(Movie.class, id);
+		return movie;
 	}
 	
-	public void cleanDatabase() {
+	public void deleteMovie(String title) {
+		Movie movie = getMovie(title);
+		for(Session s : movie.getSessions()) {
+			pm.deletePersistent(s);
+		}
+		pm.deletePersistent(movie);
+	}
+	
+	public <T> void cleanDatabase(Class<T> c) {
 		begin();
-		Query<Movie> q = pm.newQuery(Movie.class);
-		q.deletePersistentAll();
+		Query<T> qs = pm.newQuery(c);
+		qs.deletePersistentAll();
 		end();
+	}
+	
+	public List<Session> getSessions(int year, int month, int day) {
+		Query<Session> q = pm.newQuery(Session.class);
+		q.setFilter("time > d1");
+		q.setFilter("time < d2");
+		q.declareParameters("java.util.Date d1, java.util.Date d2");
+		Calendar cal = new GregorianCalendar();
+		cal.clear();
+		cal.set(year, month, day, 0, 0, 0);
+		Date d1 = cal.getTime();
+		cal.set(year, month, day, 23, 59, 59);
+		Date d2 = cal.getTime();
+		List<Session> list = (List<Session>) q.execute(d1, d2);
+		return list;
+		
 	}
 	
 }

@@ -14,6 +14,7 @@ public class User {
 	String login=null;
 	String password=null;
 	
+	
 	@Persistent(mappedBy="user", dependentElement="true")
 	@Join
 	Set<Message> messages = new HashSet<Message>();

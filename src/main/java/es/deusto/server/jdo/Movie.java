@@ -8,6 +8,10 @@ import javax.jdo.annotations.*;
 @PersistenceCapable(detachable = "true")
 public class Movie {
 	
+	@PrimaryKey
+	@Persistent(valueStrategy = IdGeneratorStrategy.INCREMENT)
+	private long id;
+	
 	@Unique
 	private String title;
 	private String synopsis;
@@ -18,6 +22,9 @@ public class Movie {
 	private List<String> cast;
 	private String director;
 	
+	@Persistent(mappedBy = "movie")
+	private List<Session> sessions;
+	
 	public Movie(String title, String synopsis, int duration, String genre, List<String> cast, String director) {
 		super();
 		this.title = title;
@@ -26,6 +33,7 @@ public class Movie {
 		this.genre = genre;
 		this.cast = cast;
 		this.director = director;
+		sessions = new ArrayList<Session>();
 	}
 	
 	
@@ -33,6 +41,7 @@ public class Movie {
 	
 	public Movie() {
 		cast = new ArrayList<String>();
+		sessions = new ArrayList<Session>();
 	}
 	
 	public String getTitle() {
@@ -73,6 +82,15 @@ public class Movie {
 	}
 	public void setDirector(String director) {
 		this.director = director;
+	}
+	public List<Session> getSessions() {
+		return sessions;
+	}
+	public void setSessions(List<Session> sessions) {
+		this.sessions = sessions;
+	}
+	public long getId() {
+		return id;
 	}
 	
 	
