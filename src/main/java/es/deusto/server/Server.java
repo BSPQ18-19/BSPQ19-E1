@@ -116,7 +116,7 @@ public class Server extends UnicastRemoteObject implements IServer {
 			System.setSecurityManager(new SecurityManager());
 		}
 
-		String name = "//" + args[0] + ":" + args[1] + "/" + args[2];
+		String name = "/" + args[0] + ":" + args[1] + "/" + args[2];
 
 		try {
 			IServer objServer = new Server();
