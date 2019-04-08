@@ -4,7 +4,8 @@ BSPQ19-E1
 Compilation
 `mvn clean compile`
 
-Create Datanucleus schema:
+Create Datanucleus schema: 
+`mysql < src/sql/create-messagesdb.sql`
 `mvn datanucleus:schema-create`
 
 To start the registry

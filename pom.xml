@@ -3,8 +3,8 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>Messaging</groupId>
-	<artifactId>SavingMessagesJDORMI</artifactId>
+	<groupId>Cinema</groupId>
+	<artifactId>CinemaTickets</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
@@ -15,7 +15,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<server.IP>127.0.0.1</server.IP>
 		<server.port>1099</server.port>
-		<server.Name>MessagerJDORMI</server.Name>
+		<server.Name>CinemaTickets</server.Name>
 		<policy.file>${basedir}/src/main/resources/security/java.policy</policy.file>
 		<config.files.dir>${basedir}/src/main/resources</config.files.dir>
 	</properties>
@@ -78,7 +78,7 @@
 				<configuration>
 					<log4jConfiguration>${config.files.dir}/log4j.properties</log4jConfiguration>
 					<verbose>true</verbose>
-					<props>${config.files.dir}/datanucleus.properties</props>
+					<props>"${config.files.dir}/datanucleus.properties"</props>
 				</configuration>
 				<executions>
 					<execution>
@@ -131,6 +131,7 @@
 						<artifactId>exec-maven-plugin</artifactId>
 						<version>1.2.1</version>
 						<configuration>
+							<!-- <mainClass>es.deusto.server.Server</mainClass> -->
 							<mainClass>es.deusto.server.Server</mainClass>
 							<systemProperties>
 

@@ -3,107 +3,36 @@ package es.deusto.server;
 import java.rmi.Naming;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
+import java.util.List;
 
-import javax.jdo.PersistenceManager;
-import javax.jdo.PersistenceManagerFactory;
-import javax.jdo.Query;
-import javax.jdo.JDOHelper;
-import javax.jdo.Transaction;
-
-import es.deusto.server.jdo.User;
-import es.deusto.server.jdo.Message;
-
+import es.deusto.server.jdo.DAO;
+import es.deusto.server.jdo.Movie;
 
 public class Server extends UnicastRemoteObject implements IServer {
 
 	private static final long serialVersionUID = 1L;
 	private int cont = 0;
-	private PersistenceManager pm=null;
-	private Transaction tx=null;
+	private DAO dao;
 
 	protected Server() throws RemoteException {
 		super();
-		PersistenceManagerFactory pmf = JDOHelper.getPersistenceManagerFactory("datanucleus.properties");
-		this.pm = pmf.getPersistenceManager();
-		this.tx = pm.currentTransaction();
-	}
-	
-	protected void finalize () throws Throwable {
-		if (tx.isActive()) {
-            tx.rollback();
-        }
-        pm.close();
+		this.dao = new DAO();
 	}
 
-	@SuppressWarnings("unchecked")
-	public String sayMessage(String login, String password, String message) throws RemoteException {
-		User user = null;
-		try{
-			tx.begin();
-			System.out.println("Creating query ...");
-			
-			
-			Query<User> q = pm.newQuery("SELECT FROM " + User.class.getName() + " WHERE login == \"" + login + "\" &&  password == \"" + password + "\"");
-			q.setUnique(true);
-			user = (User)q.execute();
-			
-			System.out.println("User retrieved: " + user);
-			if (user != null)  {
-				Message message1 = new Message(message);
-				user.getMessages().add(message1);
-				pm.makePersistent(user);					 
-			}
-			tx.commit();
-		} finally {
-			if (tx.isActive()) {
-				tx.rollback();
-			}
-		
-		}
-		
-		if (user != null) {
-			cont++;
-			System.out.println(" * Client number: " + cont);
-			return message;
-		} else {
-			throw new RemoteException("Login details supplied for message delivery are not correct");
-		} 
+	public void addMovie(String title, String director, List<String> cast) {
+		dao.begin();
+		Movie movie = new Movie();
+		movie.setTitle(title);
+		movie.setDirector(director);
+		movie.setCast(cast);
+		dao.storeObject(movie);
+		dao.end();
 	}
-	
-	public void registerUser(String login, String password) {
-		try
-        {	
-            tx.begin();
-            System.out.println("Checking whether the user already exits or not: '" + login +"'");
-			User user = null;
-			try {
-				user = pm.getObjectById(User.class, login);
-			} catch (javax.jdo.JDOObjectNotFoundException jonfe) {
-				System.out.println("Exception launched: " + jonfe.getMessage());
-			}
-			System.out.println("User: " + user);
-			if (user != null) {
-				System.out.println("Setting password user: " + user);
-				user.setPassword(password);
-				System.out.println("Password set user: " + user);
-			} else {
-				System.out.println("Creating user: " + user);
-				user = new User(login, password);
-				pm.makePersistent(user);					 
-				System.out.println("User created: " + user);
-			}
-			tx.commit();
-        }
-        finally
-        {
-            if (tx.isActive())
-            {
-                tx.rollback();
-            }
-      
-        }
-		
-		
+
+	public void deleteMovie(String title) {
+		dao.begin();
+		dao.deleteMovie(title);
+		dao.end();
 	}
 
 	public static void main(String[] args) {
@@ -116,6 +45,7 @@ public class Server extends UnicastRemoteObject implements IServer {
 			System.setSecurityManager(new SecurityManager());
 		}
 
+		System.out.println(args);
 		String name = "//" + args[0] + ":" + args[1] + "/" + args[2];
 
 		try {
