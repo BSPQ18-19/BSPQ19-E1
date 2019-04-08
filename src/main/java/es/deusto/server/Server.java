@@ -3,6 +3,7 @@ package es.deusto.server;
 import java.rmi.Naming;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
+import java.util.List;
 
 import javax.jdo.PersistenceManager;
 import javax.jdo.PersistenceManagerFactory;
@@ -10,6 +11,8 @@ import javax.jdo.Query;
 import javax.jdo.JDOHelper;
 import javax.jdo.Transaction;
 
+import es.deusto.server.jdo.DAO;
+import es.deusto.server.jdo.Movie;
 import es.deusto.server.jdo.User;
 import es.deusto.server.jdo.Message;
 
@@ -20,6 +23,7 @@ public class Server extends UnicastRemoteObject implements IServer {
 	private int cont = 0;
 	private PersistenceManager pm=null;
 	private Transaction tx=null;
+	private DAO dao = new DAO();
 
 	protected Server() throws RemoteException {
 		super();
@@ -106,6 +110,16 @@ public class Server extends UnicastRemoteObject implements IServer {
 		
 	}
 
+	public void addMovie(String title, String director, List<String> cast) {
+		dao.begin();
+		Movie movie = new Movie();
+		movie.setTitle(title);
+		movie.setDirector(director);
+		movie.setCast(cast);
+		dao.storeObject(movie);
+		dao.end();
+	}
+
 	public static void main(String[] args) {
 		if (args.length != 3) {
 			System.out.println("How to invoke: java [policy] [codebase] Server.Server [host] [port] [server]");
@@ -116,6 +130,7 @@ public class Server extends UnicastRemoteObject implements IServer {
 			System.setSecurityManager(new SecurityManager());
 		}
 
+		System.out.println(args);
 		String name = "//" + args[0] + ":" + args[1] + "/" + args[2];
 
 		try {
