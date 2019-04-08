@@ -40,8 +40,8 @@ public class Client {
 					String title  = stdin.readLine();
 					System.out.println("Director:");
 					String director  = stdin.readLine();
-					System.out.println("Cast:");
-					List<String> cast = Arrays.asList(stdin.readLine().split(" "));
+					System.out.println("Cast (separated by tabs):");
+					List<String> cast = Arrays.asList(stdin.readLine().split("\t"));
 					objHello.addMovie(title, director, cast);
 					System.out.println("Added Movie");
 					break;
