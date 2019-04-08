@@ -120,6 +120,12 @@ public class Server extends UnicastRemoteObject implements IServer {
 		dao.end();
 	}
 
+	public void deleteMovie(String title) {
+		dao.begin();
+		dao.deleteMovie(title);
+		dao.end();
+	}
+
 	public static void main(String[] args) {
 		if (args.length != 3) {
 			System.out.println("How to invoke: java [policy] [codebase] Server.Server [host] [port] [server]");
