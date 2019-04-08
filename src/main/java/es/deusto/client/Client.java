@@ -22,11 +22,10 @@ public class Client {
 		try {
 			String name = "//" + args[0] + ":" + args[1] + "/" + args[2];
 			IServer objHello = (IServer) java.rmi.Naming.lookup(name);
-			// Register to be allowed to send messages
 			int choiceentry = -1;
 			Scanner scanchoice = new Scanner(System.in);
 			while(choiceentry < 1 || choiceentry > 3) {
-				System.out.println("Enter \"1 - Add Movie\", \"2 - Delete Movie\", \"3\" or \"4\"");
+				System.out.println("Enter \"1 - Add Movie\", \"2 - Delete Movie\"");
 				if(scanchoice.hasNextInt())
 					choiceentry = scanchoice.nextInt();
 			}
@@ -51,13 +50,8 @@ public class Client {
 					String titleToDelete  = stdin.readLine();
 					objHello.deleteMovie(titleToDelete);
 					break;
-				case 3:
-					//do logic
-					break;
 			}
-			// objHello.registerUser("dipina", "dipina");
-			// System.out.println("* Message coming from the server: '" + objHello.sayMessage("dipina", "dipina", "This is a test!") + "'");
-			
+
 		} catch (Exception e) {
 			System.err.println("RMI Example exception: " + e.getMessage());
 			e.printStackTrace();
