@@ -4,6 +4,7 @@ import java.rmi.Naming;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.List;
+import java.util.Optional;
 
 import es.deusto.server.jdo.DAO;
 import es.deusto.server.jdo.Movie;
@@ -17,6 +18,13 @@ public class Server extends UnicastRemoteObject implements IServer {
 	protected Server() throws RemoteException {
 		super();
 		this.dao = new DAO();
+	}
+
+	public Movie getMovie(String title) {
+		dao.begin();
+		Movie movie = dao.getMovie(title);
+		dao.end();
+		return movie;
 	}
 
 	public void addMovie(String title, String director, List<String> cast) {

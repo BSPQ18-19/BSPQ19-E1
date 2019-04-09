@@ -45,10 +45,15 @@ public class Client {
 					System.out.println("Added Movie");
 					break;
 				case 2:
-					System.out.println("Add Movie");
+					System.out.println("Delete Movie");
 					System.out.println("Title:");
-					String titleToDelete  = stdin.readLine();
-					objHello.deleteMovie(titleToDelete);
+					String titleToDelete = stdin.readLine();
+					if (objHello.getMovie(titleToDelete) != null) {
+						objHello.deleteMovie(titleToDelete);
+						System.out.println("Deleted %s" + titleToDelete);
+					}
+					else
+						System.out.println(titleToDelete + " is not in the database");
 					break;
 			}
 
