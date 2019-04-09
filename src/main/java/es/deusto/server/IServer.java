@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Optional;
 
 public interface IServer extends Remote {
-	Movie getMovie(String title) throws RemoteException;
+	boolean isMovieInDatabase(String title) throws RemoteException;
 	void addMovie(String title, String director, List<String> cast) throws RemoteException;
 	void deleteMovie(String title) throws RemoteException;
 }

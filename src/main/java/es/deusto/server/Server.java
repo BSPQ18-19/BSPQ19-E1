@@ -20,11 +20,11 @@ public class Server extends UnicastRemoteObject implements IServer {
 		this.dao = new DAO();
 	}
 
-	public Movie getMovie(String title) {
+	public boolean isMovieInDatabase(String title) {
 		dao.begin();
 		Movie movie = dao.getMovie(title);
 		dao.end();
-		return movie;
+		return movie != null;
 	}
 
 	public void addMovie(String title, String director, List<String> cast) {

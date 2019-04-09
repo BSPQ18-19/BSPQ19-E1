@@ -48,9 +48,9 @@ public class Client {
 					System.out.println("Delete Movie");
 					System.out.println("Title:");
 					String titleToDelete = stdin.readLine();
-					if (objHello.getMovie(titleToDelete) != null) {
+					if (objHello.isMovieInDatabase(titleToDelete)) {
 						objHello.deleteMovie(titleToDelete);
-						System.out.println("Deleted %s" + titleToDelete);
+						System.out.println("Deleted " + titleToDelete);
 					}
 					else
 						System.out.println(titleToDelete + " is not in the database");
