@@ -14,7 +14,8 @@ public class DAO {
 	private PersistenceManagerFactory pmf;
 	private PersistenceManager pm;
 	private Transaction tx;
-
+	
+	// Generic DAO methods
 	public DAO() {
 		pmf = JDOHelper.getPersistenceManagerFactory("datanucleus.properties");
 	}
@@ -47,6 +48,14 @@ public class DAO {
 		pm.makePersistent(o);
 	}
 	
+	public <T> void cleanDatabase(Class<T> c) {
+		begin();
+		Query<T> qs = pm.newQuery(c);
+		qs.deletePersistentAll();
+		end();
+	}
+	
+	// Movie methods
 	public List<Movie> getMovies(){
 		Extent<Movie> ex = pm.getExtent(Movie.class, false);
 		Query<Movie> q = pm.newQuery(ex);
@@ -77,13 +86,7 @@ public class DAO {
 		pm.deletePersistent(movie);
 	}
 	
-	public <T> void cleanDatabase(Class<T> c) {
-		begin();
-		Query<T> qs = pm.newQuery(c);
-		qs.deletePersistentAll();
-		end();
-	}
-	
+	// Session methods
 	public List<Session> getSessions(int year, int month, int day) {
 		Query<Session> q = pm.newQuery(Session.class);
 		q.setFilter("time > d1");
@@ -100,4 +103,35 @@ public class DAO {
 		
 	}
 	
+	
+	// Client methods
+	/**
+	 * 
+	 * @param c Client to register
+	 * @return <b>true</b> if sucess <b>false</b> if fail (user already exists)
+	 */
+	public boolean registerClient(Client c) {
+		try {
+			storeObject(c);
+			return true;
+		} catch (Exception e) {
+			return false;
+		}
+	}
+	
+	/**
+	 * 
+	 * @param email
+	 * @param password
+	 * @return The client corresponding to the given credentials, or <b>null</b> 
+	 * if no user exists with those parameters.
+	 */
+	public Client getClient(String email, String password) {
+		Query<Client> q = pm.newQuery(Client.class);
+		q.setFilter("email == em");
+		q.setFilter("password == pw");
+		q.declareParameters("java.lang.String em, java.lang.String pw");
+		Client c = q.setParameters(email, password).executeUnique();
+		return c;
+	}	
 }
