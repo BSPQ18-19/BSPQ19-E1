@@ -2,6 +2,7 @@ package es.deusto.server.jdo;
 
 import javax.jdo.annotations.*;
 
+@PersistenceCapable
 public class Client {
 	@PrimaryKey
 	@Persistent(valueStrategy = IdGeneratorStrategy.INCREMENT)
@@ -59,5 +60,13 @@ public class Client {
 	}
 	public long getId() {
 		return id;
+	}
+	
+	public boolean fieldsEqual(Client c) {
+		return this.name.equals(c.name) 
+				&& this.surname.equals(c.surname)
+				&& this.phone.equals(c.phone)
+				&& this.email.equals(c.email)
+				&& this.password.equals(c.password);
 	}
 }

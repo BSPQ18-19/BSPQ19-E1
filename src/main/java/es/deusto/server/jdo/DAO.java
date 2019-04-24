@@ -133,5 +133,10 @@ public class DAO {
 		q.declareParameters("java.lang.String em, java.lang.String pw");
 		Client c = q.setParameters(email, password).executeUnique();
 		return c;
-	}	
+	}
+	
+	public void deleteClient(String email, String password) {
+		Client c = getClient(email, password);
+		pm.deletePersistent(c);
+	}
 }
