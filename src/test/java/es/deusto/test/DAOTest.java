@@ -9,10 +9,10 @@ import es.deusto.server.jdo.*;
 
 public class DAOTest {
 	
-	public static DAO dao;
+	public DAO dao;
 	
-	@BeforeClass
-	public static void setUpClass() {
+	@Before
+	public void setUpClass() {
 		dao = new DAO();
 	}
 	
