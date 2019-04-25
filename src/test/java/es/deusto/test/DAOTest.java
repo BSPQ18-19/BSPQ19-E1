@@ -5,6 +5,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
+import java.util.List;
+
 import es.deusto.server.jdo.*;
 
 public class DAOTest {
@@ -64,6 +66,23 @@ public class DAOTest {
 		testClientCreation();
 		testClientModification();
 		testClientDeletion();
+	}
+	
+	@Test
+	public void testMovieSearchDAO() {
+		Movie m = new Movie();
+		m.setDirector("asdf");
+		m.setTitle("my title for searching");
+		dao.begin();
+		dao.storeObject(m);
+		dao.end();
+		
+		dao.begin();
+		List<Movie> movies = dao.searchMovieByTitle("title for");
+		assertTrue(movies.size() == 1);
+		assertTrue(movies.get(0).getTitle().equals("my title for searching"));
+		dao.deleteMovie(movies.get(0));
+		dao.end();
 	}
 	
 }

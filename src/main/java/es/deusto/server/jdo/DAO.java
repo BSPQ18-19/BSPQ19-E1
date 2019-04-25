@@ -56,6 +56,7 @@ public class DAO {
 	}
 	
 	// Movie methods
+	@SuppressWarnings("unchecked")
 	public List<Movie> getMovies(){
 		Extent<Movie> ex = pm.getExtent(Movie.class, false);
 		Query<Movie> q = pm.newQuery(ex);
@@ -73,6 +74,16 @@ public class DAO {
 		return movie;
 	}
 	
+	@SuppressWarnings("unchecked")
+	public List<Movie> searchMovieByTitle(String query){
+		//Extent<Movie> ex = pm.getExtent(Movie.class, false);
+		Query<Movie> q = pm.newQuery(Movie.class);
+		q.setFilter("this.title.matches(:expression)");
+		Collection<Movie> col = (Collection<Movie>) q.execute(".*" + query + ".*");
+		return new ArrayList<Movie>(col);
+		
+	}
+	
 	public Movie getMovie(long id) {
 		Movie movie = pm.getObjectById(Movie.class, id);
 		return movie;
@@ -80,8 +91,15 @@ public class DAO {
 	
 	public void deleteMovie(String title) {
 		Movie movie = getMovie(title);
-		for(Session s : movie.getSessions()) {
-			pm.deletePersistent(s);
+		deleteMovie(movie);
+		
+	}
+	
+	public void deleteMovie(Movie movie) {
+		if(movie.getSessions() != null) {
+			for(Session s : movie.getSessions()) {
+				pm.deletePersistent(s);
+			}
 		}
 		pm.deletePersistent(movie);
 	}
