@@ -166,4 +166,8 @@ public class DAO {
 		}
 		pm.deletePersistent(c);
 	}
+	
+	public void deleteTicket(Ticket t) {
+		pm.deletePersistent(t);
+	}
 }
