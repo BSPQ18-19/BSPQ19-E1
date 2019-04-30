@@ -5,8 +5,9 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 
 import javax.jdo.annotations.*;
+import javax.jdo.spi.Detachable;
 
-@PersistenceCapable
+@PersistenceCapable(detachable = "true")
 public class Session {
 	
 	@PrimaryKey
