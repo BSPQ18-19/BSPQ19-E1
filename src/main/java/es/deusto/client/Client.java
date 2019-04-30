@@ -3,11 +3,16 @@ package es.deusto.client;
 
 import es.deusto.server.IServer;
 
+import java.net.MalformedURLException;
+import java.rmi.NotBoundException;
+import java.rmi.RemoteException;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
 public class Client {
+
+	private IServer server;
 
 	public static void main(String[] args) {
 		if (args.length != 3) {
@@ -56,5 +61,14 @@ public class Client {
 			System.err.println("RMI Example exception: " + e.getMessage());
 			e.printStackTrace();
 		}
+	}
+
+	public void accessRMIServer(String IP, String port, String name) throws RemoteException, NotBoundException, MalformedURLException {
+		String lookupName = "//" + IP + ":" + port + "/" + name;
+		this.server = (IServer) java.rmi.Naming.lookup(lookupName);
+	}
+
+	public void addMovie(String title, String director, List<String> actorCast) throws RemoteException {
+	    this.server.addMovie(title, director, actorCast);
 	}
 }
