@@ -13,33 +13,23 @@ public class ClientController {
     private RMIServiceLocator rsl;
     private UserDTO loggedUser = null;
     private Logger log;
-    private ArrayList<UserDTO> currentHotels;
+    private ArrayList<UserDTO> currentUser;
 
     private ClientController() {
         rsl = RMIServiceLocator.getServiceLocator();
         log = ClientLogger.getLogger();
-        log.info("HotelManagementController initialized");
-        this.currentHotels = new ArrayList<>();
+        log.info("getClientManagerController initialized");
+        this.currentUser = new ArrayList<>();
     }
 
     public static ClientController getController() {
         return controller;
     }
 
-    public UserDTO signInGuest(String name, String email, String password, String phone, String address) throws RemoteException {
-        log.info("signInGuest called");
-        UserDTO result = rsl.getHotelManager().signInGuest(name, email, password, phone, address);
-        if(result != null)
-            log.info("Signed in user with email: " + email);
-        else
-            log.info("Did not signed in user with email: " + email);
-        return result;
-    }
-
     public UserDTO logIn(String email, String password) throws RemoteException {
         if(loggedUser != null)
             logOut();
-        loggedUser = rsl.getHotelManager().logIn(email, password);
+        loggedUser = rsl.getClientManager().logIn(email, password);
         if(loggedUser != null)
             log.info("Logged in user with email: " + email);
         else
@@ -52,7 +42,7 @@ public class ClientController {
             log.info("Did not logged out any user - no users were logged");
             return false;
         }
-        rsl.getHotelManager().logOut(loggedUser);
+        rsl.getClientManager().logOut(loggedUser);
         log.info("Logged out user with ID: " + loggedUser.getUserID());
         loggedUser = null;
         return true;

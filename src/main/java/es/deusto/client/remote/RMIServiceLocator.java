@@ -30,7 +30,7 @@ public class RMIServiceLocator {
         }
     }
 
-    public IClientManager getHotelManager() {
+    public IClientManager getClientManager() {
         return clientManager;
     }
 }
