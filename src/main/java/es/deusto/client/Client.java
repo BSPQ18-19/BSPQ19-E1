@@ -28,7 +28,7 @@ public class Client {
 		if(enableGUI) {
 			JFrame frame = new JFrame("Login");
 			frame.setContentPane(new LoginPage().$$$getRootComponent$$$());
-			frame.setPreferredSize(new Dimension(1200, 700));
+			//frame.setPreferredSize(new Dimension(1200, 700));
 			frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 			frame.pack();
 			frame.setVisible(true);

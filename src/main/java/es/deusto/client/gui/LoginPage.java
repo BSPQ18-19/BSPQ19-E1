@@ -1,5 +1,8 @@
 package es.deusto.client.gui;
 
+import com.intellij.uiDesigner.core.GridConstraints;
+import com.intellij.uiDesigner.core.GridLayoutManager;
+import com.intellij.uiDesigner.core.Spacer;
 import es.deusto.client.controller.ClientController;
 
 import javax.swing.*;
@@ -30,55 +33,58 @@ public class LoginPage {
      */
     private void $$$setupUI$$$() {
         rootPanel = new JPanel();
-        rootPanel.setLayout(new GridBagLayout());
-        rootPanel.setMinimumSize(new Dimension(514, 390));
-        rootPanel.setPreferredSize(new Dimension(514, 390));
+        rootPanel.setLayout(new GridLayoutManager(3, 4, new Insets(0, 0, 0, 0), -1, -1));
+        rootPanel.setMinimumSize(new Dimension(800, 600));
+        rootPanel.setPreferredSize(new Dimension(800, 600));
+        emailField = new JTextField();
+        Font emailFieldFont = this.$$$getFont$$$(null, -1, 28, emailField.getFont());
+        if (emailFieldFont != null) emailField.setFont(emailFieldFont);
+        rootPanel.add(emailField, new GridConstraints(0, 2, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_WANT_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        passwordField1 = new JPasswordField();
+        Font passwordField1Font = this.$$$getFont$$$(null, -1, 28, passwordField1.getFont());
+        if (passwordField1Font != null) passwordField1.setFont(passwordField1Font);
+        rootPanel.add(passwordField1, new GridConstraints(1, 2, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_WANT_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        final JLabel label1 = new JLabel();
+        Font label1Font = this.$$$getFont$$$(null, -1, 28, label1.getFont());
+        if (label1Font != null) label1.setFont(label1Font);
+        label1.setHorizontalAlignment(4);
+        label1.setText("Email:");
+        rootPanel.add(label1, new GridConstraints(0, 1, 1, 1, GridConstraints.ANCHOR_EAST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(95, 16), null, 0, false));
+        final JLabel label2 = new JLabel();
+        Font label2Font = this.$$$getFont$$$(null, -1, 28, label2.getFont());
+        if (label2Font != null) label2.setFont(label2Font);
+        label2.setHorizontalAlignment(4);
+        label2.setText("Password:");
+        rootPanel.add(label2, new GridConstraints(1, 1, 1, 1, GridConstraints.ANCHOR_EAST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(95, 156), null, 0, false));
         loginButton = new JButton();
+        Font loginButtonFont = this.$$$getFont$$$(null, -1, 28, loginButton.getFont());
+        if (loginButtonFont != null) loginButton.setFont(loginButtonFont);
         loginButton.setMargin(new Insets(0, 0, 0, 0));
         loginButton.setText("Login");
-        GridBagConstraints gbc;
-        gbc = new GridBagConstraints();
-        gbc.gridx = 1;
-        gbc.gridy = 2;
-        gbc.gridwidth = 2;
-        gbc.weightx = 1.0;
-        gbc.weighty = 1.0;
-        gbc.fill = GridBagConstraints.HORIZONTAL;
-        rootPanel.add(loginButton, gbc);
-        emailField = new JTextField();
-        gbc = new GridBagConstraints();
-        gbc.gridx = 2;
-        gbc.gridy = 0;
-        gbc.weightx = 1.0;
-        gbc.weighty = 1.0;
-        gbc.anchor = GridBagConstraints.WEST;
-        gbc.fill = GridBagConstraints.HORIZONTAL;
-        rootPanel.add(emailField, gbc);
-        passwordField1 = new JPasswordField();
-        gbc = new GridBagConstraints();
-        gbc.gridx = 2;
-        gbc.gridy = 1;
-        gbc.weightx = 1.0;
-        gbc.weighty = 1.0;
-        gbc.anchor = GridBagConstraints.WEST;
-        gbc.fill = GridBagConstraints.HORIZONTAL;
-        rootPanel.add(passwordField1, gbc);
-        final JLabel label1 = new JLabel();
-        label1.setText("Email:");
-        gbc = new GridBagConstraints();
-        gbc.gridx = 1;
-        gbc.gridy = 0;
-        gbc.weightx = 1.0;
-        gbc.weighty = 1.0;
-        rootPanel.add(label1, gbc);
-        final JLabel label2 = new JLabel();
-        label2.setText("Password:");
-        gbc = new GridBagConstraints();
-        gbc.gridx = 1;
-        gbc.gridy = 1;
-        gbc.weightx = 1.0;
-        gbc.weighty = 1.0;
-        rootPanel.add(label2, gbc);
+        rootPanel.add(loginButton, new GridConstraints(2, 2, 1, 1, GridConstraints.ANCHOR_EAST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(150, -1), new Dimension(160, -1), 0, false));
+        final Spacer spacer1 = new Spacer();
+        rootPanel.add(spacer1, new GridConstraints(2, 3, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_WANT_GROW, 1, null, null, null, 0, false));
+        final Spacer spacer2 = new Spacer();
+        rootPanel.add(spacer2, new GridConstraints(2, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_WANT_GROW, 1, null, new Dimension(80, -1), null, 0, false));
+    }
+
+    /**
+     * @noinspection ALL
+     */
+    private Font $$$getFont$$$(String fontName, int style, int size, Font currentFont) {
+        if (currentFont == null) return null;
+        String resultName;
+        if (fontName == null) {
+            resultName = currentFont.getName();
+        } else {
+            Font testFont = new Font(fontName, Font.PLAIN, 10);
+            if (testFont.canDisplay('a') && testFont.canDisplay('1')) {
+                resultName = fontName;
+            } else {
+                resultName = currentFont.getName();
+            }
+        }
+        return new Font(resultName, style >= 0 ? style : currentFont.getStyle(), size >= 0 ? size : currentFont.getSize());
     }
 
     /**
@@ -88,5 +94,8 @@ public class LoginPage {
         return rootPanel;
     }
 
+    private void createUIComponents() {
+        // TODO: place custom component creation code here
+    }
 }
 
