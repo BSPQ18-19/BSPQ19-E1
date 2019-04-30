@@ -2,6 +2,7 @@ package es.deusto.client;
 
 
 import es.deusto.client.gui.LoginPage;
+import es.deusto.client.remote.RMIServiceLocator;
 import es.deusto.server.IServer;
 
 import javax.swing.*;
@@ -26,6 +27,7 @@ public class Client {
 		}
 
 		if(enableGUI) {
+			RMIServiceLocator.getServiceLocator().setService(args[0], Integer.parseInt(args[1]), args[2]);
 			JFrame frame = new JFrame("Login");
 			frame.setContentPane(new LoginPage().$$$getRootComponent$$$());
 			//frame.setPreferredSize(new Dimension(1200, 700));
