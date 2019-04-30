@@ -1,5 +1,8 @@
 package es.deusto.server.jdo;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.jdo.annotations.*;
 
 @PersistenceCapable
@@ -18,13 +21,14 @@ public class Client {
 	
 	// TODO 
 	// Join table or primary key?
-	// @Persistent(mappedBy="Client")
-	// private List<Ticket> purchases;
+	@Persistent(mappedBy="client")
+	private List<Ticket> purchases;
 	
 	public Client(String email, String password) {
 		super();
 		this.email = email;
 		this.password = password;
+		purchases = new ArrayList<Ticket>();
 	}
 	
 	
@@ -62,6 +66,16 @@ public class Client {
 		return id;
 	}
 	
+	public List<Ticket> getPurchases() {
+		return purchases;
+	}
+
+
+	public void setPurchases(List<Ticket> purchases) {
+		this.purchases = purchases;
+	}
+
+
 	public boolean fieldsEqual(Client c) {
 		return this.name.equals(c.name) 
 				&& this.surname.equals(c.surname)

@@ -155,6 +155,19 @@ public class DAO {
 	
 	public void deleteClient(String email, String password) {
 		Client c = getClient(email, password);
+		deleteClient(c);
+	}
+	
+	public void deleteClient(Client c) {
+		if(c.getPurchases() != null) {
+			for (Ticket ticket : c.getPurchases()) {
+				pm.deletePersistent(ticket);
+			}
+		}
 		pm.deletePersistent(c);
+	}
+	
+	public void deleteTicket(Ticket t) {
+		pm.deletePersistent(t);
 	}
 }

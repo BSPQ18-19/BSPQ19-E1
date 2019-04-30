@@ -78,11 +78,39 @@ public class DAOTest {
 		dao.end();
 		
 		dao.begin();
-		List<Movie> movies = dao.searchMovieByTitle("title for");
+		List<Movie> movies = dao.searchMovieByTitle("searching");
 		assertTrue(movies.size() == 1);
 		assertTrue(movies.get(0).getTitle().equals("my title for searching"));
 		dao.deleteMovie(movies.get(0));
 		dao.end();
 	}
+	
+	@Test
+	public void testTicketDAO() {
+		Movie m = new Movie();
+		m.setDirector("asdf");
+		m.setTitle("my title for ticket");
+		Session s = new Session(2019, 4, 30, 20, 30);
+		m.getSessions().add(s);
+		Client c = new Client("ticket@ticket", "ticket");
+		Ticket t = new Ticket(s, c);
+		c.getPurchases().add(t);
+		dao.begin();
+		dao.storeObject(c);
+		dao.storeObject(m);
+		dao.storeObject(t);
+		dao.end();
+		
+		dao.begin();
+		c = dao.getClient("ticket@ticket", "ticket");
+		System.out.println(c.getPurchases().size());
+		assertTrue(c.getPurchases().size() == 1);
+		assertEquals(c.getPurchases().get(0).getSession().getMovie().getTitle(), "my title for ticket");
+		dao.deleteClient(c);
+		dao.deleteMovie("my title for ticket");
+		dao.end();
+		
+	}
+	
 	
 }
