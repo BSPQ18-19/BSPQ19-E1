@@ -14,7 +14,7 @@ public class Server extends UnicastRemoteObject implements IServer {
 	private int cont = 0;
 	private DAO dao;
 
-	protected Server() throws RemoteException {
+	public Server() throws RemoteException {
 		super();
 		this.dao = new DAO();
 	}
@@ -27,6 +27,13 @@ public class Server extends UnicastRemoteObject implements IServer {
 		movie.setCast(cast);
 		dao.storeObject(movie);
 		dao.end();
+	}
+
+	public Movie getMovie(String title) {
+		dao.begin();
+		Movie movie = dao.getMovie(title);
+		dao.end();
+		return movie;
 	}
 
 	public void deleteMovie(String title) {
