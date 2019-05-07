@@ -6,6 +6,10 @@ import es.deusto.server.jdo.Movie;
 
 public class MovieDTO implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -5235775776186342746L;
 	public long id;
 	public String title;
 	public String synopsis;
