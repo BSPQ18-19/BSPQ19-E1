@@ -23,7 +23,7 @@ public class Client {
 		boolean enableGUI = true;
 
 		if (args.length != 3) {
-			System.out.println("Use: java [policy] [codebase] Client.Client [host] [port] [server]");
+			System.out.println("Use: java [policy] [codebase] User.User [host] [port] [server]");
 			System.exit(0);
 		}
 
