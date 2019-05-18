@@ -1,29 +1,30 @@
 package es.deusto.client.gui;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.rmi.RemoteException;
+
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+import javax.swing.SpringLayout;
+
 import es.deusto.client.Client;
 import es.deusto.client.controller.ClientController;
 import es.deusto.server.data.UserDTO;
-import es.deusto.server.jdo.User;
 
-import javax.swing.JPanel;
-import javax.swing.SpringLayout;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JTextField;
-import javax.swing.JPasswordField;
-import javax.swing.JButton;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
-import java.rmi.RemoteException;
+public class Register extends JPanel {
 
-public class Login extends JPanel {
 	private JTextField textField;
 	private JPasswordField passwordField;
+	private JPasswordField passwordField_1;
 
 	/**
 	 * Create the panel.
 	 */
-	public Login(Client client) {
+	public Register(Client client) {
 		SpringLayout springLayout = new SpringLayout();
 		setLayout(springLayout);
 		
@@ -53,36 +54,25 @@ public class Login extends JPanel {
 		passwordField.setColumns(20);
 		add(passwordField);
 		
-		JButton btnLogin = new JButton("Login");
+		JButton btnLogin = new JButton("Register");
 		btnLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				try {
-					UserDTO user = ClientController.getController().logIn(textField.getText(), new String(passwordField.getPassword()));
-					if(user != null) {
-						
-						client.switchToRegister();
-					} else {
-						client.incorrectLoginAlert();
-					}
-				} catch (RemoteException e) {
-					e.printStackTrace();
-				}
-
+				// TODO registration
 			}
 		});
 		springLayout.putConstraint(SpringLayout.NORTH, btnLogin, 37, SpringLayout.SOUTH, passwordField);
 		springLayout.putConstraint(SpringLayout.WEST, btnLogin, 0, SpringLayout.WEST, passwordField);
 		add(btnLogin);
 		
-		JButton btnRegister = new JButton("Registration");
-		btnRegister.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				client.switchToRegister();
-			}
-		});
-		springLayout.putConstraint(SpringLayout.NORTH, btnRegister, 0, SpringLayout.NORTH, btnLogin);
-		springLayout.putConstraint(SpringLayout.EAST, btnRegister, 0, SpringLayout.EAST, textField);
-		add(btnRegister);
-
+		JLabel lblRepeat = new JLabel("Repeat:");
+		springLayout.putConstraint(SpringLayout.NORTH, lblRepeat, 6, SpringLayout.SOUTH, lblPassword);
+		springLayout.putConstraint(SpringLayout.WEST, lblRepeat, 0, SpringLayout.WEST, lblUsername);
+		add(lblRepeat);
+		
+		passwordField_1 = new JPasswordField();
+		passwordField_1.setColumns(20);
+		springLayout.putConstraint(SpringLayout.NORTH, passwordField_1, 6, SpringLayout.SOUTH, passwordField);
+		springLayout.putConstraint(SpringLayout.WEST, passwordField_1, 0, SpringLayout.WEST, textField);
+		add(passwordField_1);
 	}
 }

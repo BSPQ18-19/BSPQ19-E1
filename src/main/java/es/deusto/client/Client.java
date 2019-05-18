@@ -2,6 +2,7 @@ package es.deusto.client;
 
 
 import es.deusto.client.gui.Login;
+import es.deusto.client.gui.Register;
 import es.deusto.client.remote.RMIServiceLocator;
 import es.deusto.server.IServer;
 
@@ -111,6 +112,19 @@ public class Client {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.add(new Login());
+		frame.add(new Login(this));
 	}
+	
+	public void switchToRegister() {
+		frame.getContentPane().removeAll();
+		frame.getContentPane().add(new Register(this));
+		frame.setTitle("Register");
+		SwingUtilities.updateComponentTreeUI(frame);
+	}
+	
+	public void incorrectLoginAlert() {
+		JOptionPane.showMessageDialog(frame, "Incorrect Login", "Incorrect email or password", JOptionPane.WARNING_MESSAGE);
+	}
+	
+	
 }

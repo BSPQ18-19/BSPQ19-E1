@@ -48,8 +48,11 @@ public class Server extends UnicastRemoteObject implements IServer {
 		dao.begin();
 		User user = dao.getClient(email, password);
 		dao.end();
-		UserDTO userDTO = new UserDTO(user);
-		return userDTO;
+		if(user != null) {
+			return new UserDTO(user);
+		} else {
+			return null;
+		}
 	}
 
 	public boolean logOut(UserDTO user) throws RemoteException {
