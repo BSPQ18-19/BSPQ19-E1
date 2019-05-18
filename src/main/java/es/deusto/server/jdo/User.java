@@ -22,7 +22,7 @@ public class User {
 	
 	// TODO 
 	// Join table or primary key?
-	@Persistent(mappedBy="client")
+	@Persistent(mappedBy="user")
 	private List<Ticket> purchases;
 	
 	public User(String email, String password) {

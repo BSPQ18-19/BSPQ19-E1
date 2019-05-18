@@ -8,6 +8,7 @@ import java.util.List;
 import es.deusto.server.data.UserDTO;
 import es.deusto.server.jdo.DAO;
 import es.deusto.server.jdo.Movie;
+import es.deusto.server.jdo.User;
 
 public class Server extends UnicastRemoteObject implements IServer {
 
@@ -44,7 +45,11 @@ public class Server extends UnicastRemoteObject implements IServer {
 	}
 
 	public UserDTO logIn(String email, String password) throws RemoteException {
-		return null;
+		dao.begin();
+		User user = dao.getClient(email, password);
+		dao.end();
+		UserDTO userDTO = new UserDTO(user);
+		return userDTO;
 	}
 
 	public boolean logOut(UserDTO user) throws RemoteException {

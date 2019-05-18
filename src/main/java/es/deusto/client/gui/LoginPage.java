@@ -23,8 +23,6 @@ public class LoginPage {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    System.out.println(emailField.getText() + new String(passwordField1.getPassword()));
-
                     ClientController.getController().logIn(emailField.getText(),  new String(passwordField1.getPassword()));
                 } catch (RemoteException ex) {
                     ex.printStackTrace();

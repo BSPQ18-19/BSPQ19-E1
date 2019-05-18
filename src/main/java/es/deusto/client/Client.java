@@ -1,7 +1,7 @@
 package es.deusto.client;
 
 
-import es.deusto.client.gui.LoginPage;
+import es.deusto.client.gui.Login;
 import es.deusto.client.remote.RMIServiceLocator;
 import es.deusto.server.IServer;
 
@@ -17,6 +17,7 @@ import java.util.Scanner;
 public class Client {
 
 	private IServer server;
+	private JFrame frame;
 
 	public static void main(String[] args) {
 
@@ -31,14 +32,19 @@ public class Client {
 			System.setSecurityManager(new SecurityManager());
 		}
 
+		RMIServiceLocator.getServiceLocator().setService(args[0], args[1], args[2]);
+
 		if(enableGUI) {
-			RMIServiceLocator.getServiceLocator().setService(args[0], Integer.parseInt(args[1]), args[2]);
-			JFrame frame = new JFrame("Login");
-			frame.setContentPane(new LoginPage().$$$getRootComponent$$$());
-			//frame.setPreferredSize(new Dimension(1200, 700));
-			frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-			frame.pack();
-			frame.setVisible(true);
+			EventQueue.invokeLater(new Runnable() {
+				public void run() {
+					try {
+						Client window = new Client();
+						window.frame.setVisible(true);
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
+				}
+			});
 		} else {
 
 			try {
@@ -89,5 +95,22 @@ public class Client {
 
 	public void addMovie(String title, String director, List<String> actorCast) throws RemoteException {
 	    this.server.addMovie(title, director, actorCast);
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public Client() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(100, 100, 450, 300);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.add(new Login());
 	}
 }
