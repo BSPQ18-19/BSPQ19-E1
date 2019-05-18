@@ -5,8 +5,10 @@ import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.List;
 
+import es.deusto.server.data.UserDTO;
 import es.deusto.server.jdo.DAO;
 import es.deusto.server.jdo.Movie;
+import es.deusto.server.jdo.User;
 
 public class Server extends UnicastRemoteObject implements IServer {
 
@@ -40,6 +42,18 @@ public class Server extends UnicastRemoteObject implements IServer {
 		dao.begin();
 		dao.deleteMovie(title);
 		dao.end();
+	}
+
+	public UserDTO logIn(String email, String password) throws RemoteException {
+		dao.begin();
+		User user = dao.getClient(email, password);
+		dao.end();
+		UserDTO userDTO = new UserDTO(user);
+		return userDTO;
+	}
+
+	public boolean logOut(UserDTO user) throws RemoteException {
+		return false;
 	}
 
 	public static void main(String[] args) {

@@ -9,12 +9,12 @@ public class Ticket {
 	@Persistent(valueStrategy = IdGeneratorStrategy.INCREMENT)
 	private long id;
 	private Session session;
-	private Client client;
+	private User user;
 	
-	public Ticket(Session session, Client client) {
+	public Ticket(Session session, User user) {
 		super();
 		this.session = session;
-		this.client = client;
+		this.user = user;
 	}
 
 	public Session getSession() {
@@ -25,12 +25,12 @@ public class Ticket {
 		this.session = session;
 	}
 
-	public Client getClient() {
-		return client;
+	public User getUser() {
+		return user;
 	}
 
-	public void setClient(Client client) {
-		this.client = client;
+	public void setUser(User user) {
+		this.user = user;
 	}
 	
 	public long getId() {
