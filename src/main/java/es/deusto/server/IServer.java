@@ -13,7 +13,8 @@ public interface IServer extends Remote {
 	Movie getMovie(String title) throws RemoteException;
 	List<MovieDTO> searchMovies(String query) throws RemoteException;
 	List<SessionDTO> getSessionsForMovie(MovieDTO mdto) throws RemoteException;
-	List<MovieDTO> getMoviesForDay(int year, int month, int day) throws RemoteException;
+	List<SessionDTO> getSessionsForDay(int year, int month, int day) throws RemoteException;
+	boolean buyTickets(UserDTO user, SessionDTO session, int amount) throws RemoteException;
 	UserDTO logIn(String email, String password) throws RemoteException;
 	boolean logOut(UserDTO user) throws RemoteException;
 }

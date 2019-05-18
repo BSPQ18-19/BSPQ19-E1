@@ -14,6 +14,7 @@ import es.deusto.server.data.UserDTO;
 import es.deusto.server.jdo.DAO;
 import es.deusto.server.jdo.Movie;
 import es.deusto.server.jdo.Session;
+import es.deusto.server.jdo.Ticket;
 import es.deusto.server.jdo.User;
 
 public class Server extends UnicastRemoteObject implements IServer {
@@ -40,6 +41,7 @@ public class Server extends UnicastRemoteObject implements IServer {
 		dao.end();
 	}
 
+	// No DTO = bad
 	public Movie getMovie(String title) {
 		dao.begin();
 		Movie movie = dao.getMovie(title);
@@ -82,7 +84,7 @@ public class Server extends UnicastRemoteObject implements IServer {
 	@Override
 	public List<SessionDTO> getSessionsForMovie(MovieDTO mdto) throws RemoteException {
 		dao.begin();
-		Movie movie = dao.getMovie(mdto.id);
+		Movie movie = dao.getObjectById(Movie.class, mdto.id);
 		List<Session> sessions = movie.getSessions();
 		List<SessionDTO> sessionsDTO = new ArrayList<>(sessions.size());
 		for (Session s : sessions) {
@@ -90,23 +92,6 @@ public class Server extends UnicastRemoteObject implements IServer {
 		}
 		dao.end();
 		return sessionsDTO;
-	}
-
-	@Override
-	public List<MovieDTO> getMoviesForDay(int year, int month, int day) throws RemoteException {
-		dao.begin();
-		List<Session> sessions = dao.getSessions(year, month, day);
-		// This should make repeated movies not save twice
-		Set<Movie> moviesset = new HashSet<>();
-		for (Session s : sessions) {
-			moviesset.add(s.getMovie());
-		}
-		List<MovieDTO> movieslist = new ArrayList<>(moviesset.size());
-		for (Movie m : moviesset) {
-			movieslist.add(new MovieDTO(m));
-		}
-		dao.end();
-		return movieslist;
 	}
 	
 	public static void main(String[] args) {
@@ -133,6 +118,38 @@ public class Server extends UnicastRemoteObject implements IServer {
 		} catch (Exception e) {
 			System.err.println("Hello exception: " + e.getMessage());
 			e.printStackTrace();
+		}
+	}
+
+	@Override
+	public List<SessionDTO> getSessionsForDay(int year, int month, int day) throws RemoteException {
+		dao.begin();
+		List<Session> sessions = dao.getSessions(year, month, day);
+		List<SessionDTO> sessionsDTO = new ArrayList<>(sessions.size());
+		
+		for (Session s : sessions) {
+			sessionsDTO.add(new SessionDTO(s));
+		}
+		dao.end();
+		return sessionsDTO;
+	}
+
+	@Override
+	public boolean buyTickets(UserDTO user, SessionDTO session, int amount) throws RemoteException {
+		dao.begin();
+		User u = dao.getObjectById(User.class, user.getUserID());
+		Session s = dao.getObjectById(Session.class, session.id);
+		if (u == null || s == null || amount < 1) {
+			dao.end();
+			return false;
+		}
+		else {
+			for (int i = 0; i < amount; i++) {
+				Ticket ticket = new Ticket(s, u);
+				u.getPurchases().add(ticket);
+			}
+			dao.end();
+			return false;
 		}
 	}
 }

@@ -7,23 +7,23 @@ import java.io.Serializable;
 public class UserDTO implements Serializable {
 
     private static final long serialVersionUID = 1L;
-    private String userID;
+    private long userID;
     private String name;
 
-    public UserDTO(String userID, String name, boolean isGuest) {
+    public UserDTO(long userID, String name, boolean isGuest) {
         this.userID = userID;
         this.name = name;
     }
     public UserDTO(User user){
-        this.userID = String.valueOf(user.getId());
+        this.userID = user.getId();
         this.name = user.getName();
     }
 
-    public String getUserID() {
+    public long getUserID() {
         return userID;
     }
 
-    public void setUserID(String userID) {
+    public void setUserID(long userID) {
         this.userID = userID;
     }
 
@@ -39,7 +39,7 @@ public class UserDTO implements Serializable {
     public boolean equals(Object o) {
         if(o instanceof UserDTO) {
             UserDTO object = (UserDTO) o;
-            return object.getUserID().equals(userID);
+            return object.getUserID() == userID;
         }
         return false;
     }
