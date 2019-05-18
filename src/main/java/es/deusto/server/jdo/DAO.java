@@ -122,13 +122,13 @@ public class DAO {
 	}
 
 	
-	// Client methods
+	// User methods
 	/**
 	 * 
-	 * @param c Client to register
+	 * @param c User to register
 	 * @return <b>true</b> if sucess <b>false</b> if fail (user already exists)
 	 */
-	public boolean registerClient(Client c) {
+	public boolean registerClient(User c) {
 		try {
 			storeObject(c);
 			return true;
@@ -144,21 +144,21 @@ public class DAO {
 	 * @return The client corresponding to the given credentials, or <b>null</b> 
 	 * if no user exists with those parameters.
 	 */
-	public Client getClient(String email, String password) {
-		Query<Client> q = pm.newQuery(Client.class);
+	public User getClient(String email, String password) {
+		Query<User> q = pm.newQuery(User.class);
 		q.setFilter("email == em");
 		q.setFilter("password == pw");
 		q.declareParameters("java.lang.String em, java.lang.String pw");
-		Client c = q.setParameters(email, password).executeUnique();
+		User c = q.setParameters(email, password).executeUnique();
 		return c;
 	}
 	
 	public void deleteClient(String email, String password) {
-		Client c = getClient(email, password);
+		User c = getClient(email, password);
 		deleteClient(c);
 	}
 	
-	public void deleteClient(Client c) {
+	public void deleteClient(User c) {
 		if(c.getPurchases() != null) {
 			for (Ticket ticket : c.getPurchases()) {
 				pm.deletePersistent(ticket);

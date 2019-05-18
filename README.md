@@ -14,5 +14,5 @@ To start the registry
 Launch server:
 `mvn exec:java -Pserver`
 
-Launch client:
+Launch user:
 `mvn exec:java -Pclient`
