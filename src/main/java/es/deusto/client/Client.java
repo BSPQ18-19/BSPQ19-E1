@@ -1,6 +1,8 @@
 package es.deusto.client;
 
 
+import es.deusto.client.gui.EditProfile;
+import es.deusto.client.gui.HomePage;
 import es.deusto.client.gui.Login;
 import es.deusto.client.gui.Register;
 import es.deusto.client.remote.RMIServiceLocator;
@@ -110,7 +112,7 @@ public class Client {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 450, 300);
+		frame.setBounds(100, 100, 900, 600);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.add(new Login(this));
 	}
@@ -119,6 +121,20 @@ public class Client {
 		frame.getContentPane().removeAll();
 		frame.getContentPane().add(new Register(this));
 		frame.setTitle("Register");
+		SwingUtilities.updateComponentTreeUI(frame);
+	}
+	
+	public void switchToHomePage() {
+		frame.getContentPane().removeAll();
+		frame.getContentPane().add(new HomePage(this));
+		frame.setTitle("Home Page");
+		SwingUtilities.updateComponentTreeUI(frame);
+	}
+	
+	public void switchToEditProfile() {
+		frame.getContentPane().removeAll();
+		frame.getContentPane().add(new EditProfile(this));
+		frame.setTitle("Edit Profile");
 		SwingUtilities.updateComponentTreeUI(frame);
 	}
 	

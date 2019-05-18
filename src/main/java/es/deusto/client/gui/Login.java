@@ -60,7 +60,7 @@ public class Login extends JPanel {
 					UserDTO user = ClientController.getController().logIn(textField.getText(), new String(passwordField.getPassword()));
 					if(user != null) {
 						
-						client.switchToRegister();
+						client.switchToHomePage();
 					} else {
 						client.incorrectLoginAlert();
 					}
