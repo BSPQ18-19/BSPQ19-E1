@@ -1,0 +1,10 @@
+digraph "es.deusto.client.Client.switchToRegister"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node34 [label="es.deusto.client.Client.switch\lToRegister",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node34 -> Node35 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node35 [label="es.deusto.client.gui.Login.\lLogin",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classes_1_1deusto_1_1client_1_1gui_1_1_login.html#af565f7accded6e1e3d09b03d6baeaeb4",tooltip=" "];
+}

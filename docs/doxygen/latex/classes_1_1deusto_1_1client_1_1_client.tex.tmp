@@ -1,0 +1,164 @@
+\hypertarget{classes_1_1deusto_1_1client_1_1_client}{}\section{es.\+deusto.\+client.\+Client Class Reference}
+\label{classes_1_1deusto_1_1client_1_1_client}\index{es.deusto.client.Client@{es.deusto.client.Client}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classes_1_1deusto_1_1client_1_1_client_aaed61e092ef0cfa2b78065df6e6b0f55}{access\+R\+M\+I\+Server}} (String IP, String port, String name)  throws Remote\+Exception, Not\+Bound\+Exception, Malformed\+U\+R\+L\+Exception 
+\item 
+void \mbox{\hyperlink{classes_1_1deusto_1_1client_1_1_client_ab3ebcc9daf4719fe0c9354a49d5957e4}{add\+Movie}} (String title, String director, List$<$ String $>$ actor\+Cast)  throws Remote\+Exception 
+\item 
+\mbox{\hyperlink{classes_1_1deusto_1_1client_1_1_client_a71c03e318a72447da873297f3364f67f}{Client}} ()
+\item 
+void \mbox{\hyperlink{classes_1_1deusto_1_1client_1_1_client_a8b292db7d6ec16eaa53b224bb7a33ab4}{switch\+To\+Register}} ()
+\item 
+void \mbox{\hyperlink{classes_1_1deusto_1_1client_1_1_client_aff17deef622ce410b473d4dadad36343}{switch\+To\+Home\+Page}} ()
+\item 
+void \mbox{\hyperlink{classes_1_1deusto_1_1client_1_1_client_afefdad03c88bee0a0427af249604cf19}{switch\+To\+Edit\+Profile}} ()
+\item 
+void \mbox{\hyperlink{classes_1_1deusto_1_1client_1_1_client_a66fff847d9f168900f6992fd4eff5e3d}{switch\+To\+Login}} ()
+\item 
+void \mbox{\hyperlink{classes_1_1deusto_1_1client_1_1_client_a7cf818fce703324d74c896d9e4149dbe}{switch\+To\+Movie\+Search}} ()
+\item 
+void \mbox{\hyperlink{classes_1_1deusto_1_1client_1_1_client_a8bbc4a71a4aaff50bfe419a724898790}{incorrect\+Login\+Alert}} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classes_1_1deusto_1_1client_1_1_client_a69a7526d0af9cb2341f4bf341b501152}{main}} (String\mbox{[}$\,$\mbox{]} args)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 21 of file Client.\+java.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classes_1_1deusto_1_1client_1_1_client_a71c03e318a72447da873297f3364f67f}\label{classes_1_1deusto_1_1client_1_1_client_a71c03e318a72447da873297f3364f67f}} 
+\index{es.deusto.client.Client@{es.deusto.client.Client}!Client@{Client}}
+\index{Client@{Client}!es.deusto.client.Client@{es.deusto.client.Client}}
+\subsubsection{\texorpdfstring{Client()}{Client()}}
+{\footnotesize\ttfamily es.\+deusto.\+client.\+Client.\+Client (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Create the application. 
+
+Definition at line 107 of file Client.\+java.
+
+Here is the caller graph for this function\+:
+% FIG 0
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classes_1_1deusto_1_1client_1_1_client_aaed61e092ef0cfa2b78065df6e6b0f55}\label{classes_1_1deusto_1_1client_1_1_client_aaed61e092ef0cfa2b78065df6e6b0f55}} 
+\index{es.deusto.client.Client@{es.deusto.client.Client}!accessRMIServer@{accessRMIServer}}
+\index{accessRMIServer@{accessRMIServer}!es.deusto.client.Client@{es.deusto.client.Client}}
+\subsubsection{\texorpdfstring{accessRMIServer()}{accessRMIServer()}}
+{\footnotesize\ttfamily void es.\+deusto.\+client.\+Client.\+access\+R\+M\+I\+Server (\begin{DoxyParamCaption}\item[{String}]{IP,  }\item[{String}]{port,  }\item[{String}]{name }\end{DoxyParamCaption}) throws Remote\+Exception, Not\+Bound\+Exception, Malformed\+U\+R\+L\+Exception}
+
+
+
+Definition at line 95 of file Client.\+java.
+
+\mbox{\Hypertarget{classes_1_1deusto_1_1client_1_1_client_ab3ebcc9daf4719fe0c9354a49d5957e4}\label{classes_1_1deusto_1_1client_1_1_client_ab3ebcc9daf4719fe0c9354a49d5957e4}} 
+\index{es.deusto.client.Client@{es.deusto.client.Client}!addMovie@{addMovie}}
+\index{addMovie@{addMovie}!es.deusto.client.Client@{es.deusto.client.Client}}
+\subsubsection{\texorpdfstring{addMovie()}{addMovie()}}
+{\footnotesize\ttfamily void es.\+deusto.\+client.\+Client.\+add\+Movie (\begin{DoxyParamCaption}\item[{String}]{title,  }\item[{String}]{director,  }\item[{List$<$ String $>$}]{actor\+Cast }\end{DoxyParamCaption}) throws Remote\+Exception}
+
+
+
+Definition at line 100 of file Client.\+java.
+
+Here is the call graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{classes_1_1deusto_1_1client_1_1_client_a8bbc4a71a4aaff50bfe419a724898790}\label{classes_1_1deusto_1_1client_1_1_client_a8bbc4a71a4aaff50bfe419a724898790}} 
+\index{es.deusto.client.Client@{es.deusto.client.Client}!incorrectLoginAlert@{incorrectLoginAlert}}
+\index{incorrectLoginAlert@{incorrectLoginAlert}!es.deusto.client.Client@{es.deusto.client.Client}}
+\subsubsection{\texorpdfstring{incorrectLoginAlert()}{incorrectLoginAlert()}}
+{\footnotesize\ttfamily void es.\+deusto.\+client.\+Client.\+incorrect\+Login\+Alert (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 158 of file Client.\+java.
+
+Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{classes_1_1deusto_1_1client_1_1_client_a69a7526d0af9cb2341f4bf341b501152}\label{classes_1_1deusto_1_1client_1_1_client_a69a7526d0af9cb2341f4bf341b501152}} 
+\index{es.deusto.client.Client@{es.deusto.client.Client}!main@{main}}
+\index{main@{main}!es.deusto.client.Client@{es.deusto.client.Client}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily static void es.\+deusto.\+client.\+Client.\+main (\begin{DoxyParamCaption}\item[{String \mbox{[}$\,$\mbox{]}}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 26 of file Client.\+java.
+
+Here is the call graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{classes_1_1deusto_1_1client_1_1_client_afefdad03c88bee0a0427af249604cf19}\label{classes_1_1deusto_1_1client_1_1_client_afefdad03c88bee0a0427af249604cf19}} 
+\index{es.deusto.client.Client@{es.deusto.client.Client}!switchToEditProfile@{switchToEditProfile}}
+\index{switchToEditProfile@{switchToEditProfile}!es.deusto.client.Client@{es.deusto.client.Client}}
+\subsubsection{\texorpdfstring{switchToEditProfile()}{switchToEditProfile()}}
+{\footnotesize\ttfamily void es.\+deusto.\+client.\+Client.\+switch\+To\+Edit\+Profile (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 135 of file Client.\+java.
+
+Here is the caller graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{classes_1_1deusto_1_1client_1_1_client_aff17deef622ce410b473d4dadad36343}\label{classes_1_1deusto_1_1client_1_1_client_aff17deef622ce410b473d4dadad36343}} 
+\index{es.deusto.client.Client@{es.deusto.client.Client}!switchToHomePage@{switchToHomePage}}
+\index{switchToHomePage@{switchToHomePage}!es.deusto.client.Client@{es.deusto.client.Client}}
+\subsubsection{\texorpdfstring{switchToHomePage()}{switchToHomePage()}}
+{\footnotesize\ttfamily void es.\+deusto.\+client.\+Client.\+switch\+To\+Home\+Page (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 128 of file Client.\+java.
+
+Here is the caller graph for this function\+:
+% FIG 5
+\mbox{\Hypertarget{classes_1_1deusto_1_1client_1_1_client_a66fff847d9f168900f6992fd4eff5e3d}\label{classes_1_1deusto_1_1client_1_1_client_a66fff847d9f168900f6992fd4eff5e3d}} 
+\index{es.deusto.client.Client@{es.deusto.client.Client}!switchToLogin@{switchToLogin}}
+\index{switchToLogin@{switchToLogin}!es.deusto.client.Client@{es.deusto.client.Client}}
+\subsubsection{\texorpdfstring{switchToLogin()}{switchToLogin()}}
+{\footnotesize\ttfamily void es.\+deusto.\+client.\+Client.\+switch\+To\+Login (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 143 of file Client.\+java.
+
+Here is the caller graph for this function\+:
+% FIG 6
+\mbox{\Hypertarget{classes_1_1deusto_1_1client_1_1_client_a7cf818fce703324d74c896d9e4149dbe}\label{classes_1_1deusto_1_1client_1_1_client_a7cf818fce703324d74c896d9e4149dbe}} 
+\index{es.deusto.client.Client@{es.deusto.client.Client}!switchToMovieSearch@{switchToMovieSearch}}
+\index{switchToMovieSearch@{switchToMovieSearch}!es.deusto.client.Client@{es.deusto.client.Client}}
+\subsubsection{\texorpdfstring{switchToMovieSearch()}{switchToMovieSearch()}}
+{\footnotesize\ttfamily void es.\+deusto.\+client.\+Client.\+switch\+To\+Movie\+Search (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 150 of file Client.\+java.
+
+Here is the caller graph for this function\+:
+% FIG 7
+\mbox{\Hypertarget{classes_1_1deusto_1_1client_1_1_client_a8b292db7d6ec16eaa53b224bb7a33ab4}\label{classes_1_1deusto_1_1client_1_1_client_a8b292db7d6ec16eaa53b224bb7a33ab4}} 
+\index{es.deusto.client.Client@{es.deusto.client.Client}!switchToRegister@{switchToRegister}}
+\index{switchToRegister@{switchToRegister}!es.deusto.client.Client@{es.deusto.client.Client}}
+\subsubsection{\texorpdfstring{switchToRegister()}{switchToRegister()}}
+{\footnotesize\ttfamily void es.\+deusto.\+client.\+Client.\+switch\+To\+Register (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 121 of file Client.\+java.
+
+Here is the caller graph for this function\+:
+% FIG 8
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/es/deusto/client/\mbox{\hyperlink{_client_8java}{Client.\+java}}\end{DoxyCompactItemize}

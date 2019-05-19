@@ -1,0 +1,30 @@
+digraph "es.deusto.server.jdo.DAO.end"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node33 [label="es.deusto.server.jdo.DAO.end",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node33 -> Node34 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node34 [label="es.deusto.server.Server.add\lMovie",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classes_1_1deusto_1_1server_1_1_server.html#a150317903dc393d29f39db81e79131e0",tooltip=" "];
+  Node33 -> Node35 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node35 [label="es.deusto.server.Server.get\lMovie",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classes_1_1deusto_1_1server_1_1_server.html#a7e4544c63bcf2b2d3abce0d2ff1567ac",tooltip=" "];
+  Node33 -> Node36 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node36 [label="es.deusto.server.Server.delete\lMovie",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classes_1_1deusto_1_1server_1_1_server.html#a6501e4103fcc2ef691c15e4e02f7136c",tooltip=" "];
+  Node33 -> Node37 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node37 [label="es.deusto.server.Server.logIn",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classes_1_1deusto_1_1server_1_1_server.html#ab93f5cc9b5825192c31cd2088014378d",tooltip=" "];
+  Node33 -> Node38 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node38 [label="es.deusto.server.Server.search\lMovies",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classes_1_1deusto_1_1server_1_1_server.html#a16789cc76edd46978ffbb58581caf5db",tooltip=" "];
+  Node33 -> Node39 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node39 [label="es.deusto.server.Server.get\lSessionsForMovie",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classes_1_1deusto_1_1server_1_1_server.html#a33a6671bb4dc4bd9e23df10e53e5632d",tooltip=" "];
+  Node33 -> Node40 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node40 [label="es.deusto.server.Server.get\lSessionsForDay",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classes_1_1deusto_1_1server_1_1_server.html#a688ca336b3cbdb5c04ecdc4f23ff65d1",tooltip=" "];
+  Node33 -> Node41 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node41 [label="es.deusto.server.Server.buy\lTickets",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classes_1_1deusto_1_1server_1_1_server.html#a3bbf9f19774d2fae5c831cfac1f2306c",tooltip=" "];
+  Node33 -> Node42 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node42 [label="es.deusto.server.Server.get\lUserDetails",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classes_1_1deusto_1_1server_1_1_server.html#ad742fe9a45edccd8b2309be98a74baae",tooltip=" "];
+  Node33 -> Node43 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node43 [label="es.deusto.server.Server.updateUser",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classes_1_1deusto_1_1server_1_1_server.html#a74082f91af2065cd600c147296090921",tooltip=" "];
+  Node33 -> Node44 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node44 [label="es.deusto.server.Server.registerUser",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classes_1_1deusto_1_1server_1_1_server.html#a6a419bd82bce60f072b4c7f5a527abdc",tooltip=" "];
+}

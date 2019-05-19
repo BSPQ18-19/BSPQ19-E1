@@ -1,0 +1,12 @@
+digraph "es.deusto.server.data.UserDTO.equals"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node7 [label="es.deusto.server.data.User\lDTO.equals",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="es.deusto.server.data.User\lDTO.UserDTO",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classes_1_1deusto_1_1server_1_1data_1_1_user_d_t_o.html#a00e605694b6157bcf7a1acc5e2adc735",tooltip=" "];
+  Node7 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="es.deusto.server.data.User\lDTO.getUserID",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classes_1_1deusto_1_1server_1_1data_1_1_user_d_t_o.html#ae04b78d874974f7f3307b68fa2a15210",tooltip=" "];
+}

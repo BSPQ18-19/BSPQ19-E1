@@ -1,0 +1,20 @@
+digraph "es.deusto.server.data.UserDetailsDTO.UserDetailsDTO"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node2 [label="es.deusto.server.data.User\lDetailsDTO.UserDetailsDTO",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="es.deusto.server.jdo.User.getId",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classes_1_1deusto_1_1server_1_1jdo_1_1_user.html#ac116b1ec523da06c6776eaa76c910125",tooltip=" "];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="es.deusto.server.jdo.User.getName",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classes_1_1deusto_1_1server_1_1jdo_1_1_user.html#ae241c2d5fbef940165041c82dc00edad",tooltip=" "];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="es.deusto.server.jdo.User.get\lSurname",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classes_1_1deusto_1_1server_1_1jdo_1_1_user.html#adc7114247c7881e3f9e0fd14b7905f9a",tooltip=" "];
+  Node2 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="es.deusto.server.jdo.User.get\lPhone",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classes_1_1deusto_1_1server_1_1jdo_1_1_user.html#a9ad4609fbf59521908115b9c49d903f4",tooltip=" "];
+  Node2 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="es.deusto.server.jdo.User.get\lEmail",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classes_1_1deusto_1_1server_1_1jdo_1_1_user.html#aa1ba6d9e3d0572b90dac6ff627ee3f95",tooltip=" "];
+  Node2 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="es.deusto.server.jdo.User.get\lPassword",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classes_1_1deusto_1_1server_1_1jdo_1_1_user.html#a1900ee126da22ed0f043e0077e8be049",tooltip=" "];
+}
