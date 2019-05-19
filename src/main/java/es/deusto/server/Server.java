@@ -11,6 +11,7 @@ import java.util.Set;
 import es.deusto.server.data.MovieDTO;
 import es.deusto.server.data.SessionDTO;
 import es.deusto.server.data.UserDTO;
+import es.deusto.server.data.UserDetailsDTO;
 import es.deusto.server.jdo.DAO;
 import es.deusto.server.jdo.Movie;
 import es.deusto.server.jdo.Session;
@@ -154,5 +155,27 @@ public class Server extends UnicastRemoteObject implements IServer {
 			dao.end();
 			return false;
 		}
+	}
+
+	@Override
+	public UserDetailsDTO getUserDetails(UserDTO user) throws RemoteException {
+		dao.begin();
+		User u = dao.getObjectById(User.class, user.getUserID());
+		if (u == null) 
+			return null;
+		
+		UserDetailsDTO details = new UserDetailsDTO(u);
+		dao.end();
+		return details;
+	}
+
+	@Override
+	public UserDTO updateUser(UserDetailsDTO details) {
+		dao.begin();
+		User u = dao.getObjectById(User.class, details.id);
+		u.updateDetails(details);
+		UserDTO udto = new UserDTO(u);
+		dao.end();
+		return udto;
 	}
 }

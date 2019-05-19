@@ -17,4 +17,6 @@ public interface IServer extends Remote {
 	boolean buyTickets(UserDTO user, SessionDTO session, int amount) throws RemoteException;
 	UserDTO logIn(String email, String password) throws RemoteException;
 	boolean logOut(UserDTO user) throws RemoteException;
+	UserDetailsDTO getUserDetails(UserDTO user) throws RemoteException;
+	UserDTO updateUser(UserDetailsDTO details);
 }

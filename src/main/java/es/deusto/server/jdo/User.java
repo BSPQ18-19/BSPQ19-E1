@@ -5,6 +5,8 @@ import java.util.List;
 
 import javax.jdo.annotations.*;
 
+import es.deusto.server.data.UserDetailsDTO;
+
 @PersistenceCapable
 public class User {
 	@PrimaryKey
@@ -32,6 +34,27 @@ public class User {
 		purchases = new ArrayList<Ticket>();
 	}
 	
+	public void updateDetails(UserDetailsDTO details) {
+		if(!name.equals(details.name)){
+			name = new String(details.name);
+		}
+		
+		if(!surname.equals(details.surname)){
+			surname = new String(details.surname);
+		}
+		
+		if(!phone.equals(details.phone)){
+			phone = new String(details.phone);
+		}
+		
+		if(!email.equals(details.email)){
+			email = new String(details.email);
+		}
+		
+		if(!password.equals(details.password)){
+			password = new String(details.password);
+		}
+	}
 	
 	public String getName() {
 		return name;
