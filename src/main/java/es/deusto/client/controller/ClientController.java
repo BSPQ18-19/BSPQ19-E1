@@ -1,10 +1,14 @@
 package es.deusto.client.controller;
 
 import java.rmi.RemoteException;
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.List;
+
 import org.apache.log4j.Logger;
 import es.deusto.client.logger.ClientLogger;
 import es.deusto.client.remote.RMIServiceLocator;
+import es.deusto.server.data.SessionDTO;
 import es.deusto.server.data.UserDTO;
 import es.deusto.server.data.UserDetailsDTO;
 
@@ -72,6 +76,23 @@ public class ClientController {
 		} catch (RemoteException e) {
 			e.printStackTrace();
 			return false;
+		}
+	}
+	
+	public List<SessionDTO> getSessions(LocalDate date){
+		int year = date.getYear();
+		int month = date.getMonthValue();
+		int day = date.getDayOfMonth();
+		
+		List<SessionDTO> sessions;
+		
+		try {
+			sessions = rsl.getClientManager().getSessionsForDay(year, month, day);
+			return sessions;
+		} catch (RemoteException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return null;
 		}
 	}
 }

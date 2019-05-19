@@ -4,6 +4,7 @@ package es.deusto.client;
 import es.deusto.client.gui.EditProfile;
 import es.deusto.client.gui.HomePage;
 import es.deusto.client.gui.Login;
+import es.deusto.client.gui.MovieSearch;
 import es.deusto.client.gui.Register;
 import es.deusto.client.remote.RMIServiceLocator;
 import es.deusto.server.IServer;
@@ -136,6 +137,14 @@ public class Client {
 		
 		frame.getContentPane().add(new EditProfile(this));
 		frame.setTitle("Edit Profile");
+		SwingUtilities.updateComponentTreeUI(frame);
+	}
+	
+	public void switchToMovieSearch() {
+		frame.getContentPane().removeAll();
+		
+		frame.getContentPane().add(new MovieSearch(this));
+		frame.setTitle("Movie Search");
 		SwingUtilities.updateComponentTreeUI(frame);
 	}
 	
