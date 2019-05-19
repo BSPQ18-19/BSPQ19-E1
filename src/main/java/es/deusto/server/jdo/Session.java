@@ -18,12 +18,17 @@ public class Session {
 	private Date time;
 	
 	public Session(int year, int month, int day, int hour, int minute) {
+		
 		Calendar calendar = new GregorianCalendar();
 		calendar.clear();
 		calendar.set(year, month, day, hour, minute);
 		time = calendar.getTime();
 	}
 	
+	public Session() {
+		
+	}
+
 	public Movie getMovie() {
 		return movie;
 	}

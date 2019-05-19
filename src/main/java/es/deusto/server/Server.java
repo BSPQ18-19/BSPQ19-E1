@@ -4,6 +4,7 @@ import java.rmi.Naming;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -41,7 +42,14 @@ public class Server extends UnicastRemoteObject implements IServer {
 		dao.storeObject(movie);
 		dao.end();
 	}
-
+	public void addSession(Movie movie, Date time) {
+		dao.begin();
+		Session session = new Session();
+		session.setMovie(movie);
+		session.setTime(time);
+		dao.storeObject(session);
+		dao.end();
+	}
 	public MovieDTO getMovie(String title) {
 		dao.begin();
 		Movie movie = dao.getMovie(title);
@@ -54,6 +62,12 @@ public class Server extends UnicastRemoteObject implements IServer {
 		dao.begin();
 		dao.deleteMovie(title);
 		dao.end();
+	}
+	public void deleteSession(Movie movie, Date time) {//
+		dao.begin();
+		dao.deleteSession(movie, time);
+		dao.end();
+		
 	}
 
 	public UserDTO logIn(String email, String password) throws RemoteException {
@@ -187,4 +201,5 @@ public class Server extends UnicastRemoteObject implements IServer {
 		dao.end();
 		return result;
 	}
+
 }
