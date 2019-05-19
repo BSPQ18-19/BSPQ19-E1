@@ -1,0 +1,12 @@
+digraph "es.deusto.server.jdo.User.getPurchases"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node24 [label="es.deusto.server.jdo.User.get\lPurchases",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node24 -> Node25 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node25 [label="es.deusto.server.jdo.DAO.delete\lClient",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o.html#aa914bb9b49e39cfa9a1254ce578aaae1",tooltip=" "];
+  Node24 -> Node26 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node26 [label="es.deusto.server.Server.buy\lTickets",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classes_1_1deusto_1_1server_1_1_server.html#a3bbf9f19774d2fae5c831cfac1f2306c",tooltip=" "];
+}

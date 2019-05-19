@@ -1,0 +1,10 @@
+digraph "es.deusto.server.jdo.Session.getMovie"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node6 [label="es.deusto.server.jdo.Session.get\lMovie",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="es.deusto.server.data.Session\lDTO.SessionDTO",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classes_1_1deusto_1_1server_1_1data_1_1_session_d_t_o.html#a8bdfa9095064ac9b72508b348302c852",tooltip=" "];
+}

@@ -1,0 +1,192 @@
+\hypertarget{interfacees_1_1deusto_1_1server_1_1_i_server}{}\section{es.\+deusto.\+server.\+I\+Server Interface Reference}
+\label{interfacees_1_1deusto_1_1server_1_1_i_server}\index{es.deusto.server.IServer@{es.deusto.server.IServer}}
+
+
+Inheritance diagram for es.\+deusto.\+server.\+I\+Server\+:
+% FIG 0
+
+
+Collaboration diagram for es.\+deusto.\+server.\+I\+Server\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interfacees_1_1deusto_1_1server_1_1_i_server_a393d8689e14b3534dfa425e4c900532e}{add\+Movie}} (String title, String director, List$<$ String $>$ cast)  throws Remote\+Exception
+\item 
+void \mbox{\hyperlink{interfacees_1_1deusto_1_1server_1_1_i_server_a0b3243dc04d49f7659fefec4e4fb43b7}{delete\+Movie}} (String title)  throws Remote\+Exception
+\item 
+\mbox{\hyperlink{classes_1_1deusto_1_1server_1_1data_1_1_movie_d_t_o}{Movie\+D\+TO}} \mbox{\hyperlink{interfacees_1_1deusto_1_1server_1_1_i_server_a2b7883e416d98a7c92de13cbed7af450}{get\+Movie}} (String title)  throws Remote\+Exception
+\item 
+List$<$ \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1data_1_1_movie_d_t_o}{Movie\+D\+TO}} $>$ \mbox{\hyperlink{interfacees_1_1deusto_1_1server_1_1_i_server_a50b7dacdeb04d5f1ee3f3b59989ed117}{search\+Movies}} (String query)  throws Remote\+Exception
+\item 
+List$<$ \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1data_1_1_session_d_t_o}{Session\+D\+TO}} $>$ \mbox{\hyperlink{interfacees_1_1deusto_1_1server_1_1_i_server_a33dc65de2a567be10bf2477ee28765f8}{get\+Sessions\+For\+Movie}} (\mbox{\hyperlink{classes_1_1deusto_1_1server_1_1data_1_1_movie_d_t_o}{Movie\+D\+TO}} mdto)  throws Remote\+Exception
+\item 
+List$<$ \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1data_1_1_session_d_t_o}{Session\+D\+TO}} $>$ \mbox{\hyperlink{interfacees_1_1deusto_1_1server_1_1_i_server_aac50d6a77e30df4d4c15fcaf4ba979f5}{get\+Sessions\+For\+Day}} (int year, int month, int day)  throws Remote\+Exception
+\item 
+boolean \mbox{\hyperlink{interfacees_1_1deusto_1_1server_1_1_i_server_ac3302c01fefc37a32c0bcbf79fcce44b}{buy\+Tickets}} (\mbox{\hyperlink{classes_1_1deusto_1_1server_1_1data_1_1_user_d_t_o}{User\+D\+TO}} user, \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1data_1_1_session_d_t_o}{Session\+D\+TO}} session, int amount)  throws Remote\+Exception
+\item 
+\mbox{\hyperlink{classes_1_1deusto_1_1server_1_1data_1_1_user_d_t_o}{User\+D\+TO}} \mbox{\hyperlink{interfacees_1_1deusto_1_1server_1_1_i_server_a62db155ac744b9712e303ceea76a3560}{log\+In}} (String email, String password)  throws Remote\+Exception
+\item 
+boolean \mbox{\hyperlink{interfacees_1_1deusto_1_1server_1_1_i_server_a479231082cae13f9c651c0ec2cb2cece}{log\+Out}} (\mbox{\hyperlink{classes_1_1deusto_1_1server_1_1data_1_1_user_d_t_o}{User\+D\+TO}} user)  throws Remote\+Exception
+\item 
+\mbox{\hyperlink{classes_1_1deusto_1_1server_1_1data_1_1_user_details_d_t_o}{User\+Details\+D\+TO}} \mbox{\hyperlink{interfacees_1_1deusto_1_1server_1_1_i_server_a2dcd7f0b0e157eb797e20432c0b0e971}{get\+User\+Details}} (\mbox{\hyperlink{classes_1_1deusto_1_1server_1_1data_1_1_user_d_t_o}{User\+D\+TO}} user)  throws Remote\+Exception
+\item 
+\mbox{\hyperlink{classes_1_1deusto_1_1server_1_1data_1_1_user_d_t_o}{User\+D\+TO}} \mbox{\hyperlink{interfacees_1_1deusto_1_1server_1_1_i_server_aff376200af975b145ac85ccfdf48a229}{update\+User}} (\mbox{\hyperlink{classes_1_1deusto_1_1server_1_1data_1_1_user_details_d_t_o}{User\+Details\+D\+TO}} details)  throws Remote\+Exception
+\item 
+boolean \mbox{\hyperlink{interfacees_1_1deusto_1_1server_1_1_i_server_a998e20655e760b135fab601a417aa5ae}{register\+User}} (\mbox{\hyperlink{classes_1_1deusto_1_1server_1_1data_1_1_user_details_d_t_o}{User\+Details\+D\+TO}} user)  throws Remote\+Exception
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 10 of file I\+Server.\+java.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{interfacees_1_1deusto_1_1server_1_1_i_server_a393d8689e14b3534dfa425e4c900532e}\label{interfacees_1_1deusto_1_1server_1_1_i_server_a393d8689e14b3534dfa425e4c900532e}} 
+\index{es.deusto.server.IServer@{es.deusto.server.IServer}!addMovie@{addMovie}}
+\index{addMovie@{addMovie}!es.deusto.server.IServer@{es.deusto.server.IServer}}
+\subsubsection{\texorpdfstring{addMovie()}{addMovie()}}
+{\footnotesize\ttfamily void es.\+deusto.\+server.\+I\+Server.\+add\+Movie (\begin{DoxyParamCaption}\item[{String}]{title,  }\item[{String}]{director,  }\item[{List$<$ String $>$}]{cast }\end{DoxyParamCaption}) throws Remote\+Exception}
+
+
+
+Implemented in \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1_server_a150317903dc393d29f39db81e79131e0}{es.\+deusto.\+server.\+Server}}.
+
+Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{interfacees_1_1deusto_1_1server_1_1_i_server_ac3302c01fefc37a32c0bcbf79fcce44b}\label{interfacees_1_1deusto_1_1server_1_1_i_server_ac3302c01fefc37a32c0bcbf79fcce44b}} 
+\index{es.deusto.server.IServer@{es.deusto.server.IServer}!buyTickets@{buyTickets}}
+\index{buyTickets@{buyTickets}!es.deusto.server.IServer@{es.deusto.server.IServer}}
+\subsubsection{\texorpdfstring{buyTickets()}{buyTickets()}}
+{\footnotesize\ttfamily boolean es.\+deusto.\+server.\+I\+Server.\+buy\+Tickets (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classes_1_1deusto_1_1server_1_1data_1_1_user_d_t_o}{User\+D\+TO}}}]{user,  }\item[{\mbox{\hyperlink{classes_1_1deusto_1_1server_1_1data_1_1_session_d_t_o}{Session\+D\+TO}}}]{session,  }\item[{int}]{amount }\end{DoxyParamCaption}) throws Remote\+Exception}
+
+
+
+Implemented in \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1_server_a3bbf9f19774d2fae5c831cfac1f2306c}{es.\+deusto.\+server.\+Server}}.
+
+Here is the caller graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{interfacees_1_1deusto_1_1server_1_1_i_server_a0b3243dc04d49f7659fefec4e4fb43b7}\label{interfacees_1_1deusto_1_1server_1_1_i_server_a0b3243dc04d49f7659fefec4e4fb43b7}} 
+\index{es.deusto.server.IServer@{es.deusto.server.IServer}!deleteMovie@{deleteMovie}}
+\index{deleteMovie@{deleteMovie}!es.deusto.server.IServer@{es.deusto.server.IServer}}
+\subsubsection{\texorpdfstring{deleteMovie()}{deleteMovie()}}
+{\footnotesize\ttfamily void es.\+deusto.\+server.\+I\+Server.\+delete\+Movie (\begin{DoxyParamCaption}\item[{String}]{title }\end{DoxyParamCaption}) throws Remote\+Exception}
+
+
+
+Implemented in \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1_server_a6501e4103fcc2ef691c15e4e02f7136c}{es.\+deusto.\+server.\+Server}}.
+
+Here is the caller graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{interfacees_1_1deusto_1_1server_1_1_i_server_a2b7883e416d98a7c92de13cbed7af450}\label{interfacees_1_1deusto_1_1server_1_1_i_server_a2b7883e416d98a7c92de13cbed7af450}} 
+\index{es.deusto.server.IServer@{es.deusto.server.IServer}!getMovie@{getMovie}}
+\index{getMovie@{getMovie}!es.deusto.server.IServer@{es.deusto.server.IServer}}
+\subsubsection{\texorpdfstring{getMovie()}{getMovie()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1data_1_1_movie_d_t_o}{Movie\+D\+TO}} es.\+deusto.\+server.\+I\+Server.\+get\+Movie (\begin{DoxyParamCaption}\item[{String}]{title }\end{DoxyParamCaption}) throws Remote\+Exception}
+
+
+
+Implemented in \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1_server_a7e4544c63bcf2b2d3abce0d2ff1567ac}{es.\+deusto.\+server.\+Server}}.
+
+Here is the caller graph for this function\+:
+% FIG 5
+\mbox{\Hypertarget{interfacees_1_1deusto_1_1server_1_1_i_server_aac50d6a77e30df4d4c15fcaf4ba979f5}\label{interfacees_1_1deusto_1_1server_1_1_i_server_aac50d6a77e30df4d4c15fcaf4ba979f5}} 
+\index{es.deusto.server.IServer@{es.deusto.server.IServer}!getSessionsForDay@{getSessionsForDay}}
+\index{getSessionsForDay@{getSessionsForDay}!es.deusto.server.IServer@{es.deusto.server.IServer}}
+\subsubsection{\texorpdfstring{getSessionsForDay()}{getSessionsForDay()}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{classes_1_1deusto_1_1server_1_1data_1_1_session_d_t_o}{Session\+D\+TO}}$>$ es.\+deusto.\+server.\+I\+Server.\+get\+Sessions\+For\+Day (\begin{DoxyParamCaption}\item[{int}]{year,  }\item[{int}]{month,  }\item[{int}]{day }\end{DoxyParamCaption}) throws Remote\+Exception}
+
+
+
+Implemented in \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1_server_a688ca336b3cbdb5c04ecdc4f23ff65d1}{es.\+deusto.\+server.\+Server}}.
+
+Here is the caller graph for this function\+:
+% FIG 6
+\mbox{\Hypertarget{interfacees_1_1deusto_1_1server_1_1_i_server_a33dc65de2a567be10bf2477ee28765f8}\label{interfacees_1_1deusto_1_1server_1_1_i_server_a33dc65de2a567be10bf2477ee28765f8}} 
+\index{es.deusto.server.IServer@{es.deusto.server.IServer}!getSessionsForMovie@{getSessionsForMovie}}
+\index{getSessionsForMovie@{getSessionsForMovie}!es.deusto.server.IServer@{es.deusto.server.IServer}}
+\subsubsection{\texorpdfstring{getSessionsForMovie()}{getSessionsForMovie()}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{classes_1_1deusto_1_1server_1_1data_1_1_session_d_t_o}{Session\+D\+TO}}$>$ es.\+deusto.\+server.\+I\+Server.\+get\+Sessions\+For\+Movie (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classes_1_1deusto_1_1server_1_1data_1_1_movie_d_t_o}{Movie\+D\+TO}}}]{mdto }\end{DoxyParamCaption}) throws Remote\+Exception}
+
+
+
+Implemented in \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1_server_a33a6671bb4dc4bd9e23df10e53e5632d}{es.\+deusto.\+server.\+Server}}.
+
+\mbox{\Hypertarget{interfacees_1_1deusto_1_1server_1_1_i_server_a2dcd7f0b0e157eb797e20432c0b0e971}\label{interfacees_1_1deusto_1_1server_1_1_i_server_a2dcd7f0b0e157eb797e20432c0b0e971}} 
+\index{es.deusto.server.IServer@{es.deusto.server.IServer}!getUserDetails@{getUserDetails}}
+\index{getUserDetails@{getUserDetails}!es.deusto.server.IServer@{es.deusto.server.IServer}}
+\subsubsection{\texorpdfstring{getUserDetails()}{getUserDetails()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1data_1_1_user_details_d_t_o}{User\+Details\+D\+TO}} es.\+deusto.\+server.\+I\+Server.\+get\+User\+Details (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classes_1_1deusto_1_1server_1_1data_1_1_user_d_t_o}{User\+D\+TO}}}]{user }\end{DoxyParamCaption}) throws Remote\+Exception}
+
+
+
+Implemented in \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1_server_ad742fe9a45edccd8b2309be98a74baae}{es.\+deusto.\+server.\+Server}}.
+
+Here is the caller graph for this function\+:
+% FIG 7
+\mbox{\Hypertarget{interfacees_1_1deusto_1_1server_1_1_i_server_a62db155ac744b9712e303ceea76a3560}\label{interfacees_1_1deusto_1_1server_1_1_i_server_a62db155ac744b9712e303ceea76a3560}} 
+\index{es.deusto.server.IServer@{es.deusto.server.IServer}!logIn@{logIn}}
+\index{logIn@{logIn}!es.deusto.server.IServer@{es.deusto.server.IServer}}
+\subsubsection{\texorpdfstring{logIn()}{logIn()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1data_1_1_user_d_t_o}{User\+D\+TO}} es.\+deusto.\+server.\+I\+Server.\+log\+In (\begin{DoxyParamCaption}\item[{String}]{email,  }\item[{String}]{password }\end{DoxyParamCaption}) throws Remote\+Exception}
+
+
+
+Implemented in \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1_server_ab93f5cc9b5825192c31cd2088014378d}{es.\+deusto.\+server.\+Server}}.
+
+Here is the caller graph for this function\+:
+% FIG 8
+\mbox{\Hypertarget{interfacees_1_1deusto_1_1server_1_1_i_server_a479231082cae13f9c651c0ec2cb2cece}\label{interfacees_1_1deusto_1_1server_1_1_i_server_a479231082cae13f9c651c0ec2cb2cece}} 
+\index{es.deusto.server.IServer@{es.deusto.server.IServer}!logOut@{logOut}}
+\index{logOut@{logOut}!es.deusto.server.IServer@{es.deusto.server.IServer}}
+\subsubsection{\texorpdfstring{logOut()}{logOut()}}
+{\footnotesize\ttfamily boolean es.\+deusto.\+server.\+I\+Server.\+log\+Out (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classes_1_1deusto_1_1server_1_1data_1_1_user_d_t_o}{User\+D\+TO}}}]{user }\end{DoxyParamCaption}) throws Remote\+Exception}
+
+
+
+Implemented in \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1_server_a92cf8a599adfa6a34f7cfe788119cf0a}{es.\+deusto.\+server.\+Server}}.
+
+Here is the caller graph for this function\+:
+% FIG 9
+\mbox{\Hypertarget{interfacees_1_1deusto_1_1server_1_1_i_server_a998e20655e760b135fab601a417aa5ae}\label{interfacees_1_1deusto_1_1server_1_1_i_server_a998e20655e760b135fab601a417aa5ae}} 
+\index{es.deusto.server.IServer@{es.deusto.server.IServer}!registerUser@{registerUser}}
+\index{registerUser@{registerUser}!es.deusto.server.IServer@{es.deusto.server.IServer}}
+\subsubsection{\texorpdfstring{registerUser()}{registerUser()}}
+{\footnotesize\ttfamily boolean es.\+deusto.\+server.\+I\+Server.\+register\+User (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classes_1_1deusto_1_1server_1_1data_1_1_user_details_d_t_o}{User\+Details\+D\+TO}}}]{user }\end{DoxyParamCaption}) throws Remote\+Exception}
+
+
+
+Implemented in \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1_server_a6a419bd82bce60f072b4c7f5a527abdc}{es.\+deusto.\+server.\+Server}}.
+
+Here is the caller graph for this function\+:
+% FIG 10
+\mbox{\Hypertarget{interfacees_1_1deusto_1_1server_1_1_i_server_a50b7dacdeb04d5f1ee3f3b59989ed117}\label{interfacees_1_1deusto_1_1server_1_1_i_server_a50b7dacdeb04d5f1ee3f3b59989ed117}} 
+\index{es.deusto.server.IServer@{es.deusto.server.IServer}!searchMovies@{searchMovies}}
+\index{searchMovies@{searchMovies}!es.deusto.server.IServer@{es.deusto.server.IServer}}
+\subsubsection{\texorpdfstring{searchMovies()}{searchMovies()}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{classes_1_1deusto_1_1server_1_1data_1_1_movie_d_t_o}{Movie\+D\+TO}}$>$ es.\+deusto.\+server.\+I\+Server.\+search\+Movies (\begin{DoxyParamCaption}\item[{String}]{query }\end{DoxyParamCaption}) throws Remote\+Exception}
+
+
+
+Implemented in \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1_server_a16789cc76edd46978ffbb58581caf5db}{es.\+deusto.\+server.\+Server}}.
+
+\mbox{\Hypertarget{interfacees_1_1deusto_1_1server_1_1_i_server_aff376200af975b145ac85ccfdf48a229}\label{interfacees_1_1deusto_1_1server_1_1_i_server_aff376200af975b145ac85ccfdf48a229}} 
+\index{es.deusto.server.IServer@{es.deusto.server.IServer}!updateUser@{updateUser}}
+\index{updateUser@{updateUser}!es.deusto.server.IServer@{es.deusto.server.IServer}}
+\subsubsection{\texorpdfstring{updateUser()}{updateUser()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1data_1_1_user_d_t_o}{User\+D\+TO}} es.\+deusto.\+server.\+I\+Server.\+update\+User (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classes_1_1deusto_1_1server_1_1data_1_1_user_details_d_t_o}{User\+Details\+D\+TO}}}]{details }\end{DoxyParamCaption}) throws Remote\+Exception}
+
+
+
+Implemented in \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1_server_a74082f91af2065cd600c147296090921}{es.\+deusto.\+server.\+Server}}.
+
+Here is the caller graph for this function\+:
+% FIG 11
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/es/deusto/server/\mbox{\hyperlink{_i_server_8java}{I\+Server.\+java}}\end{DoxyCompactItemize}

@@ -1,0 +1,12 @@
+digraph "es.deusto.server.IServer.buyTickets"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node5 [label="es.deusto.server.IServer.buy\lTickets",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="es.deusto.client.controller.\lClientController.buyMovie",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classes_1_1deusto_1_1client_1_1controller_1_1_client_controller.html#a92f0a66750a4f02c11de68814bc0d96f",tooltip=" "];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="es.deusto.client.gui.Buy\lTickets.BuyTickets",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classes_1_1deusto_1_1client_1_1gui_1_1_buy_tickets.html#a550c5b4787c8ffd333049cf8d6c32e48",tooltip=" "];
+}
