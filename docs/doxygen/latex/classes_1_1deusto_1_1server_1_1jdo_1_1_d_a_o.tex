@@ -27,6 +27,12 @@ void \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o_a479ca9a8597a
 \item 
 List$<$ \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1jdo_1_1_session}{Session}} $>$ \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o_a2f9f9eb5adc37f559d7fefe2da6544f1}{get\+Sessions}} (int year, int month, int day)
 \item 
+\mbox{\hyperlink{classes_1_1deusto_1_1server_1_1jdo_1_1_session}{Session}} \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o_a34f9e5400280bbc1a9fce9143696470e}{get\+Session}} (\mbox{\hyperlink{classes_1_1deusto_1_1server_1_1jdo_1_1_movie}{Movie}} movie, Date time)
+\item 
+void \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o_a399605bc2a2fd86679ddf7793b71de12}{delete\+Session}} (\mbox{\hyperlink{classes_1_1deusto_1_1server_1_1jdo_1_1_movie}{Movie}} movie, Date time)
+\item 
+void \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o_aa4010f98d33fbdb583bb361ab576ff2d}{delete\+Session}} (\mbox{\hyperlink{classes_1_1deusto_1_1server_1_1jdo_1_1_session}{Session}} session)
+\item 
 boolean \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o_a783758c37658336ee1e4e995a672a0ce}{register\+Client}} (\mbox{\hyperlink{classes_1_1deusto_1_1server_1_1jdo_1_1_user}{User}} c)
 \item 
 \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1jdo_1_1_user}{User}} \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o_a340f51843de8957e9ef8b0c95081512a}{get\+Client}} (String email, String password)
@@ -71,7 +77,13 @@ Definition at line 19 of file D\+A\+O.\+java.
 Definition at line 23 of file D\+A\+O.\+java.
 
 Here is the caller graph for this function\+:
-% FIG 0
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o_ad923bb21c8273dabc601b85713703c89_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o_a9664ce68819a53c7b27add7f305a52b0}\label{classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o_a9664ce68819a53c7b27add7f305a52b0}} 
 \index{es.deusto.server.jdo.DAO@{es.deusto.server.jdo.DAO}!deleteClient@{deleteClient}}
 \index{deleteClient@{deleteClient}!es.deusto.server.jdo.DAO@{es.deusto.server.jdo.DAO}}
@@ -80,10 +92,16 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line 151 of file D\+A\+O.\+java.
+Definition at line 168 of file D\+A\+O.\+java.
 
 Here is the call graph for this function\+:
-% FIG 1
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o_a9664ce68819a53c7b27add7f305a52b0_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o_aa914bb9b49e39cfa9a1254ce578aaae1}\label{classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o_aa914bb9b49e39cfa9a1254ce578aaae1}} 
 \index{es.deusto.server.jdo.DAO@{es.deusto.server.jdo.DAO}!deleteClient@{deleteClient}}
 \index{deleteClient@{deleteClient}!es.deusto.server.jdo.DAO@{es.deusto.server.jdo.DAO}}
@@ -92,10 +110,16 @@ Here is the call graph for this function\+:
 
 
 
-Definition at line 156 of file D\+A\+O.\+java.
+Definition at line 173 of file D\+A\+O.\+java.
 
 Here is the call graph for this function\+:
-% FIG 2
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o_aa914bb9b49e39cfa9a1254ce578aaae1_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o_a9bcf552682ef562673a7c725d003debf}\label{classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o_a9bcf552682ef562673a7c725d003debf}} 
 \index{es.deusto.server.jdo.DAO@{es.deusto.server.jdo.DAO}!deleteMovie@{deleteMovie}}
 \index{deleteMovie@{deleteMovie}!es.deusto.server.jdo.DAO@{es.deusto.server.jdo.DAO}}
@@ -104,12 +128,24 @@ Here is the call graph for this function\+:
 
 
 
-Definition at line 87 of file D\+A\+O.\+java.
+Definition at line 86 of file D\+A\+O.\+java.
 
 Here is the call graph for this function\+:
-% FIG 3
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o_a9bcf552682ef562673a7c725d003debf_cgraph}
+\end{center}
+\end{figure}
 Here is the caller graph for this function\+:
-% FIG 4
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o_a9bcf552682ef562673a7c725d003debf_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o_a479ca9a8597aada4e74445699140e0fd}\label{classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o_a479ca9a8597aada4e74445699140e0fd}} 
 \index{es.deusto.server.jdo.DAO@{es.deusto.server.jdo.DAO}!deleteMovie@{deleteMovie}}
 \index{deleteMovie@{deleteMovie}!es.deusto.server.jdo.DAO@{es.deusto.server.jdo.DAO}}
@@ -118,10 +154,60 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line 93 of file D\+A\+O.\+java.
+Definition at line 92 of file D\+A\+O.\+java.
 
 Here is the call graph for this function\+:
-% FIG 5
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o_a479ca9a8597aada4e74445699140e0fd_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o_a399605bc2a2fd86679ddf7793b71de12}\label{classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o_a399605bc2a2fd86679ddf7793b71de12}} 
+\index{es.deusto.server.jdo.DAO@{es.deusto.server.jdo.DAO}!deleteSession@{deleteSession}}
+\index{deleteSession@{deleteSession}!es.deusto.server.jdo.DAO@{es.deusto.server.jdo.DAO}}
+\subsubsection{\texorpdfstring{deleteSession()}{deleteSession()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void es.\+deusto.\+server.\+jdo.\+D\+A\+O.\+delete\+Session (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classes_1_1deusto_1_1server_1_1jdo_1_1_movie}{Movie}}}]{movie,  }\item[{Date}]{time }\end{DoxyParamCaption})}
+
+
+
+Definition at line 125 of file D\+A\+O.\+java.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o_a399605bc2a2fd86679ddf7793b71de12_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o_a399605bc2a2fd86679ddf7793b71de12_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o_aa4010f98d33fbdb583bb361ab576ff2d}\label{classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o_aa4010f98d33fbdb583bb361ab576ff2d}} 
+\index{es.deusto.server.jdo.DAO@{es.deusto.server.jdo.DAO}!deleteSession@{deleteSession}}
+\index{deleteSession@{deleteSession}!es.deusto.server.jdo.DAO@{es.deusto.server.jdo.DAO}}
+\subsubsection{\texorpdfstring{deleteSession()}{deleteSession()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void es.\+deusto.\+server.\+jdo.\+D\+A\+O.\+delete\+Session (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classes_1_1deusto_1_1server_1_1jdo_1_1_session}{Session}}}]{session }\end{DoxyParamCaption})}
+
+
+
+Definition at line 131 of file D\+A\+O.\+java.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o_aa4010f98d33fbdb583bb361ab576ff2d_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o_a174a90986e95dcae4ab728c8d1a16ca8}\label{classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o_a174a90986e95dcae4ab728c8d1a16ca8}} 
 \index{es.deusto.server.jdo.DAO@{es.deusto.server.jdo.DAO}!deleteTicket@{deleteTicket}}
 \index{deleteTicket@{deleteTicket}!es.deusto.server.jdo.DAO@{es.deusto.server.jdo.DAO}}
@@ -130,7 +216,7 @@ Here is the call graph for this function\+:
 
 
 
-Definition at line 165 of file D\+A\+O.\+java.
+Definition at line 182 of file D\+A\+O.\+java.
 
 \mbox{\Hypertarget{classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o_afb5b546d4ade9c2cab1f769e0b0c82bf}\label{classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o_afb5b546d4ade9c2cab1f769e0b0c82bf}} 
 \index{es.deusto.server.jdo.DAO@{es.deusto.server.jdo.DAO}!detachOnCommit@{detachOnCommit}}
@@ -140,7 +226,7 @@ Definition at line 165 of file D\+A\+O.\+java.
 
 
 
-Definition at line 38 of file D\+A\+O.\+java.
+Definition at line 37 of file D\+A\+O.\+java.
 
 \mbox{\Hypertarget{classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o_a376574d8ad006d0bad98e39172b67847}\label{classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o_a376574d8ad006d0bad98e39172b67847}} 
 \index{es.deusto.server.jdo.DAO@{es.deusto.server.jdo.DAO}!end@{end}}
@@ -153,7 +239,13 @@ Definition at line 38 of file D\+A\+O.\+java.
 Definition at line 29 of file D\+A\+O.\+java.
 
 Here is the caller graph for this function\+:
-% FIG 6
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o_a376574d8ad006d0bad98e39172b67847_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o_a340f51843de8957e9ef8b0c95081512a}\label{classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o_a340f51843de8957e9ef8b0c95081512a}} 
 \index{es.deusto.server.jdo.DAO@{es.deusto.server.jdo.DAO}!getClient@{getClient}}
 \index{getClient@{getClient}!es.deusto.server.jdo.DAO@{es.deusto.server.jdo.DAO}}
@@ -172,10 +264,16 @@ The client corresponding to the given credentials, or {\bfseries{null}} if no us
 \end{DoxyReturn}
 
 
-Definition at line 142 of file D\+A\+O.\+java.
+Definition at line 159 of file D\+A\+O.\+java.
 
 Here is the caller graph for this function\+:
-% FIG 7
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o_a340f51843de8957e9ef8b0c95081512a_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o_a9bbbc5fb0fa218f2feefc3c813edc305}\label{classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o_a9bbbc5fb0fa218f2feefc3c813edc305}} 
 \index{es.deusto.server.jdo.DAO@{es.deusto.server.jdo.DAO}!getMovie@{getMovie}}
 \index{getMovie@{getMovie}!es.deusto.server.jdo.DAO@{es.deusto.server.jdo.DAO}}
@@ -184,10 +282,16 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line 68 of file D\+A\+O.\+java.
+Definition at line 67 of file D\+A\+O.\+java.
 
 Here is the caller graph for this function\+:
-% FIG 8
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o_a9bbbc5fb0fa218f2feefc3c813edc305_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o_a23dfafaa747b95ec24c9df6ca678e7d7}\label{classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o_a23dfafaa747b95ec24c9df6ca678e7d7}} 
 \index{es.deusto.server.jdo.DAO@{es.deusto.server.jdo.DAO}!getMovies@{getMovies}}
 \index{getMovies@{getMovies}!es.deusto.server.jdo.DAO@{es.deusto.server.jdo.DAO}}
@@ -196,8 +300,26 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line 60 of file D\+A\+O.\+java.
+Definition at line 59 of file D\+A\+O.\+java.
 
+\mbox{\Hypertarget{classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o_a34f9e5400280bbc1a9fce9143696470e}\label{classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o_a34f9e5400280bbc1a9fce9143696470e}} 
+\index{es.deusto.server.jdo.DAO@{es.deusto.server.jdo.DAO}!getSession@{getSession}}
+\index{getSession@{getSession}!es.deusto.server.jdo.DAO@{es.deusto.server.jdo.DAO}}
+\subsubsection{\texorpdfstring{getSession()}{getSession()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1jdo_1_1_session}{Session}} es.\+deusto.\+server.\+jdo.\+D\+A\+O.\+get\+Session (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classes_1_1deusto_1_1server_1_1jdo_1_1_movie}{Movie}}}]{movie,  }\item[{Date}]{time }\end{DoxyParamCaption})}
+
+
+
+Definition at line 118 of file D\+A\+O.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o_a34f9e5400280bbc1a9fce9143696470e_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o_a2f9f9eb5adc37f559d7fefe2da6544f1}\label{classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o_a2f9f9eb5adc37f559d7fefe2da6544f1}} 
 \index{es.deusto.server.jdo.DAO@{es.deusto.server.jdo.DAO}!getSessions@{getSessions}}
 \index{getSessions@{getSessions}!es.deusto.server.jdo.DAO@{es.deusto.server.jdo.DAO}}
@@ -206,10 +328,16 @@ Definition at line 60 of file D\+A\+O.\+java.
 
 
 
-Definition at line 103 of file D\+A\+O.\+java.
+Definition at line 102 of file D\+A\+O.\+java.
 
 Here is the caller graph for this function\+:
-% FIG 9
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o_a2f9f9eb5adc37f559d7fefe2da6544f1_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o_a783758c37658336ee1e4e995a672a0ce}\label{classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o_a783758c37658336ee1e4e995a672a0ce}} 
 \index{es.deusto.server.jdo.DAO@{es.deusto.server.jdo.DAO}!registerClient@{registerClient}}
 \index{registerClient@{registerClient}!es.deusto.server.jdo.DAO@{es.deusto.server.jdo.DAO}}
@@ -226,12 +354,24 @@ Here is the caller graph for this function\+:
 \end{DoxyReturn}
 
 
-Definition at line 126 of file D\+A\+O.\+java.
+Definition at line 143 of file D\+A\+O.\+java.
 
 Here is the call graph for this function\+:
-% FIG 10
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o_a783758c37658336ee1e4e995a672a0ce_cgraph}
+\end{center}
+\end{figure}
 Here is the caller graph for this function\+:
-% FIG 11
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o_a783758c37658336ee1e4e995a672a0ce_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o_ac2a137746dce274ba0a89eb388820bcf}\label{classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o_ac2a137746dce274ba0a89eb388820bcf}} 
 \index{es.deusto.server.jdo.DAO@{es.deusto.server.jdo.DAO}!rollback@{rollback}}
 \index{rollback@{rollback}!es.deusto.server.jdo.DAO@{es.deusto.server.jdo.DAO}}
@@ -240,7 +380,7 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line 42 of file D\+A\+O.\+java.
+Definition at line 41 of file D\+A\+O.\+java.
 
 \mbox{\Hypertarget{classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o_a58c4f711e3e60688619f8a065073f4ff}\label{classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o_a58c4f711e3e60688619f8a065073f4ff}} 
 \index{es.deusto.server.jdo.DAO@{es.deusto.server.jdo.DAO}!searchMovieByTitle@{searchMovieByTitle}}
@@ -250,10 +390,16 @@ Definition at line 42 of file D\+A\+O.\+java.
 
 
 
-Definition at line 78 of file D\+A\+O.\+java.
+Definition at line 77 of file D\+A\+O.\+java.
 
 Here is the caller graph for this function\+:
-% FIG 12
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o_a58c4f711e3e60688619f8a065073f4ff_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o_a663255898c034b46536c8a9cd2b247f9}\label{classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o_a663255898c034b46536c8a9cd2b247f9}} 
 \index{es.deusto.server.jdo.DAO@{es.deusto.server.jdo.DAO}!storeObject@{storeObject}}
 \index{storeObject@{storeObject}!es.deusto.server.jdo.DAO@{es.deusto.server.jdo.DAO}}
@@ -262,10 +408,16 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line 47 of file D\+A\+O.\+java.
+Definition at line 46 of file D\+A\+O.\+java.
 
 Here is the caller graph for this function\+:
-% FIG 13
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o_a663255898c034b46536c8a9cd2b247f9_icgraph}
+\end{center}
+\end{figure}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

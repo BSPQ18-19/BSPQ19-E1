@@ -3,17 +3,33 @@
 
 
 Inheritance diagram for es.\+deusto.\+server.\+I\+Server\+:
-% FIG 0
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{interfacees_1_1deusto_1_1server_1_1_i_server__inherit__graph}
+\end{center}
+\end{figure}
 
 
 Collaboration diagram for es.\+deusto.\+server.\+I\+Server\+:
-% FIG 1
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{interfacees_1_1deusto_1_1server_1_1_i_server__coll__graph}
+\end{center}
+\end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{interfacees_1_1deusto_1_1server_1_1_i_server_a393d8689e14b3534dfa425e4c900532e}{add\+Movie}} (String title, String director, List$<$ String $>$ cast)  throws Remote\+Exception
 \item 
 void \mbox{\hyperlink{interfacees_1_1deusto_1_1server_1_1_i_server_a0b3243dc04d49f7659fefec4e4fb43b7}{delete\+Movie}} (String title)  throws Remote\+Exception
+\item 
+void \mbox{\hyperlink{interfacees_1_1deusto_1_1server_1_1_i_server_a1e1a4e176284ef7aec05142fb85b9a72}{add\+Session}} (\mbox{\hyperlink{classes_1_1deusto_1_1server_1_1jdo_1_1_movie}{Movie}} movie, Date time)  throws Remote\+Exception
+\item 
+void \mbox{\hyperlink{interfacees_1_1deusto_1_1server_1_1_i_server_a83edabd700f0b02d4007c28392ec7c94}{delete\+Session}} (\mbox{\hyperlink{classes_1_1deusto_1_1server_1_1jdo_1_1_movie}{Movie}} movie, Date time)  throws Remote\+Exception
 \item 
 \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1data_1_1_movie_d_t_o}{Movie\+D\+TO}} \mbox{\hyperlink{interfacees_1_1deusto_1_1server_1_1_i_server_a2b7883e416d98a7c92de13cbed7af450}{get\+Movie}} (String title)  throws Remote\+Exception
 \item 
@@ -40,7 +56,7 @@ boolean \mbox{\hyperlink{interfacees_1_1deusto_1_1server_1_1_i_server_a998e20655
 \subsection{Detailed Description}
 
 
-Definition at line 10 of file I\+Server.\+java.
+Definition at line 11 of file I\+Server.\+java.
 
 
 
@@ -56,7 +72,23 @@ Definition at line 10 of file I\+Server.\+java.
 Implemented in \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1_server_a150317903dc393d29f39db81e79131e0}{es.\+deusto.\+server.\+Server}}.
 
 Here is the caller graph for this function\+:
-% FIG 2
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interfacees_1_1deusto_1_1server_1_1_i_server_a393d8689e14b3534dfa425e4c900532e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{interfacees_1_1deusto_1_1server_1_1_i_server_a1e1a4e176284ef7aec05142fb85b9a72}\label{interfacees_1_1deusto_1_1server_1_1_i_server_a1e1a4e176284ef7aec05142fb85b9a72}} 
+\index{es.deusto.server.IServer@{es.deusto.server.IServer}!addSession@{addSession}}
+\index{addSession@{addSession}!es.deusto.server.IServer@{es.deusto.server.IServer}}
+\subsubsection{\texorpdfstring{addSession()}{addSession()}}
+{\footnotesize\ttfamily void es.\+deusto.\+server.\+I\+Server.\+add\+Session (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classes_1_1deusto_1_1server_1_1jdo_1_1_movie}{Movie}}}]{movie,  }\item[{Date}]{time }\end{DoxyParamCaption}) throws Remote\+Exception}
+
+
+
+Implemented in \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1_server_abca83b4649011a8a68af754bbd25e22d}{es.\+deusto.\+server.\+Server}}.
+
 \mbox{\Hypertarget{interfacees_1_1deusto_1_1server_1_1_i_server_ac3302c01fefc37a32c0bcbf79fcce44b}\label{interfacees_1_1deusto_1_1server_1_1_i_server_ac3302c01fefc37a32c0bcbf79fcce44b}} 
 \index{es.deusto.server.IServer@{es.deusto.server.IServer}!buyTickets@{buyTickets}}
 \index{buyTickets@{buyTickets}!es.deusto.server.IServer@{es.deusto.server.IServer}}
@@ -68,7 +100,13 @@ Here is the caller graph for this function\+:
 Implemented in \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1_server_a3bbf9f19774d2fae5c831cfac1f2306c}{es.\+deusto.\+server.\+Server}}.
 
 Here is the caller graph for this function\+:
-% FIG 3
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interfacees_1_1deusto_1_1server_1_1_i_server_ac3302c01fefc37a32c0bcbf79fcce44b_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{interfacees_1_1deusto_1_1server_1_1_i_server_a0b3243dc04d49f7659fefec4e4fb43b7}\label{interfacees_1_1deusto_1_1server_1_1_i_server_a0b3243dc04d49f7659fefec4e4fb43b7}} 
 \index{es.deusto.server.IServer@{es.deusto.server.IServer}!deleteMovie@{deleteMovie}}
 \index{deleteMovie@{deleteMovie}!es.deusto.server.IServer@{es.deusto.server.IServer}}
@@ -80,7 +118,23 @@ Here is the caller graph for this function\+:
 Implemented in \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1_server_a6501e4103fcc2ef691c15e4e02f7136c}{es.\+deusto.\+server.\+Server}}.
 
 Here is the caller graph for this function\+:
-% FIG 4
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interfacees_1_1deusto_1_1server_1_1_i_server_a0b3243dc04d49f7659fefec4e4fb43b7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{interfacees_1_1deusto_1_1server_1_1_i_server_a83edabd700f0b02d4007c28392ec7c94}\label{interfacees_1_1deusto_1_1server_1_1_i_server_a83edabd700f0b02d4007c28392ec7c94}} 
+\index{es.deusto.server.IServer@{es.deusto.server.IServer}!deleteSession@{deleteSession}}
+\index{deleteSession@{deleteSession}!es.deusto.server.IServer@{es.deusto.server.IServer}}
+\subsubsection{\texorpdfstring{deleteSession()}{deleteSession()}}
+{\footnotesize\ttfamily void es.\+deusto.\+server.\+I\+Server.\+delete\+Session (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classes_1_1deusto_1_1server_1_1jdo_1_1_movie}{Movie}}}]{movie,  }\item[{Date}]{time }\end{DoxyParamCaption}) throws Remote\+Exception}
+
+
+
+Implemented in \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1_server_aa5f1973de47331683592355aaa036bfb}{es.\+deusto.\+server.\+Server}}.
+
 \mbox{\Hypertarget{interfacees_1_1deusto_1_1server_1_1_i_server_a2b7883e416d98a7c92de13cbed7af450}\label{interfacees_1_1deusto_1_1server_1_1_i_server_a2b7883e416d98a7c92de13cbed7af450}} 
 \index{es.deusto.server.IServer@{es.deusto.server.IServer}!getMovie@{getMovie}}
 \index{getMovie@{getMovie}!es.deusto.server.IServer@{es.deusto.server.IServer}}
@@ -92,7 +146,13 @@ Here is the caller graph for this function\+:
 Implemented in \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1_server_a7e4544c63bcf2b2d3abce0d2ff1567ac}{es.\+deusto.\+server.\+Server}}.
 
 Here is the caller graph for this function\+:
-% FIG 5
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interfacees_1_1deusto_1_1server_1_1_i_server_a2b7883e416d98a7c92de13cbed7af450_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{interfacees_1_1deusto_1_1server_1_1_i_server_aac50d6a77e30df4d4c15fcaf4ba979f5}\label{interfacees_1_1deusto_1_1server_1_1_i_server_aac50d6a77e30df4d4c15fcaf4ba979f5}} 
 \index{es.deusto.server.IServer@{es.deusto.server.IServer}!getSessionsForDay@{getSessionsForDay}}
 \index{getSessionsForDay@{getSessionsForDay}!es.deusto.server.IServer@{es.deusto.server.IServer}}
@@ -104,7 +164,13 @@ Here is the caller graph for this function\+:
 Implemented in \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1_server_a688ca336b3cbdb5c04ecdc4f23ff65d1}{es.\+deusto.\+server.\+Server}}.
 
 Here is the caller graph for this function\+:
-% FIG 6
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interfacees_1_1deusto_1_1server_1_1_i_server_aac50d6a77e30df4d4c15fcaf4ba979f5_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{interfacees_1_1deusto_1_1server_1_1_i_server_a33dc65de2a567be10bf2477ee28765f8}\label{interfacees_1_1deusto_1_1server_1_1_i_server_a33dc65de2a567be10bf2477ee28765f8}} 
 \index{es.deusto.server.IServer@{es.deusto.server.IServer}!getSessionsForMovie@{getSessionsForMovie}}
 \index{getSessionsForMovie@{getSessionsForMovie}!es.deusto.server.IServer@{es.deusto.server.IServer}}
@@ -126,7 +192,13 @@ Implemented in \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1_server_a33a6671b
 Implemented in \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1_server_ad742fe9a45edccd8b2309be98a74baae}{es.\+deusto.\+server.\+Server}}.
 
 Here is the caller graph for this function\+:
-% FIG 7
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interfacees_1_1deusto_1_1server_1_1_i_server_a2dcd7f0b0e157eb797e20432c0b0e971_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{interfacees_1_1deusto_1_1server_1_1_i_server_a62db155ac744b9712e303ceea76a3560}\label{interfacees_1_1deusto_1_1server_1_1_i_server_a62db155ac744b9712e303ceea76a3560}} 
 \index{es.deusto.server.IServer@{es.deusto.server.IServer}!logIn@{logIn}}
 \index{logIn@{logIn}!es.deusto.server.IServer@{es.deusto.server.IServer}}
@@ -138,7 +210,13 @@ Here is the caller graph for this function\+:
 Implemented in \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1_server_ab93f5cc9b5825192c31cd2088014378d}{es.\+deusto.\+server.\+Server}}.
 
 Here is the caller graph for this function\+:
-% FIG 8
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interfacees_1_1deusto_1_1server_1_1_i_server_a62db155ac744b9712e303ceea76a3560_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{interfacees_1_1deusto_1_1server_1_1_i_server_a479231082cae13f9c651c0ec2cb2cece}\label{interfacees_1_1deusto_1_1server_1_1_i_server_a479231082cae13f9c651c0ec2cb2cece}} 
 \index{es.deusto.server.IServer@{es.deusto.server.IServer}!logOut@{logOut}}
 \index{logOut@{logOut}!es.deusto.server.IServer@{es.deusto.server.IServer}}
@@ -150,7 +228,13 @@ Here is the caller graph for this function\+:
 Implemented in \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1_server_a92cf8a599adfa6a34f7cfe788119cf0a}{es.\+deusto.\+server.\+Server}}.
 
 Here is the caller graph for this function\+:
-% FIG 9
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interfacees_1_1deusto_1_1server_1_1_i_server_a479231082cae13f9c651c0ec2cb2cece_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{interfacees_1_1deusto_1_1server_1_1_i_server_a998e20655e760b135fab601a417aa5ae}\label{interfacees_1_1deusto_1_1server_1_1_i_server_a998e20655e760b135fab601a417aa5ae}} 
 \index{es.deusto.server.IServer@{es.deusto.server.IServer}!registerUser@{registerUser}}
 \index{registerUser@{registerUser}!es.deusto.server.IServer@{es.deusto.server.IServer}}
@@ -162,7 +246,13 @@ Here is the caller graph for this function\+:
 Implemented in \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1_server_a6a419bd82bce60f072b4c7f5a527abdc}{es.\+deusto.\+server.\+Server}}.
 
 Here is the caller graph for this function\+:
-% FIG 10
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interfacees_1_1deusto_1_1server_1_1_i_server_a998e20655e760b135fab601a417aa5ae_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{interfacees_1_1deusto_1_1server_1_1_i_server_a50b7dacdeb04d5f1ee3f3b59989ed117}\label{interfacees_1_1deusto_1_1server_1_1_i_server_a50b7dacdeb04d5f1ee3f3b59989ed117}} 
 \index{es.deusto.server.IServer@{es.deusto.server.IServer}!searchMovies@{searchMovies}}
 \index{searchMovies@{searchMovies}!es.deusto.server.IServer@{es.deusto.server.IServer}}
@@ -184,7 +274,13 @@ Implemented in \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1_server_a16789cc7
 Implemented in \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1_server_a74082f91af2065cd600c147296090921}{es.\+deusto.\+server.\+Server}}.
 
 Here is the caller graph for this function\+:
-% FIG 11
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interfacees_1_1deusto_1_1server_1_1_i_server_aff376200af975b145ac85ccfdf48a229_icgraph}
+\end{center}
+\end{figure}
 
 
 The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
