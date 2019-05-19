@@ -1,5 +1,6 @@
 package es.deusto.test;
 
+import junit.framework.JUnit4TestAdapter;
 import org.junit.*;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -12,6 +13,10 @@ import es.deusto.server.jdo.*;
 public class DAOTest {
 	
 	public DAO dao;
+
+	public static junit.framework.Test suite() {
+		return new JUnit4TestAdapter(DAOTest.class);
+	}
 	
 	@Before
 	public void setUpClass() {
