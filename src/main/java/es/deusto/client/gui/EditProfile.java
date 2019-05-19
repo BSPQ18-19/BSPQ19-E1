@@ -3,8 +3,13 @@ package es.deusto.client.gui;
 import javax.swing.JPanel;
 
 import es.deusto.client.Client;
+import es.deusto.client.controller.ClientController;
+import es.deusto.server.data.UserDetailsDTO;
+
 import java.awt.GridBagLayout;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.GridBagConstraints;
 import javax.swing.JTextField;
 import java.awt.Insets;
@@ -21,11 +26,14 @@ public class EditProfile extends JPanel {
 	private JTextField textField_2;
 	private JPasswordField passwordField;
 	private JPasswordField passwordField_1;
+	
+	private UserDetailsDTO details;
 
 	/**
 	 * Create the panel.
 	 */
 	public EditProfile(Client client) {
+		details = ClientController.getController().getUserDetails();
 		GridBagLayout gridBagLayout = new GridBagLayout();
 		gridBagLayout.columnWidths = new int[]{0, 0, 0, 0, 0};
 		gridBagLayout.rowHeights = new int[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
@@ -63,6 +71,7 @@ public class EditProfile extends JPanel {
 		gbc_textField.gridy = 2;
 		add(textField, gbc_textField);
 		textField.setColumns(10);
+		textField.setText(details.name);
 		
 		JLabel lblSurname = new JLabel("Surname:");
 		GridBagConstraints gbc_lblSurname = new GridBagConstraints();
@@ -80,6 +89,7 @@ public class EditProfile extends JPanel {
 		gbc_textField_1.gridy = 3;
 		add(textField_1, gbc_textField_1);
 		textField_1.setColumns(20);
+		textField_1.setText(details.surname);
 		
 		JLabel lblPhone = new JLabel("Phone:");
 		GridBagConstraints gbc_lblPhone = new GridBagConstraints();
@@ -97,6 +107,7 @@ public class EditProfile extends JPanel {
 		gbc_textField_2.gridy = 4;
 		add(textField_2, gbc_textField_2);
 		textField_2.setColumns(10);
+		textField_2.setText(details.phone);
 		
 		JLabel lblChangePassword = new JLabel("New password:");
 		GridBagConstraints gbc_lblChangePassword = new GridBagConstraints();
@@ -142,7 +153,24 @@ public class EditProfile extends JPanel {
 		panel.add(btnSaveChanges);
 		btnSaveChanges.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+				details.name = textField.getText();
+				details.surname = textField_1.getText();
+				details.phone = textField_1.getText();
+				if (passwordField.getPassword().length != 0) {
+						if (passwordField.getPassword().equals(passwordField_1.getPassword())) {
+							details.password = new String(passwordField.getPassword());
+						} else {
+							JOptionPane.showMessageDialog(EditProfile.this, "Passwords do not match", "Error", JOptionPane.ERROR_MESSAGE);
+							return;
+						}
+				}
+				boolean success = ClientController.getController().updateUser(details);
+				if (success) {
+					JOptionPane.showMessageDialog(EditProfile.this, "Updated successfully");
+					client.switchToHomePage();
+				} else {
+					JOptionPane.showMessageDialog(EditProfile.this, "An error has ocurred", "Error", JOptionPane.ERROR_MESSAGE);
+				}
 			}
 		});
 		

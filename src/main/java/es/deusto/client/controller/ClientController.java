@@ -6,6 +6,7 @@ import org.apache.log4j.Logger;
 import es.deusto.client.logger.ClientLogger;
 import es.deusto.client.remote.RMIServiceLocator;
 import es.deusto.server.data.UserDTO;
+import es.deusto.server.data.UserDetailsDTO;
 
 public class ClientController {
 
@@ -51,4 +52,26 @@ public class ClientController {
     public UserDTO getLoggedUser() {
         return loggedUser;
     }
+
+	public UserDetailsDTO getUserDetails() {
+		try {
+			UserDetailsDTO details = rsl.getClientManager().getUserDetails(loggedUser);
+			return details;
+		} catch (RemoteException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return new UserDetailsDTO();
+		}
+	}
+	
+	public boolean updateUser(UserDetailsDTO details) {
+		try {
+			UserDTO newuser = rsl.getClientManager().updateUser(details);
+			loggedUser = newuser;
+			return true; // Success
+		} catch (RemoteException e) {
+			e.printStackTrace();
+			return false;
+		}
+	}
 }

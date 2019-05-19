@@ -170,7 +170,7 @@ public class Server extends UnicastRemoteObject implements IServer {
 	}
 
 	@Override
-	public UserDTO updateUser(UserDetailsDTO details) {
+	public UserDTO updateUser(UserDetailsDTO details) throws RemoteException {
 		dao.begin();
 		User u = dao.getObjectById(User.class, details.id);
 		u.updateDetails(details);

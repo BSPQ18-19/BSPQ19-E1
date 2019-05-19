@@ -133,6 +133,7 @@ public class Client {
 	
 	public void switchToEditProfile() {
 		frame.getContentPane().removeAll();
+		
 		frame.getContentPane().add(new EditProfile(this));
 		frame.setTitle("Edit Profile");
 		SwingUtilities.updateComponentTreeUI(frame);
