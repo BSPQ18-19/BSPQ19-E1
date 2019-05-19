@@ -45,7 +45,7 @@ public class HomePage extends JPanel {
 		add(lblLoggedInAs, gbc_lblLoggedInAs);
 		
 		JLabel lblUsername = new JLabel("");
-		lblUsername.setText(ClientController.getController().getLoggedUser().getName());
+		lblUsername.setText(ClientController.getController().getUserDetails().name);
 		GridBagConstraints gbc_lblUsername = new GridBagConstraints();
 		gbc_lblUsername.anchor = GridBagConstraints.WEST;
 		gbc_lblUsername.insets = new Insets(0, 0, 5, 5);

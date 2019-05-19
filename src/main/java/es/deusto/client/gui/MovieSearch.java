@@ -78,7 +78,10 @@ public class MovieSearch extends JPanel {
 			List<SessionDTO> sessions = ClientController.getController().getSessions(date);
 			if (sessions != null) {
 				listmodel.removeAllElements();
-				listmodel.addAll(sessions);
+				//listmodel.addAll(sessions);
+				for ( SessionDTO session : sessions) {
+					listmodel.addElement(session);
+				}
 			}
 		});
 		
