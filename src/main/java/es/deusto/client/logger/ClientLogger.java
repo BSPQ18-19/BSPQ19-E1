@@ -1,13 +1,14 @@
 package es.deusto.client.logger;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class ClientLogger {
 
     private static final Logger log;
 
     static {
-        log = Logger.getLogger("ClientLog");
+        log = LoggerFactory.getLogger("ClientLog");
     }
 
     public static Logger getLogger() {

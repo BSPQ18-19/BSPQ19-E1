@@ -5,7 +5,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
 import es.deusto.client.logger.ClientLogger;
 import es.deusto.client.remote.RMIServiceLocator;
 import es.deusto.server.data.MovieDTO;

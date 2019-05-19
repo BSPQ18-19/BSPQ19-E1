@@ -1,7 +1,7 @@
 package es.deusto.client.remote;
 
 import es.deusto.server.IServer;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
 
 import es.deusto.client.logger.ClientLogger;
 
@@ -27,7 +27,7 @@ public class RMIServiceLocator {
             clientManager = (IServer) java.rmi.Naming.lookup(url);
             log.info("Connected to: " + url);
         } catch (Exception e) {
-            log.fatal("Exception stablishing connection to: " + url);
+            log.error("Exception stablishing connection to: " + url);
         }
     }
 
