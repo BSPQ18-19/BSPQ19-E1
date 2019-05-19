@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.jdo.annotations.*;
 
+import es.deusto.server.data.UserDTO;
 import es.deusto.server.data.UserDetailsDTO;
 
 @PersistenceCapable
@@ -32,6 +33,15 @@ public class User {
 		this.email = email;
 		this.password = password;
 		purchases = new ArrayList<Ticket>();
+	}
+
+	public User(UserDetailsDTO user) {
+		super();
+		this.email = user.email;
+		this.name = user.name;
+		this.surname = user.surname;
+		this.phone = user.phone;
+		this.password = user.password;
 	}
 	
 	public void updateDetails(UserDetailsDTO details) {

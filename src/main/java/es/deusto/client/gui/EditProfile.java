@@ -18,6 +18,7 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Component;
+import java.util.Arrays;
 import javax.swing.Box;
 
 public class EditProfile extends JPanel {
@@ -157,7 +158,7 @@ public class EditProfile extends JPanel {
 				details.surname = textField_1.getText();
 				details.phone = textField_1.getText();
 				if (passwordField.getPassword().length != 0) {
-						if (passwordField.getPassword().equals(passwordField_1.getPassword())) {
+						if (Arrays.equals(passwordField.getPassword(), passwordField_1.getPassword())) {
 							details.password = new String(passwordField.getPassword());
 						} else {
 							JOptionPane.showMessageDialog(EditProfile.this, "Passwords do not match", "Error", JOptionPane.ERROR_MESSAGE);

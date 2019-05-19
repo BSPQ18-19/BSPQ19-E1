@@ -78,6 +78,16 @@ public class ClientController {
 			return false;
 		}
 	}
+
+	public boolean registerUser(UserDetailsDTO user) {
+        boolean result = false;
+        try {
+            result = rsl.getClientManager().registerUser(user);
+        } catch (RemoteException e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
 	
 	public List<SessionDTO> getSessions(LocalDate date){
 		int year = date.getYear();

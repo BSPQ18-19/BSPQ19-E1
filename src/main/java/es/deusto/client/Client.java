@@ -139,6 +139,13 @@ public class Client {
 		frame.setTitle("Edit Profile");
 		SwingUtilities.updateComponentTreeUI(frame);
 	}
+
+	public void switchToLogin() {
+		frame.getContentPane().removeAll();
+		frame.getContentPane().add(new Login(this));
+		frame.setTitle("Login");
+		SwingUtilities.updateComponentTreeUI(frame);
+	}
 	
 	public void switchToMovieSearch() {
 		frame.getContentPane().removeAll();

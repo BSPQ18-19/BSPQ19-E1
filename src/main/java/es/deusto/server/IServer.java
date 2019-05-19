@@ -19,4 +19,5 @@ public interface IServer extends Remote {
 	boolean logOut(UserDTO user) throws RemoteException;
 	UserDetailsDTO getUserDetails(UserDTO user) throws RemoteException;
 	UserDTO updateUser(UserDetailsDTO details) throws RemoteException;
+	boolean registerUser(UserDetailsDTO user) throws RemoteException;
 }
