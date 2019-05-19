@@ -21,7 +21,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static junit.framework.TestCase.assertEquals;
-import static org.graalvm.compiler.replacements.Log.println;
+//import static org.graalvm.compiler.replacements.Log.println;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
