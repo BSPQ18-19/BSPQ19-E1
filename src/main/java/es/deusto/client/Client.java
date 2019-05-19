@@ -138,6 +138,13 @@ public class Client {
 		frame.setTitle("Edit Profile");
 		SwingUtilities.updateComponentTreeUI(frame);
 	}
+
+	public void switchToLogin() {
+		frame.getContentPane().removeAll();
+		frame.getContentPane().add(new Login(this));
+		frame.setTitle("Login");
+		SwingUtilities.updateComponentTreeUI(frame);
+	}
 	
 	public void incorrectLoginAlert() {
 		JOptionPane.showMessageDialog(frame, "Incorrect Login", "Incorrect email or password", JOptionPane.WARNING_MESSAGE);

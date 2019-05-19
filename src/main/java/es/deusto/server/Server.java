@@ -178,4 +178,13 @@ public class Server extends UnicastRemoteObject implements IServer {
 		dao.end();
 		return udto;
 	}
+
+	@Override
+	public boolean registerUser(UserDetailsDTO user) throws RemoteException {
+		dao.begin();
+		User u = new User(user);
+		boolean result = dao.registerClient(u);
+		dao.end();
+		return result;
+	}
 }
