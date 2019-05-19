@@ -84,11 +84,6 @@ public class DAO {
 		
 	}
 	
-	public Movie getMovie(long id) {
-		Movie movie = pm.getObjectById(Movie.class, id);
-		return movie;
-	}
-	
 	public void deleteMovie(String title) {
 		Movie movie = getMovie(title);
 		deleteMovie(movie);
@@ -169,5 +164,10 @@ public class DAO {
 	
 	public void deleteTicket(Ticket t) {
 		pm.deletePersistent(t);
+	}
+	
+	public <T> T getObjectById(Class<T> c, long id) {
+		T obj = pm.getObjectById(c, id);
+		return obj;
 	}
 }

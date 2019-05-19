@@ -12,10 +12,12 @@ public class SessionDTO implements Serializable {
 	private static final long serialVersionUID = -3146665473731969523L;
 	public Date time;
 	public long id;
+	public String movieTitle;
 	
 	public SessionDTO() {}
 	public SessionDTO(Session session) {
 		time = new Date(session.getTime().getTime());
 		id = session.getId();
+		movieTitle = new String(session.getMovie().getTitle());
 	}
 }
