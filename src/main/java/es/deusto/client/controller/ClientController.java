@@ -8,6 +8,7 @@ import java.util.List;
 import org.apache.log4j.Logger;
 import es.deusto.client.logger.ClientLogger;
 import es.deusto.client.remote.RMIServiceLocator;
+import es.deusto.server.data.MovieDTO;
 import es.deusto.server.data.SessionDTO;
 import es.deusto.server.data.UserDTO;
 import es.deusto.server.data.UserDetailsDTO;
@@ -103,6 +104,28 @@ public class ClientController {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 			return null;
+		}
+	}
+
+	public MovieDTO getMovie(String movieTitle) {
+		try {
+			MovieDTO movie = rsl.getClientManager().getMovie(movieTitle);
+			return movie;
+		} catch (RemoteException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return null;
+		}
+	}
+
+	public boolean buyMovie(SessionDTO session, int amount) {
+		// TODO Auto-generated method stub
+		try {
+			return rsl.getClientManager().buyTickets(loggedUser, session, amount);
+		} catch (RemoteException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return false;
 		}
 	}
 }

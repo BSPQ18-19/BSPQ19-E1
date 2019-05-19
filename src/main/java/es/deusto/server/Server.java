@@ -42,12 +42,12 @@ public class Server extends UnicastRemoteObject implements IServer {
 		dao.end();
 	}
 
-	// No DTO = bad
-	public Movie getMovie(String title) {
+	public MovieDTO getMovie(String title) {
 		dao.begin();
 		Movie movie = dao.getMovie(title);
+		MovieDTO mdto = new MovieDTO(movie);
 		dao.end();
-		return movie;
+		return mdto;
 	}
 
 	public void deleteMovie(String title) {

@@ -10,7 +10,7 @@ import java.util.List;
 public interface IServer extends Remote {
 	void addMovie(String title, String director, List<String> cast) throws RemoteException;
 	void deleteMovie(String title) throws RemoteException;
-	Movie getMovie(String title) throws RemoteException;
+	MovieDTO getMovie(String title) throws RemoteException;
 	List<MovieDTO> searchMovies(String query) throws RemoteException;
 	List<SessionDTO> getSessionsForMovie(MovieDTO mdto) throws RemoteException;
 	List<SessionDTO> getSessionsForDay(int year, int month, int day) throws RemoteException;
