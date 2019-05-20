@@ -156,7 +156,7 @@ public class EditProfile extends JPanel {
 			public void actionPerformed(ActionEvent e) {
 				details.name = textField.getText();
 				details.surname = textField_1.getText();
-				details.phone = textField_1.getText();
+				details.phone = textField_2.getText();
 				if (passwordField.getPassword().length != 0) {
 						if (Arrays.equals(passwordField.getPassword(), passwordField_1.getPassword())) {
 							details.password = new String(passwordField.getPassword());

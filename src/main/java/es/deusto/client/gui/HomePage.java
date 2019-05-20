@@ -8,6 +8,7 @@ import javax.swing.JLabel;
 import javax.swing.SpringLayout;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.rmi.RemoteException;
 import java.awt.event.ActionEvent;
 import java.awt.GridBagLayout;
 import java.awt.GridBagConstraints;
@@ -65,6 +66,24 @@ public class HomePage extends JPanel {
 		gbc_btnEditProfile.gridx = 3;
 		gbc_btnEditProfile.gridy = 1;
 		add(btnEditProfile, gbc_btnEditProfile);
+		
+		JButton btnLogout = new JButton("Logout");
+		btnLogout.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				try {
+					ClientController.getController().logOut();
+					client.switchToLogin();
+				} catch (RemoteException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		});
+		GridBagConstraints gbc_btnLogout = new GridBagConstraints();
+		gbc_btnLogout.insets = new Insets(0, 0, 5, 5);
+		gbc_btnLogout.gridx = 4;
+		gbc_btnLogout.gridy = 1;
+		add(btnLogout, gbc_btnLogout);
 		
 		JLabel lblMovies = new JLabel("Latest Movies");
 		GridBagConstraints gbc_lblMovies = new GridBagConstraints();
