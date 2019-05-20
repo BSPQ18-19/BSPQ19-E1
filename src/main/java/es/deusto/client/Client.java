@@ -1,13 +1,10 @@
 package es.deusto.client;
 
 
-import es.deusto.client.gui.EditProfile;
-import es.deusto.client.gui.HomePage;
-import es.deusto.client.gui.Login;
-import es.deusto.client.gui.MovieSearch;
-import es.deusto.client.gui.Register;
+import es.deusto.client.gui.*;
 import es.deusto.client.remote.RMIServiceLocator;
 import es.deusto.server.IServer;
+import es.deusto.server.data.SessionDTO;
 
 import javax.swing.*;
 import java.awt.*;
@@ -149,9 +146,15 @@ public class Client {
 	
 	public void switchToMovieSearch() {
 		frame.getContentPane().removeAll();
-		
 		frame.getContentPane().add(new MovieSearch(this));
 		frame.setTitle("Movie Search");
+		SwingUtilities.updateComponentTreeUI(frame);
+	}
+
+	public void switchToBuyTickets(SessionDTO session) {
+		frame.getContentPane().removeAll();
+		frame.getContentPane().add(new BuyTickets(this, session));
+		frame.setTitle("Buy Tickets");
 		SwingUtilities.updateComponentTreeUI(frame);
 	}
 	

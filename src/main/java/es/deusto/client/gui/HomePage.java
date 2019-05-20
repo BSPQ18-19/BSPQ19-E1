@@ -24,9 +24,9 @@ public class HomePage extends JPanel {
 	public HomePage(Client client) {
 		GridBagLayout gridBagLayout = new GridBagLayout();
 		gridBagLayout.columnWidths = new int[]{0, 161, 67, 55, 83, 100, 0};
-		gridBagLayout.rowHeights = new int[]{0, 23, 0, 0, 0, 0, 0};
+		gridBagLayout.rowHeights = new int[]{0, 23, 0, 0, 0, 0, 0, 0};
 		gridBagLayout.columnWeights = new double[]{0.0, 0.0, 0.0, 0.0, 1.0, 0.0, Double.MIN_VALUE};
-		gridBagLayout.rowWeights = new double[]{0.0, 0.0, 0.0, 1.0, 0.0, 0.0, Double.MIN_VALUE};
+		gridBagLayout.rowWeights = new double[]{0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
 		setLayout(gridBagLayout);
 		
 		Component verticalStrut_1 = Box.createVerticalStrut(20);
@@ -66,7 +66,7 @@ public class HomePage extends JPanel {
 		gbc_btnEditProfile.gridy = 1;
 		add(btnEditProfile, gbc_btnEditProfile);
 		
-		JLabel lblMovies = new JLabel("Movies (select to see sessions)");
+		JLabel lblMovies = new JLabel("Latest Movies");
 		GridBagConstraints gbc_lblMovies = new GridBagConstraints();
 		gbc_lblMovies.insets = new Insets(0, 0, 5, 5);
 		gbc_lblMovies.gridx = 1;
@@ -104,6 +104,11 @@ public class HomePage extends JPanel {
 		add(list_1, gbc_list_1);
 		
 		JButton btnSeeAvailableSessions = new JButton("See available sessions");
+		btnSeeAvailableSessions.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				
+			}
+		});
 		GridBagConstraints gbc_btnSeeAvailableSessions = new GridBagConstraints();
 		gbc_btnSeeAvailableSessions.insets = new Insets(0, 0, 5, 5);
 		gbc_btnSeeAvailableSessions.gridx = 1;
@@ -117,11 +122,23 @@ public class HomePage extends JPanel {
 		gbc_btnTicketDetails.gridy = 4;
 		add(btnTicketDetails, gbc_btnTicketDetails);
 		
+		JButton btnSearchMovies = new JButton("Search Movies");
+		btnSearchMovies.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				client.switchToMovieSearch();
+			}
+		});
+		GridBagConstraints gbc_btnSearchMovies = new GridBagConstraints();
+		gbc_btnSearchMovies.insets = new Insets(0, 0, 5, 5);
+		gbc_btnSearchMovies.gridx = 1;
+		gbc_btnSearchMovies.gridy = 5;
+		add(btnSearchMovies, gbc_btnSearchMovies);
+		
 		Component verticalStrut = Box.createVerticalStrut(20);
 		GridBagConstraints gbc_verticalStrut = new GridBagConstraints();
 		gbc_verticalStrut.insets = new Insets(0, 0, 0, 5);
 		gbc_verticalStrut.gridx = 1;
-		gbc_verticalStrut.gridy = 5;
+		gbc_verticalStrut.gridy = 6;
 		add(verticalStrut, gbc_verticalStrut);
 
 	}

@@ -167,7 +167,7 @@ public class Server extends UnicastRemoteObject implements IServer {
 				u.getPurchases().add(ticket);
 			}
 			dao.end();
-			return false;
+			return true;
 		}
 	}
 
