@@ -231,8 +231,13 @@ public class Server extends UnicastRemoteObject implements IServer {
 	public void deleteMovie(MovieDTO movie) throws RemoteException {
 		dao.begin();
 		Movie m = dao.getObjectById(Movie.class, movie.id);
-		dao.deleteMovie(m);
-		dao.end();
+		try {
+			dao.deleteMovie(m);
+			dao.end();
+		} catch (Exception e) {
+			dao.rollback();
+			throw e;
+		}
 		
 	}
 
