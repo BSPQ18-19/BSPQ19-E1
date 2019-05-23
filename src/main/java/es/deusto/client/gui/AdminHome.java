@@ -33,7 +33,7 @@ public class AdminHome extends JPanel {
 		JPanel panel = new JPanel();
 		add(panel, BorderLayout.SOUTH);
 		
-		JButton btnAddMovie = new JButton("Add Movie");
+		JButton btnAddMovie = new JButton(client.text.getString("addMovie"));
 		panel.add(btnAddMovie);
 		btnAddMovie.addActionListener((e) -> {
 			client.switchToAddMovie();
@@ -45,7 +45,7 @@ public class AdminHome extends JPanel {
 		JButton btnUpdateDetails = new JButton(client.text.getString("updateDetails"));
 		panel.add(btnUpdateDetails);
 		
-		JButton btnDelete = new JButton("Delete");
+		JButton btnDelete = new JButton(client.text.getString("delete"));
 		btnDelete.addActionListener((e) -> {
 			MovieDTO movie = movie_list.getSelectedValue();
 			boolean success = ClientController.getController().deleteMovie(movie);
@@ -60,6 +60,9 @@ public class AdminHome extends JPanel {
 		
 		JButton btnLogout = new JButton(client.text.getString("logout"));
 		panel.add(btnLogout);
+		btnLogout.addActionListener((e) -> {
+			client.switchToLogin();
+		});
 		
 		
 

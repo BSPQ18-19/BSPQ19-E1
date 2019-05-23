@@ -32,7 +32,7 @@ public class MovieDetails extends JPanel {
 		gridBagLayout.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, Double.MIN_VALUE};
 		setLayout(gridBagLayout);
 		
-		JLabel lblTitle = new JLabel("Title:");
+		JLabel lblTitle = new JLabel(client.text.getString("movieTitle"));
 		GridBagConstraints gbc_lblTitle = new GridBagConstraints();
 		gbc_lblTitle.anchor = GridBagConstraints.EAST;
 		gbc_lblTitle.insets = new Insets(0, 0, 5, 5);
@@ -49,7 +49,7 @@ public class MovieDetails extends JPanel {
 		add(textField_title, gbc_textField_title);
 		textField_title.setColumns(10);
 		
-		JLabel lblSynopsis = new JLabel("Synopsis:");
+		JLabel lblSynopsis = new JLabel(client.text.getString("movieSynopsis"));
 		GridBagConstraints gbc_lblSynopsis = new GridBagConstraints();
 		gbc_lblSynopsis.insets = new Insets(0, 0, 5, 5);
 		gbc_lblSynopsis.anchor = GridBagConstraints.EAST;
@@ -66,7 +66,7 @@ public class MovieDetails extends JPanel {
 		add(textField_synopsis, gbc_textField_synopsis);
 		textField_synopsis.setColumns(10);
 		
-		JLabel lblDurationmin = new JLabel("Duration (min):");
+		JLabel lblDurationmin = new JLabel(client.text.getString("duration"));
 		GridBagConstraints gbc_lblDurationmin = new GridBagConstraints();
 		gbc_lblDurationmin.anchor = GridBagConstraints.EAST;
 		gbc_lblDurationmin.insets = new Insets(0, 0, 5, 5);
@@ -83,7 +83,7 @@ public class MovieDetails extends JPanel {
 		add(textField_duration, gbc_textField_duration);
 		textField_duration.setColumns(10);
 		
-		JLabel lblGenre = new JLabel("Genre:");
+		JLabel lblGenre = new JLabel(client.text.getString("genre"));
 		GridBagConstraints gbc_lblGenre = new GridBagConstraints();
 		gbc_lblGenre.insets = new Insets(0, 0, 5, 5);
 		gbc_lblGenre.anchor = GridBagConstraints.EAST;
@@ -100,7 +100,7 @@ public class MovieDetails extends JPanel {
 		add(textField_genre, gbc_textField_genre);
 		textField_genre.setColumns(10);
 		
-		JLabel lblDirector = new JLabel("Director:");
+		JLabel lblDirector = new JLabel(client.text.getString("director"));
 		GridBagConstraints gbc_lblDirector = new GridBagConstraints();
 		gbc_lblDirector.anchor = GridBagConstraints.EAST;
 		gbc_lblDirector.insets = new Insets(0, 0, 5, 5);
@@ -117,7 +117,7 @@ public class MovieDetails extends JPanel {
 		add(textField_director, gbc_textField_director);
 		textField_director.setColumns(10);
 		
-		JLabel lblCast = new JLabel("Cast:");
+		JLabel lblCast = new JLabel(client.text.getString("movieCast"));
 		GridBagConstraints gbc_lblCast = new GridBagConstraints();
 		gbc_lblCast.insets = new Insets(0, 0, 5, 5);
 		gbc_lblCast.anchor = GridBagConstraints.EAST;
@@ -141,7 +141,7 @@ public class MovieDetails extends JPanel {
 		gbc_panel.gridy = 6;
 		add(panel, gbc_panel);
 		
-		JButton btnAdd = new JButton("Add");
+		JButton btnAdd = new JButton(client.text.getString("addMovie"));
 		panel.add(btnAdd);
 		btnAdd.addActionListener((e) -> {
 			MovieDTO movie = new MovieDTO();
@@ -157,8 +157,11 @@ public class MovieDetails extends JPanel {
 			}
 		});
 		
-		JButton btnCancel = new JButton("Cancel");
+		JButton btnCancel = new JButton(client.text.getString("cancel"));
 		panel.add(btnCancel);
+		btnCancel.addActionListener((e) -> {
+			client.switchToAdminHome();
+		});
 		
 	}
 
