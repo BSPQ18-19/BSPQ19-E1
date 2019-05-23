@@ -42,6 +42,7 @@ public class User {
 		this.surname = user.surname;
 		this.phone = user.phone;
 		this.password = user.password;
+		this.type = user.type;
 	}
 
 	public User(UserDTO userDTO) {

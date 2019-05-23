@@ -223,8 +223,8 @@ public class Server extends UnicastRemoteObject implements IServer {
 		for (Movie m : movies) {
 			dtos.add(new MovieDTO(m));
 		}
-		
-		return null;
+		dao.end();
+		return dtos;
 	}
 
 	@Override

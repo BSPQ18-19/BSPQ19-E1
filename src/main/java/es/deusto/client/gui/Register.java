@@ -21,6 +21,8 @@ import es.deusto.client.Client;
 import es.deusto.client.controller.ClientController;
 import es.deusto.server.data.UserDTO;
 import es.deusto.server.data.UserDetailsDTO;
+import es.deusto.server.jdo.UserType;
+
 import java.awt.FlowLayout;
 import java.util.Arrays;
 
@@ -181,6 +183,7 @@ public class Register extends JPanel {
 				details.name = nameField.getText();
 				details.surname = surnameField.getText();
 				details.phone = phoneField.getText();
+				details.type = UserType.CLIENTE;
 				if(details.email.length() == 0 || details.name.length() == 0 || details.surname.length() == 0 || details.phone.length() == 0){
 					JOptionPane.showMessageDialog(Register.this, "There is one or more empty fields", "Error", JOptionPane.ERROR_MESSAGE);
 					return;
