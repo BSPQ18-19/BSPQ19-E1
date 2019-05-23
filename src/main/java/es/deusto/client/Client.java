@@ -11,14 +11,15 @@ import java.awt.*;
 import java.net.MalformedURLException;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
-import java.util.Arrays;
+import java.util.*;
 import java.util.List;
-import java.util.Scanner;
 
 public class Client {
 
 	private IServer server;
 	private JFrame frame;
+	public static ResourceBundle text;
+	public static String language;
 
 	public static void main(String[] args) {
 
@@ -34,6 +35,10 @@ public class Client {
 		}
 
 		RMIServiceLocator.getServiceLocator().setService(args[0], args[1], args[2]);
+
+		Locale aLocale = new Locale("en", "ES");
+		text = ResourceBundle.getBundle("text", aLocale);
+		language = "English";
 
 		if(enableGUI) {
 			EventQueue.invokeLater(new Runnable() {

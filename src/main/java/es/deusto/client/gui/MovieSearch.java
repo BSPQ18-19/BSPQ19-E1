@@ -47,7 +47,7 @@ public class MovieSearch extends JPanel {
 		gbl_panel.rowWeights = new double[]{0.0, 0.0, Double.MIN_VALUE};
 		panel.setLayout(gbl_panel);
 		
-		JButton btnSearch = new JButton("Search");
+		JButton btnSearch = new JButton(client.text.getString("search"));
 		GridBagConstraints gbc_btnSearch = new GridBagConstraints();
 		gbc_btnSearch.fill = GridBagConstraints.HORIZONTAL;
 		gbc_btnSearch.gridx = 0;
@@ -88,13 +88,13 @@ public class MovieSearch extends JPanel {
 		JPanel panel_2 = new JPanel();
 		add(panel_2, BorderLayout.SOUTH);
 		
-		JButton btnCancel = new JButton("Cancel");
+		JButton btnCancel = new JButton(client.text.getString("cancel"));
 		panel_2.add(btnCancel);
 		btnCancel.addActionListener((e) -> {
 			client.switchToHomePage();
 		});
 		
-		JButton btnSelect = new JButton("Select");
+		JButton btnSelect = new JButton(client.text.getString("select"));
 		panel_2.add(btnSelect);
 		btnSelect.addActionListener((e) -> {
 			SessionDTO session = list.getSelectedValue();

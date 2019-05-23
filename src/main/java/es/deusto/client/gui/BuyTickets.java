@@ -52,7 +52,7 @@ public class BuyTickets extends JPanel {
 		gbc_lblSynopsis.gridy = 2;
 		add(lblSynopsis, gbc_lblSynopsis);
 		
-		JLabel lblDuration = new JLabel("Duration: " + movie.duration + " min");
+		JLabel lblDuration = new JLabel(client.text.getString("duration") + movie.duration + " min");
 		GridBagConstraints gbc_lblDuration = new GridBagConstraints();
 		gbc_lblDuration.insets = new Insets(0, 0, 5, 5);
 		gbc_lblDuration.anchor = GridBagConstraints.WEST;
@@ -60,7 +60,7 @@ public class BuyTickets extends JPanel {
 		gbc_lblDuration.gridy = 3;
 		add(lblDuration, gbc_lblDuration);
 		
-		JLabel lblGenre = new JLabel("Genre: " + movie.genre);
+		JLabel lblGenre = new JLabel(client.text.getString("genre") + movie.genre);
 		GridBagConstraints gbc_lblGenre = new GridBagConstraints();
 		gbc_lblGenre.insets = new Insets(0, 0, 5, 5);
 		gbc_lblGenre.anchor = GridBagConstraints.WEST;
@@ -68,7 +68,7 @@ public class BuyTickets extends JPanel {
 		gbc_lblGenre.gridy = 4;
 		add(lblGenre, gbc_lblGenre);
 		
-		JLabel lblDirector = new JLabel("Director:" + movie.director);
+		JLabel lblDirector = new JLabel(client.text.getString("duration") + movie.director);
 		GridBagConstraints gbc_lblDirector = new GridBagConstraints();
 		gbc_lblDirector.insets = new Insets(0, 0, 5, 5);
 		gbc_lblDirector.anchor = GridBagConstraints.WEST;
@@ -76,7 +76,7 @@ public class BuyTickets extends JPanel {
 		gbc_lblDirector.gridy = 5;
 		add(lblDirector, gbc_lblDirector);
 		
-		JLabel lblAmount = new JLabel("Amount:");
+		JLabel lblAmount = new JLabel(client.text.getString("amount"));
 		GridBagConstraints gbc_lblAmount = new GridBagConstraints();
 		gbc_lblAmount.insets = new Insets(0, 0, 5, 5);
 		gbc_lblAmount.anchor = GridBagConstraints.WEST;
@@ -92,7 +92,7 @@ public class BuyTickets extends JPanel {
 		gbc_spinner.gridy = 6;
 		add(spinner, gbc_spinner);
 		
-		JButton btnBuy = new JButton("Buy");
+		JButton btnBuy = new JButton(client.text.getString("buy"));
 		GridBagConstraints gbc_btnBuy = new GridBagConstraints();
 		gbc_btnBuy.insets = new Insets(0, 0, 5, 5);
 		gbc_btnBuy.gridx = 3;
@@ -109,7 +109,7 @@ public class BuyTickets extends JPanel {
 			client.switchToHomePage();
 		});
 		
-		JButton btnCancel = new JButton("Cancel");
+		JButton btnCancel = new JButton(client.text.getString("cancel"));
 		GridBagConstraints gbc_btnCancel = new GridBagConstraints();
 		gbc_btnCancel.anchor = GridBagConstraints.EAST;
 		gbc_btnCancel.insets = new Insets(0, 0, 5, 5);

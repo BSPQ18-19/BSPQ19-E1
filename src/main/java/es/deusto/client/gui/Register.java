@@ -60,7 +60,7 @@ public class Register extends JPanel {
 		gbc_horizontalStrut.gridy = 1;
 		add(horizontalStrut, gbc_horizontalStrut);
 		
-		JLabel lblEmail = new JLabel("Email:");
+		JLabel lblEmail = new JLabel(client.text.getString("email"));
 		GridBagConstraints gbc_lblEmail = new GridBagConstraints();
 		gbc_lblEmail.anchor = GridBagConstraints.EAST;
 		gbc_lblEmail.insets = new Insets(0, 0, 5, 5);
@@ -77,7 +77,7 @@ public class Register extends JPanel {
 		add(emailField, gbc_emailField);
 		emailField.setColumns(20);
 		
-		JLabel lblName = new JLabel("Name:");
+		JLabel lblName = new JLabel(client.text.getString("name"));
 		GridBagConstraints gbc_lblName = new GridBagConstraints();
 		gbc_lblName.insets = new Insets(0, 0, 5, 5);
 		gbc_lblName.anchor = GridBagConstraints.EAST;
@@ -95,7 +95,7 @@ public class Register extends JPanel {
 		nameField.setColumns(20);
 		nameField.setText(details.name);
 		
-		JLabel lblSurname = new JLabel("Surname:");
+		JLabel lblSurname = new JLabel(client.text.getString("surname"));
 		GridBagConstraints gbc_lblSurname = new GridBagConstraints();
 		gbc_lblSurname.anchor = GridBagConstraints.EAST;
 		gbc_lblSurname.insets = new Insets(0, 0, 5, 5);
@@ -113,7 +113,7 @@ public class Register extends JPanel {
 		surnameField.setColumns(20);
 		surnameField.setText(details.surname);
 		
-		JLabel lblPhone = new JLabel("Phone:");
+		JLabel lblPhone = new JLabel(client.text.getString("phone"));
 		GridBagConstraints gbc_lblPhone = new GridBagConstraints();
 		gbc_lblPhone.anchor = GridBagConstraints.EAST;
 		gbc_lblPhone.insets = new Insets(0, 0, 5, 5);
@@ -131,7 +131,7 @@ public class Register extends JPanel {
 		phoneField.setColumns(10);
 		phoneField.setText(details.phone);
 		
-		JLabel lblChangePassword = new JLabel("Password:");
+		JLabel lblChangePassword = new JLabel(client.text.getString("password"));
 		GridBagConstraints gbc_lblChangePassword = new GridBagConstraints();
 		gbc_lblChangePassword.anchor = GridBagConstraints.EAST;
 		gbc_lblChangePassword.insets = new Insets(0, 0, 5, 5);
@@ -147,7 +147,7 @@ public class Register extends JPanel {
 		gbc_passwordField.gridy = 6;
 		add(passwordField, gbc_passwordField);
 		
-		JLabel lblRepeatPassword = new JLabel("Repeat password:");
+		JLabel lblRepeatPassword = new JLabel(client.text.getString("repeatPassword"));
 		GridBagConstraints gbc_lblRepeatPassword = new GridBagConstraints();
 		gbc_lblRepeatPassword.anchor = GridBagConstraints.EAST;
 		gbc_lblRepeatPassword.insets = new Insets(0, 0, 5, 5);
@@ -173,7 +173,7 @@ public class Register extends JPanel {
 		gbc_panel.gridy = 9;
 		add(panel, gbc_panel);
 		
-		JButton btnRegister = new JButton("Register");
+		JButton btnRegister = new JButton(client.text.getString("register"));
 		panel.add(btnRegister);
 		btnRegister.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -206,7 +206,7 @@ public class Register extends JPanel {
 			}
 		});
 		
-		JButton btnNewButton_1 = new JButton("Cancel");
+		JButton btnNewButton_1 = new JButton(client.text.getString("cancel"));
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				client.switchToLogin();

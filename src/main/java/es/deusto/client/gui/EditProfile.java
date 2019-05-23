@@ -56,7 +56,7 @@ public class EditProfile extends JPanel {
 		gbc_horizontalStrut.gridy = 1;
 		add(horizontalStrut, gbc_horizontalStrut);
 		
-		JLabel lblName = new JLabel("Name:");
+		JLabel lblName = new JLabel(client.text.getString("name"));
 		GridBagConstraints gbc_lblName = new GridBagConstraints();
 		gbc_lblName.insets = new Insets(0, 0, 5, 5);
 		gbc_lblName.anchor = GridBagConstraints.EAST;
@@ -74,7 +74,7 @@ public class EditProfile extends JPanel {
 		textField.setColumns(10);
 		textField.setText(details.name);
 		
-		JLabel lblSurname = new JLabel("Surname:");
+		JLabel lblSurname = new JLabel(client.text.getString("surname"));
 		GridBagConstraints gbc_lblSurname = new GridBagConstraints();
 		gbc_lblSurname.anchor = GridBagConstraints.EAST;
 		gbc_lblSurname.insets = new Insets(0, 0, 5, 5);
@@ -92,7 +92,7 @@ public class EditProfile extends JPanel {
 		textField_1.setColumns(20);
 		textField_1.setText(details.surname);
 		
-		JLabel lblPhone = new JLabel("Phone:");
+		JLabel lblPhone = new JLabel(client.text.getString("phone"));
 		GridBagConstraints gbc_lblPhone = new GridBagConstraints();
 		gbc_lblPhone.anchor = GridBagConstraints.EAST;
 		gbc_lblPhone.insets = new Insets(0, 0, 5, 5);
@@ -110,7 +110,7 @@ public class EditProfile extends JPanel {
 		textField_2.setColumns(10);
 		textField_2.setText(details.phone);
 		
-		JLabel lblChangePassword = new JLabel("New password:");
+		JLabel lblChangePassword = new JLabel(client.text.getString("newPassword"));
 		GridBagConstraints gbc_lblChangePassword = new GridBagConstraints();
 		gbc_lblChangePassword.anchor = GridBagConstraints.EAST;
 		gbc_lblChangePassword.insets = new Insets(0, 0, 5, 5);
@@ -126,7 +126,7 @@ public class EditProfile extends JPanel {
 		gbc_passwordField.gridy = 5;
 		add(passwordField, gbc_passwordField);
 		
-		JLabel lblRepeatPassword = new JLabel("Repeat password:");
+		JLabel lblRepeatPassword = new JLabel(client.text.getString("repeatPassword"));
 		GridBagConstraints gbc_lblRepeatPassword = new GridBagConstraints();
 		gbc_lblRepeatPassword.anchor = GridBagConstraints.EAST;
 		gbc_lblRepeatPassword.insets = new Insets(0, 0, 5, 5);
@@ -150,7 +150,7 @@ public class EditProfile extends JPanel {
 		gbc_panel.gridy = 8;
 		add(panel, gbc_panel);
 		
-		JButton btnSaveChanges = new JButton("Save changes");
+		JButton btnSaveChanges = new JButton(client.text.getString("saveChanges"));
 		panel.add(btnSaveChanges);
 		btnSaveChanges.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -175,7 +175,7 @@ public class EditProfile extends JPanel {
 			}
 		});
 		
-		JButton btnNewButton_1 = new JButton("Cancel");
+		JButton btnNewButton_1 = new JButton(client.text.getString("cancel"));
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				client.switchToHomePage();

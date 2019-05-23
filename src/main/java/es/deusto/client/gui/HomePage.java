@@ -36,7 +36,7 @@ public class HomePage extends JPanel {
 		gbc_verticalStrut_1.gridy = 0;
 		add(verticalStrut_1, gbc_verticalStrut_1);
 		
-		JLabel lblLoggedInAs = new JLabel("Logged in as: ");
+		JLabel lblLoggedInAs = new JLabel(client.text.getString("logged"));
 		GridBagConstraints gbc_lblLoggedInAs = new GridBagConstraints();
 		gbc_lblLoggedInAs.anchor = GridBagConstraints.WEST;
 		gbc_lblLoggedInAs.insets = new Insets(0, 0, 5, 5);
@@ -53,7 +53,7 @@ public class HomePage extends JPanel {
 		gbc_lblUsername.gridy = 1;
 		add(lblUsername, gbc_lblUsername);
 		
-		JButton btnEditProfile = new JButton("Edit Profile");
+		JButton btnEditProfile = new JButton(client.text.getString("editProfile"));
 		btnEditProfile.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				client.switchToEditProfile();
@@ -66,7 +66,7 @@ public class HomePage extends JPanel {
 		gbc_btnEditProfile.gridy = 1;
 		add(btnEditProfile, gbc_btnEditProfile);
 		
-		JButton btnLogout = new JButton("Logout");
+		JButton btnLogout = new JButton(client.text.getString("logout"));
 		btnLogout.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				try {
@@ -84,14 +84,14 @@ public class HomePage extends JPanel {
 		gbc_btnLogout.gridy = 1;
 		add(btnLogout, gbc_btnLogout);
 		
-		JLabel lblMovies = new JLabel("Latest Movies");
+		JLabel lblMovies = new JLabel(client.text.getString("latestMovies"));
 		GridBagConstraints gbc_lblMovies = new GridBagConstraints();
 		gbc_lblMovies.insets = new Insets(0, 0, 5, 5);
 		gbc_lblMovies.gridx = 1;
 		gbc_lblMovies.gridy = 2;
 		add(lblMovies, gbc_lblMovies);
 		
-		JLabel lblYourTickets = new JLabel("Your tickets");
+		JLabel lblYourTickets = new JLabel(client.text.getString("yourTickets"));
 		GridBagConstraints gbc_lblYourTickets = new GridBagConstraints();
 		gbc_lblYourTickets.insets = new Insets(0, 0, 5, 5);
 		gbc_lblYourTickets.gridx = 4;
@@ -132,7 +132,7 @@ public class HomePage extends JPanel {
 		gbc_ticketsList.gridy = 3;
 		add(ticketsList, gbc_ticketsList);
 		
-		JButton btnSeeAvailableSessions = new JButton("See available sessions");
+		JButton btnSeeAvailableSessions = new JButton(client.text.getString("seeSessions"));
 		btnSeeAvailableSessions.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				
@@ -144,14 +144,14 @@ public class HomePage extends JPanel {
 		gbc_btnSeeAvailableSessions.gridy = 4;
 		add(btnSeeAvailableSessions, gbc_btnSeeAvailableSessions);
 		
-		JButton btnTicketDetails = new JButton("Ticket details");
+		JButton btnTicketDetails = new JButton(client.text.getString("ticketDetails"));
 		GridBagConstraints gbc_btnTicketDetails = new GridBagConstraints();
 		gbc_btnTicketDetails.insets = new Insets(0, 0, 5, 5);
 		gbc_btnTicketDetails.gridx = 4;
 		gbc_btnTicketDetails.gridy = 4;
 		add(btnTicketDetails, gbc_btnTicketDetails);
 		
-		JButton btnSearchMovies = new JButton("Search Movies");
+		JButton btnSearchMovies = new JButton(client.text.getString("searchMovies"));
 		btnSearchMovies.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				client.switchToMovieSearch();
