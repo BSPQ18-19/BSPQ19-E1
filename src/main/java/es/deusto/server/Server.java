@@ -18,6 +18,8 @@ import es.deusto.server.jdo.User;
 
 import javax.swing.*;
 
+import edu.emory.mathcs.backport.java.util.Arrays;
+
 public class Server extends UnicastRemoteObject implements IServer {
 
 	private static final long serialVersionUID = 1L;
@@ -239,6 +241,21 @@ public class Server extends UnicastRemoteObject implements IServer {
 			throw e;
 		}
 		
+	}
+
+	@Override
+	public void addMovie(MovieDTO movie, String[] cast) throws RemoteException {
+		// TODO Auto-generated method stub
+		dao.begin();
+		Movie m = new Movie();
+		m.setCast((List<String>)Arrays.asList(cast));
+		m.setDirector(movie.director);
+		m.setDuration(movie.duration);
+		m.setGenre(movie.genre);
+		m.setSynopsis(movie.synopsis);
+		m.setTitle(movie.title);
+		dao.storeObject(m);
+		dao.end();
 	}
 
 }

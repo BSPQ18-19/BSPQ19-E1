@@ -174,6 +174,14 @@ public class Client {
 		frame.setTitle(text.getString("adminHome"));
 		SwingUtilities.updateComponentTreeUI(frame);
 	}
+
+	public void switchToAddMovie() {
+		// TODO Auto-generated method stub
+		frame.getContentPane().removeAll();
+		frame.getContentPane().add(new MovieDetails(this));
+		frame.setTitle(text.getString("adminHome"));
+		SwingUtilities.updateComponentTreeUI(frame);
+	}
 	
 	
 }

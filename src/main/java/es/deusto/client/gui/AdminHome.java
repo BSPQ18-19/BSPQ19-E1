@@ -23,7 +23,7 @@ public class AdminHome extends JPanel {
 		setLayout(new BorderLayout(0, 0));
 		
 		DefaultListModel<MovieDTO> model = new DefaultListModel<>();
-		JList<MovieDTO> movie_list = new JList<MovieDTO>();
+		JList<MovieDTO> movie_list = new JList<MovieDTO>(model);
 		List<MovieDTO> movies = ClientController.getController().getMovies();
 		for (MovieDTO m : movies) {
 			model.addElement(m);
@@ -32,6 +32,12 @@ public class AdminHome extends JPanel {
 		
 		JPanel panel = new JPanel();
 		add(panel, BorderLayout.SOUTH);
+		
+		JButton btnAddMovie = new JButton("Add Movie");
+		panel.add(btnAddMovie);
+		btnAddMovie.addActionListener((e) -> {
+			client.switchToAddMovie();
+		}); 
 		
 		JButton btnViewSessions = new JButton(client.text.getString("viewSessions"));
 		panel.add(btnViewSessions);

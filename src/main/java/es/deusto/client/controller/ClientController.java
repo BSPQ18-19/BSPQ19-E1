@@ -154,4 +154,16 @@ public class ClientController {
 			return false;
 		}
 	}
+
+	public boolean addMovie(MovieDTO movie, String[] cast) {
+		// TODO Auto-generated method stub
+		try {
+			rsl.getClientManager().addMovie(movie, cast);
+			return true;
+		} catch (RemoteException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return false;
+		}
+	}
 }
