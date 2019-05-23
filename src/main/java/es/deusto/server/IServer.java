@@ -11,8 +11,8 @@ import java.util.List;
 public interface IServer extends Remote {
 	void addMovie(String title, String director, List<String> cast) throws RemoteException;
 	void deleteMovie(String title) throws RemoteException;
-	void addSession(Movie movie, Date time) throws RemoteException;
-	void deleteSession(Movie movie, Date time) throws RemoteException;
+	void addSession(MovieDTO movie, Date time) throws RemoteException;
+	void deleteSession(SessionDTO session) throws RemoteException;
 	MovieDTO getMovie(String title) throws RemoteException;
 	List<MovieDTO> searchMovies(String query) throws RemoteException;
 	List<SessionDTO> getSessionsForMovie(MovieDTO mdto) throws RemoteException;

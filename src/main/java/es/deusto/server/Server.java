@@ -33,7 +33,7 @@ public class Server extends UnicastRemoteObject implements IServer {
 		this.dao = new DAO();
 	}
 
-	public void addMovie(String title, String director, List<String> cast) {
+	public void addMovie(String title, String director, List<String> cast) throws RemoteException {
 		dao.begin();
 		Movie movie = new Movie();
 		movie.setTitle(title);
@@ -42,15 +42,16 @@ public class Server extends UnicastRemoteObject implements IServer {
 		dao.storeObject(movie);
 		dao.end();
 	}
-	public void addSession(Movie movie, Date time) {
+	public void addSession(MovieDTO movie, Date time) throws RemoteException {
 		dao.begin();
 		Session session = new Session();
-		session.setMovie(movie);
+		Movie m = dao.getObjectById(Movie.class, movie.id);
+		session.setMovie(m);
 		session.setTime(time);
 		dao.storeObject(session);
 		dao.end();
 	}
-	public MovieDTO getMovie(String title) {
+	public MovieDTO getMovie(String title) throws RemoteException {
 		dao.begin();
 		Movie movie = dao.getMovie(title);
 		MovieDTO mdto = new MovieDTO(movie);
@@ -58,14 +59,15 @@ public class Server extends UnicastRemoteObject implements IServer {
 		return mdto;
 	}
 
-	public void deleteMovie(String title) {
+	public void deleteMovie(String title) throws RemoteException {
 		dao.begin();
 		dao.deleteMovie(title);
 		dao.end();
 	}
-	public void deleteSession(Movie movie, Date time) {//
+	public void deleteSession(SessionDTO session) throws RemoteException {//
 		dao.begin();
-		dao.deleteSession(movie, time);
+		Session s = dao.getObjectById(Session.class, session.id);
+		dao.deleteSession(s);
 		dao.end();
 		
 	}
