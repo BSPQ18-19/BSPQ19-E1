@@ -161,16 +161,16 @@ public class EditProfile extends JPanel {
 						if (Arrays.equals(passwordField.getPassword(), passwordField_1.getPassword())) {
 							details.password = new String(passwordField.getPassword());
 						} else {
-							JOptionPane.showMessageDialog(EditProfile.this, "Passwords do not match", "Error", JOptionPane.ERROR_MESSAGE);
+							JOptionPane.showMessageDialog(EditProfile.this, client.text.getString("passwordError"), client.text.getString("error"), JOptionPane.ERROR_MESSAGE);
 							return;
 						}
 				}
 				boolean success = ClientController.getController().updateUser(details);
 				if (success) {
-					JOptionPane.showMessageDialog(EditProfile.this, "Updated successfully");
+					JOptionPane.showMessageDialog(EditProfile.this, client.text.getString("userUpdateOK"));
 					client.switchToHomePage();
 				} else {
-					JOptionPane.showMessageDialog(EditProfile.this, "An error has ocurred", "Error", JOptionPane.ERROR_MESSAGE);
+					JOptionPane.showMessageDialog(EditProfile.this, client.text.getString("userUpdateError"), client.text.getString("error"), JOptionPane.ERROR_MESSAGE);
 				}
 			}
 		});

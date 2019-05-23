@@ -11,6 +11,7 @@ import java.util.List;
 public interface IServer extends Remote {
 	void addMovie(String title, String director, List<String> cast) throws RemoteException;
 	void deleteMovie(String title) throws RemoteException;
+	void deleteMovie(MovieDTO movie) throws RemoteException;
 	void addSession(MovieDTO movie, Date time) throws RemoteException;
 	void deleteSession(SessionDTO session) throws RemoteException;
 	MovieDTO getMovie(String title) throws RemoteException;
@@ -24,4 +25,5 @@ public interface IServer extends Remote {
 	UserDTO updateUser(UserDetailsDTO details) throws RemoteException;
 	boolean registerUser(UserDetailsDTO user) throws RemoteException;
 	List<TicketDTO> getTickets(UserDTO user) throws RemoteException;
+	List<MovieDTO> getAllMovies() throws RemoteException;
 }

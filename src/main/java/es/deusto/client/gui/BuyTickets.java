@@ -102,9 +102,9 @@ public class BuyTickets extends JPanel {
 			System.out.println(session.id + "" + spinner.getValue());
 			boolean success = ClientController.getController().buyMovie(session, (int) spinner.getValue());
 			if(success) {
-				JOptionPane.showMessageDialog(this, "Successfully bought tickets");
+				JOptionPane.showMessageDialog(this, client.text.getString("buyTicketsOK"));
 			} else {
-				JOptionPane.showMessageDialog(this, "An error has ocurred");
+				JOptionPane.showMessageDialog(this, client.text.getString("buyTicketsError"));
 			}
 			client.switchToHomePage();
 		});

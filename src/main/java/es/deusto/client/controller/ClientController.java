@@ -61,7 +61,7 @@ public class ClientController {
 			return details;
 		} catch (RemoteException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			log.error(e.getMessage());
 			return new UserDetailsDTO();
 		}
 	}
@@ -72,7 +72,7 @@ public class ClientController {
 			loggedUser = newuser;
 			return true; // Success
 		} catch (RemoteException e) {
-			e.printStackTrace();
+			log.error(e.getMessage());
 			return false;
 		}
 	}
@@ -82,7 +82,7 @@ public class ClientController {
         try {
             result = rsl.getClientManager().registerUser(user);
         } catch (RemoteException e) {
-            e.printStackTrace();
+            log.error(e.getMessage());
         }
         return result;
     }
@@ -99,7 +99,7 @@ public class ClientController {
 			return sessions;
 		} catch (RemoteException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			log.error(e.getMessage());
 			return null;
 		}
 	}
@@ -110,7 +110,7 @@ public class ClientController {
 			return movie;
 		} catch (RemoteException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			log.error(e.getMessage());
 			return null;
 		}
 	}
@@ -121,7 +121,7 @@ public class ClientController {
 			return rsl.getClientManager().buyTickets(loggedUser, session, amount);
 		} catch (RemoteException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			log.error(e.getMessage());
 			return false;
 		}
 	}
@@ -130,8 +130,28 @@ public class ClientController {
 		try {
 			return rsl.getClientManager().getTickets(user);
 		} catch (RemoteException e) {
-			e.printStackTrace();
+			log.error(e.getMessage());
 			return null;
+		}
+	}
+
+	public List<MovieDTO> getMovies() {
+		try {
+			return rsl.getClientManager().getAllMovies();
+		} catch (RemoteException e) {
+			// TODO Auto-generated catch block
+			log.error(e.getMessage());
+			return null;
+		}
+	}
+
+	public boolean deleteMovie(MovieDTO movie) {
+		try {
+			rsl.getClientManager().deleteMovie(movie);
+			return true;
+		} catch (RemoteException e) {
+			log.error(e.getMessage());
+			return false;
 		}
 	}
 }

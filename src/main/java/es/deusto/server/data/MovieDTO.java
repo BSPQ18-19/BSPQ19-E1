@@ -28,4 +28,12 @@ public class MovieDTO implements Serializable {
 		genre = new String(movie.getGenre());
 		director = new String(movie.getDirector());
 	}
+
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return title;
+	}
+	
+	
 }

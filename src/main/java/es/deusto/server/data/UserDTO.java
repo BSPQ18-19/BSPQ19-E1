@@ -1,6 +1,7 @@
 package es.deusto.server.data;
 
 import es.deusto.server.jdo.User;
+import es.deusto.server.jdo.UserType;
 
 import java.io.Serializable;
 
@@ -9,6 +10,7 @@ public class UserDTO implements Serializable {
     private static final long serialVersionUID = 1L;
     private long userID;
     private String name;
+    private UserType type;
 
     public UserDTO(long userID, String name, boolean isGuest) {
         this.userID = userID;
@@ -17,9 +19,16 @@ public class UserDTO implements Serializable {
     public UserDTO(User user){
         this.userID = user.getId();
         this.name = user.getName();
+        this.type = user.getType();
     }
 
-    public long getUserID() {
+    public UserType getType() {
+		return type;
+	}
+	public void setType(UserType type) {
+		this.type = type;
+	}
+	public long getUserID() {
         return userID;
     }
 

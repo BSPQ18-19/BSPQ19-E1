@@ -215,4 +215,25 @@ public class Server extends UnicastRemoteObject implements IServer {
 		return listDTO;
 	}
 
+	@Override
+	public List<MovieDTO> getAllMovies() throws RemoteException {
+		dao.begin();
+		List<Movie> movies = dao.getMovies();
+		List<MovieDTO> dtos = new ArrayList<>();
+		for (Movie m : movies) {
+			dtos.add(new MovieDTO(m));
+		}
+		
+		return null;
+	}
+
+	@Override
+	public void deleteMovie(MovieDTO movie) throws RemoteException {
+		dao.begin();
+		Movie m = dao.getObjectById(Movie.class, movie.id);
+		dao.deleteMovie(m);
+		dao.end();
+		
+	}
+
 }

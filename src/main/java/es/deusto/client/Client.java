@@ -18,8 +18,8 @@ public class Client {
 
 	private IServer server;
 	private JFrame frame;
-	public static ResourceBundle text;
-	public static String language;
+	public ResourceBundle text;
+	public String language;
 
 	public static void main(String[] args) {
 
@@ -36,9 +36,7 @@ public class Client {
 
 		RMIServiceLocator.getServiceLocator().setService(args[0], args[1], args[2]);
 
-		Locale aLocale = new Locale("en", "ES");
-		text = ResourceBundle.getBundle("text", aLocale);
-		language = "English";
+		
 
 		if(enableGUI) {
 			EventQueue.invokeLater(new Runnable() {
@@ -107,6 +105,9 @@ public class Client {
 	 * Create the application.
 	 */
 	public Client() {
+		Locale aLocale = new Locale("en", "ES");
+		text = ResourceBundle.getBundle("text", aLocale);
+		language = "English";
 		initialize();
 	}
 
@@ -123,14 +124,14 @@ public class Client {
 	public void switchToRegister() {
 		frame.getContentPane().removeAll();
 		frame.getContentPane().add(new Register(this));
-		frame.setTitle("Register");
+		frame.setTitle(text.getString("register"));
 		SwingUtilities.updateComponentTreeUI(frame);
 	}
 	
 	public void switchToHomePage() {
 		frame.getContentPane().removeAll();
 		frame.getContentPane().add(new HomePage(this));
-		frame.setTitle("Home Page");
+		frame.setTitle(text.getString("homePage"));
 		SwingUtilities.updateComponentTreeUI(frame);
 	}
 	
@@ -138,33 +139,40 @@ public class Client {
 		frame.getContentPane().removeAll();
 		
 		frame.getContentPane().add(new EditProfile(this));
-		frame.setTitle("Edit Profile");
+		frame.setTitle(text.getString("editProfile"));
 		SwingUtilities.updateComponentTreeUI(frame);
 	}
 
 	public void switchToLogin() {
 		frame.getContentPane().removeAll();
 		frame.getContentPane().add(new Login(this));
-		frame.setTitle("Login");
+		frame.setTitle(text.getString("login"));
 		SwingUtilities.updateComponentTreeUI(frame);
 	}
 	
 	public void switchToMovieSearch() {
 		frame.getContentPane().removeAll();
 		frame.getContentPane().add(new MovieSearch(this));
-		frame.setTitle("Movie Search");
+		frame.setTitle(text.getString("movieSearch"));
 		SwingUtilities.updateComponentTreeUI(frame);
 	}
 
 	public void switchToBuyTickets(SessionDTO session) {
 		frame.getContentPane().removeAll();
 		frame.getContentPane().add(new BuyTickets(this, session));
-		frame.setTitle("Buy Tickets");
+		frame.setTitle(text.getString("buyTickets"));
 		SwingUtilities.updateComponentTreeUI(frame);
 	}
 	
 	public void incorrectLoginAlert() {
 		JOptionPane.showMessageDialog(frame, "Incorrect Login", "Incorrect email or password", JOptionPane.WARNING_MESSAGE);
+	}
+
+	public void switchToAdminHome() {
+		frame.getContentPane().removeAll();
+		frame.getContentPane().add(new AdminHome(this));
+		frame.setTitle(text.getString("adminHome"));
+		SwingUtilities.updateComponentTreeUI(frame);
 	}
 	
 	

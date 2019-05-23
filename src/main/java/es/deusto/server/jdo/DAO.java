@@ -59,10 +59,12 @@ public class DAO {
 	// Movie methods
 	@SuppressWarnings("unchecked")
 	public List<Movie> getMovies() {
+		pm.getFetchPlan().setMaxFetchDepth(1);
 		Extent<Movie> ex = pm.getExtent(Movie.class, false);
 		Query<Movie> q = pm.newQuery(ex);
 		Collection<Movie> col = (Collection<Movie>) q.execute();
 		List<Movie> list = new ArrayList<>(col);
+		pm.getFetchPlan().setMaxFetchDepth(-1);
 		return list;
 	}
 

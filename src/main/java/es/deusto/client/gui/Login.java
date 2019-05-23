@@ -4,6 +4,7 @@ import es.deusto.client.Client;
 import es.deusto.client.controller.ClientController;
 import es.deusto.server.data.UserDTO;
 import es.deusto.server.jdo.User;
+import es.deusto.server.jdo.UserType;
 
 import javax.swing.JPanel;
 import javax.swing.SpringLayout;
@@ -64,7 +65,10 @@ public class Login extends JPanel {
 				try {
 					UserDTO user = ClientController.getController().logIn(textField.getText(), new String(passwordField.getPassword()));
 					if(user != null) {
-						client.switchToHomePage();
+						if (user.getType() == UserType.CLIENTE)
+							client.switchToHomePage();
+						else
+							client.switchToAdminHome();
 					} else {
 						client.incorrectLoginAlert();
 					}
