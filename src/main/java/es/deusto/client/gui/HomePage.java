@@ -2,20 +2,19 @@ package es.deusto.client.gui;
 
 import es.deusto.client.Client;
 import es.deusto.client.controller.ClientController;
+import es.deusto.server.data.SessionDTO;
+import es.deusto.server.data.TicketDTO;
+import es.deusto.server.jdo.Ticket;
 
-import javax.swing.JPanel;
-import javax.swing.JLabel;
-import javax.swing.SpringLayout;
-import javax.swing.JButton;
+import javax.swing.*;
 import java.awt.event.ActionListener;
 import java.rmi.RemoteException;
 import java.awt.event.ActionEvent;
 import java.awt.GridBagLayout;
 import java.awt.GridBagConstraints;
 import java.awt.Insets;
-import javax.swing.JList;
 import java.awt.Component;
-import javax.swing.Box;
+import java.util.List;
 
 public class HomePage extends JPanel {
 
@@ -113,14 +112,25 @@ public class HomePage extends JPanel {
 		gbc_list.gridx = 1;
 		gbc_list.gridy = 3;
 		add(list, gbc_list);
-		
-		JList list_1 = new JList();
-		GridBagConstraints gbc_list_1 = new GridBagConstraints();
-		gbc_list_1.insets = new Insets(0, 0, 5, 5);
-		gbc_list_1.fill = GridBagConstraints.BOTH;
-		gbc_list_1.gridx = 4;
-		gbc_list_1.gridy = 3;
-		add(list_1, gbc_list_1);
+
+		DefaultListModel<SessionDTO> listModel = new DefaultListModel<>();
+		List<TicketDTO> dtoList = ClientController.getController().getTickets(ClientController.getController().getLoggedUser());
+		System.out.println(dtoList);
+		if(dtoList != null){
+			listModel.removeAllElements();
+			for(TicketDTO ticket : dtoList){
+				listModel.addElement(ticket.session);
+			}
+		}
+
+		JList<SessionDTO> ticketsList = new JList<>(listModel);
+		ticketsList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+		GridBagConstraints gbc_ticketsList = new GridBagConstraints();
+		gbc_ticketsList.insets = new Insets(0, 0, 5, 5);
+		gbc_ticketsList.fill = GridBagConstraints.BOTH;
+		gbc_ticketsList.gridx = 4;
+		gbc_ticketsList.gridy = 3;
+		add(ticketsList, gbc_ticketsList);
 		
 		JButton btnSeeAvailableSessions = new JButton("See available sessions");
 		btnSeeAvailableSessions.addActionListener(new ActionListener() {

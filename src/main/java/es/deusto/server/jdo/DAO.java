@@ -1,5 +1,7 @@
 package es.deusto.server.jdo;
 
+import es.deusto.server.data.UserDTO;
+
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collection;
@@ -158,8 +160,7 @@ public class DAO {
 	 */
 	public User getClient(String email, String password) {
 		Query<User> q = pm.newQuery(User.class);
-		q.setFilter("email == em");
-		q.setFilter("password == pw");
+		q.setFilter("email == em && password == pw");
 		q.declareParameters("java.lang.String em, java.lang.String pw");
 		User c = q.setParameters(email, password).executeUnique();
 		return c;
@@ -186,5 +187,13 @@ public class DAO {
 	public <T> T getObjectById(Class<T> c, long id) {
 		T obj = pm.getObjectById(c, id);
 		return obj;
+	}
+
+	public List<Ticket> getTickets(UserDTO userDTO) {
+		Query<User> q = pm.newQuery(User.class);
+		q.setFilter("id == user_id");
+		q.declareParameters("java.lang.Integer user_id");
+		User user = q.setParameters(userDTO.getUserID()).executeUnique();
+		return user.getPurchases();
 	}
 }

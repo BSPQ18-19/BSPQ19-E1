@@ -98,7 +98,9 @@ public class MovieSearch extends JPanel {
 		panel_2.add(btnSelect);
 		btnSelect.addActionListener((e) -> {
 			SessionDTO session = list.getSelectedValue();
-			client.switchToBuyTickets(session);
+			if(session != null) {
+				client.switchToBuyTickets(session);
+			}
 		});
 
 	}

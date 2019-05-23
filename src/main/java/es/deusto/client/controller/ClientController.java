@@ -5,13 +5,10 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+import es.deusto.server.data.*;
 import org.slf4j.Logger;
 import es.deusto.client.logger.ClientLogger;
 import es.deusto.client.remote.RMIServiceLocator;
-import es.deusto.server.data.MovieDTO;
-import es.deusto.server.data.SessionDTO;
-import es.deusto.server.data.UserDTO;
-import es.deusto.server.data.UserDetailsDTO;
 
 public class ClientController {
 
@@ -126,6 +123,15 @@ public class ClientController {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 			return false;
+		}
+	}
+
+	public List<TicketDTO> getTickets(UserDTO user) {
+		try {
+			return rsl.getClientManager().getTickets(user);
+		} catch (RemoteException e) {
+			e.printStackTrace();
+			return null;
 		}
 	}
 }

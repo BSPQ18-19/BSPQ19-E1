@@ -9,15 +9,14 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import es.deusto.server.data.MovieDTO;
-import es.deusto.server.data.SessionDTO;
-import es.deusto.server.data.UserDTO;
-import es.deusto.server.data.UserDetailsDTO;
+import es.deusto.server.data.*;
 import es.deusto.server.jdo.DAO;
 import es.deusto.server.jdo.Movie;
 import es.deusto.server.jdo.Session;
 import es.deusto.server.jdo.Ticket;
 import es.deusto.server.jdo.User;
+
+import javax.swing.*;
 
 public class Server extends UnicastRemoteObject implements IServer {
 
@@ -202,6 +201,18 @@ public class Server extends UnicastRemoteObject implements IServer {
 		boolean result = dao.registerClient(u);
 		dao.end();
 		return result;
+	}
+
+	@Override
+	public List<TicketDTO> getTickets(UserDTO user) throws RemoteException {
+		dao.begin();
+		List<Ticket> list = dao.getTickets(user);
+		List<TicketDTO> listDTO = new ArrayList<>(list.size());
+		for(Ticket ticket: list){
+			listDTO.add(new TicketDTO(ticket));
+		}
+		dao.end();
+		return listDTO;
 	}
 
 }

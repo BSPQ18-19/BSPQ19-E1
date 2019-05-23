@@ -23,4 +23,5 @@ public interface IServer extends Remote {
 	UserDetailsDTO getUserDetails(UserDTO user) throws RemoteException;
 	UserDTO updateUser(UserDetailsDTO details) throws RemoteException;
 	boolean registerUser(UserDetailsDTO user) throws RemoteException;
+	List<TicketDTO> getTickets(UserDTO user) throws RemoteException;
 }

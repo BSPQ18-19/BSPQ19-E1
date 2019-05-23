@@ -43,6 +43,12 @@ public class User {
 		this.phone = user.phone;
 		this.password = user.password;
 	}
+
+	public User(UserDTO userDTO) {
+		super();
+		this.name = userDTO.getName();
+		this.id = userDTO.getUserID();
+	}
 	
 	public void updateDetails(UserDetailsDTO details) {
 		if(!name.equals(details.name)){
