@@ -2,8 +2,7 @@
 \label{classes_1_1deusto_1_1server_1_1_server}\index{es.deusto.server.Server@{es.deusto.server.Server}}
 
 
-Inheritance diagram for es.\+deusto.\+server.\+Server\+:
-\nopagebreak
+Inheritance diagram for es.\+deusto.\+server.\+Server\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,8 +11,7 @@ Inheritance diagram for es.\+deusto.\+server.\+Server\+:
 \end{figure}
 
 
-Collaboration diagram for es.\+deusto.\+server.\+Server\+:
-\nopagebreak
+Collaboration diagram for es.\+deusto.\+server.\+Server\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -25,15 +23,15 @@ Collaboration diagram for es.\+deusto.\+server.\+Server\+:
 \item 
 \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1_server_a84f78162a65dd737f224eb2f94c43023}{Server}} ()  throws Remote\+Exception 
 \item 
-void \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1_server_a150317903dc393d29f39db81e79131e0}{add\+Movie}} (String title, String director, List$<$ String $>$ cast)
+void \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1_server_a150317903dc393d29f39db81e79131e0}{add\+Movie}} (String title, String director, List$<$ String $>$ cast)  throws Remote\+Exception 
 \item 
-void \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1_server_abca83b4649011a8a68af754bbd25e22d}{add\+Session}} (\mbox{\hyperlink{classes_1_1deusto_1_1server_1_1jdo_1_1_movie}{Movie}} movie, Date time)
+void \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1_server_a465a6299e03ec7d69ed238cb96292e9c}{add\+Session}} (\mbox{\hyperlink{classes_1_1deusto_1_1server_1_1data_1_1_movie_d_t_o}{Movie\+D\+TO}} movie, Date time)  throws Remote\+Exception 
 \item 
-\mbox{\hyperlink{classes_1_1deusto_1_1server_1_1data_1_1_movie_d_t_o}{Movie\+D\+TO}} \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1_server_a7e4544c63bcf2b2d3abce0d2ff1567ac}{get\+Movie}} (String title)
+\mbox{\hyperlink{classes_1_1deusto_1_1server_1_1data_1_1_movie_d_t_o}{Movie\+D\+TO}} \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1_server_a7e4544c63bcf2b2d3abce0d2ff1567ac}{get\+Movie}} (String title)  throws Remote\+Exception 
 \item 
-void \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1_server_a6501e4103fcc2ef691c15e4e02f7136c}{delete\+Movie}} (String title)
+void \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1_server_a6501e4103fcc2ef691c15e4e02f7136c}{delete\+Movie}} (String title)  throws Remote\+Exception 
 \item 
-void \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1_server_aa5f1973de47331683592355aaa036bfb}{delete\+Session}} (\mbox{\hyperlink{classes_1_1deusto_1_1server_1_1jdo_1_1_movie}{Movie}} movie, Date time)
+void \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1_server_aad2637c9cecc8a8b6f89e630b3711bff}{delete\+Session}} (\mbox{\hyperlink{classes_1_1deusto_1_1server_1_1data_1_1_session_d_t_o}{Session\+D\+TO}} session)  throws Remote\+Exception 
 \item 
 \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1data_1_1_user_d_t_o}{User\+D\+TO}} \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1_server_ab93f5cc9b5825192c31cd2088014378d}{log\+In}} (String email, String password)  throws Remote\+Exception 
 \item 
@@ -52,6 +50,14 @@ boolean \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1_server_a3bbf9f19774d2fa
 \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1data_1_1_user_d_t_o}{User\+D\+TO}} \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1_server_a74082f91af2065cd600c147296090921}{update\+User}} (\mbox{\hyperlink{classes_1_1deusto_1_1server_1_1data_1_1_user_details_d_t_o}{User\+Details\+D\+TO}} details)  throws Remote\+Exception 
 \item 
 boolean \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1_server_a6a419bd82bce60f072b4c7f5a527abdc}{register\+User}} (\mbox{\hyperlink{classes_1_1deusto_1_1server_1_1data_1_1_user_details_d_t_o}{User\+Details\+D\+TO}} user)  throws Remote\+Exception 
+\item 
+List$<$ \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1data_1_1_ticket_d_t_o}{Ticket\+D\+TO}} $>$ \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1_server_ac46819596621f54e4c083d7ea49e3ff0}{get\+Tickets}} (\mbox{\hyperlink{classes_1_1deusto_1_1server_1_1data_1_1_user_d_t_o}{User\+D\+TO}} user)  throws Remote\+Exception 
+\item 
+List$<$ \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1data_1_1_movie_d_t_o}{Movie\+D\+TO}} $>$ \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1_server_a12879447707ea74459bfed6fffab514b}{get\+All\+Movies}} ()  throws Remote\+Exception 
+\item 
+void \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1_server_a9821a6a51f378535746f26fde396ade5}{delete\+Movie}} (\mbox{\hyperlink{classes_1_1deusto_1_1server_1_1data_1_1_movie_d_t_o}{Movie\+D\+TO}} movie)  throws Remote\+Exception 
+\item 
+void \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1_server_ac5b894308dff2d0d47b7c665f190603c}{add\+Movie}} (\mbox{\hyperlink{classes_1_1deusto_1_1server_1_1data_1_1_movie_d_t_o}{Movie\+D\+TO}} movie, String\mbox{[}$\,$\mbox{]} cast)  throws Remote\+Exception 
 \end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
@@ -63,7 +69,7 @@ static void \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1_server_a750bb0d7dbd
 \subsection{Detailed Description}
 
 
-Definition at line 22 of file Server.\+java.
+Definition at line 23 of file Server.\+java.
 
 
 
@@ -76,10 +82,9 @@ Definition at line 22 of file Server.\+java.
 
 
 
-Definition at line 31 of file Server.\+java.
+Definition at line 32 of file Server.\+java.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -92,8 +97,8 @@ Here is the caller graph for this function\+:
 \mbox{\Hypertarget{classes_1_1deusto_1_1server_1_1_server_a150317903dc393d29f39db81e79131e0}\label{classes_1_1deusto_1_1server_1_1_server_a150317903dc393d29f39db81e79131e0}} 
 \index{es.deusto.server.Server@{es.deusto.server.Server}!addMovie@{addMovie}}
 \index{addMovie@{addMovie}!es.deusto.server.Server@{es.deusto.server.Server}}
-\subsubsection{\texorpdfstring{addMovie()}{addMovie()}}
-{\footnotesize\ttfamily void es.\+deusto.\+server.\+Server.\+add\+Movie (\begin{DoxyParamCaption}\item[{String}]{title,  }\item[{String}]{director,  }\item[{List$<$ String $>$}]{cast }\end{DoxyParamCaption})}
+\subsubsection{\texorpdfstring{addMovie()}{addMovie()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void es.\+deusto.\+server.\+Server.\+add\+Movie (\begin{DoxyParamCaption}\item[{String}]{title,  }\item[{String}]{director,  }\item[{List$<$ String $>$}]{cast }\end{DoxyParamCaption}) throws Remote\+Exception}
 
 
 
@@ -101,36 +106,57 @@ Implements \mbox{\hyperlink{interfacees_1_1deusto_1_1server_1_1_i_server_a393d86
 
 
 
-Definition at line 36 of file Server.\+java.
+Definition at line 37 of file Server.\+java.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classes_1_1deusto_1_1server_1_1_server_a150317903dc393d29f39db81e79131e0_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{classes_1_1deusto_1_1server_1_1_server_abca83b4649011a8a68af754bbd25e22d}\label{classes_1_1deusto_1_1server_1_1_server_abca83b4649011a8a68af754bbd25e22d}} 
-\index{es.deusto.server.Server@{es.deusto.server.Server}!addSession@{addSession}}
-\index{addSession@{addSession}!es.deusto.server.Server@{es.deusto.server.Server}}
-\subsubsection{\texorpdfstring{addSession()}{addSession()}}
-{\footnotesize\ttfamily void es.\+deusto.\+server.\+Server.\+add\+Session (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classes_1_1deusto_1_1server_1_1jdo_1_1_movie}{Movie}}}]{movie,  }\item[{Date}]{time }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classes_1_1deusto_1_1server_1_1_server_ac5b894308dff2d0d47b7c665f190603c}\label{classes_1_1deusto_1_1server_1_1_server_ac5b894308dff2d0d47b7c665f190603c}} 
+\index{es.deusto.server.Server@{es.deusto.server.Server}!addMovie@{addMovie}}
+\index{addMovie@{addMovie}!es.deusto.server.Server@{es.deusto.server.Server}}
+\subsubsection{\texorpdfstring{addMovie()}{addMovie()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void es.\+deusto.\+server.\+Server.\+add\+Movie (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classes_1_1deusto_1_1server_1_1data_1_1_movie_d_t_o}{Movie\+D\+TO}}}]{movie,  }\item[{String \mbox{[}$\,$\mbox{]}}]{cast }\end{DoxyParamCaption}) throws Remote\+Exception}
 
 
 
-Implements \mbox{\hyperlink{interfacees_1_1deusto_1_1server_1_1_i_server_a1e1a4e176284ef7aec05142fb85b9a72}{es.\+deusto.\+server.\+I\+Server}}.
+Implements \mbox{\hyperlink{interfacees_1_1deusto_1_1server_1_1_i_server_a9567844dce410325c606945c8d7c4dac}{es.\+deusto.\+server.\+I\+Server}}.
 
 
 
-Definition at line 45 of file Server.\+java.
+Definition at line 247 of file Server.\+java.
 
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classes_1_1deusto_1_1server_1_1_server_abca83b4649011a8a68af754bbd25e22d_cgraph}
+\includegraphics[width=350pt]{classes_1_1deusto_1_1server_1_1_server_ac5b894308dff2d0d47b7c665f190603c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classes_1_1deusto_1_1server_1_1_server_a465a6299e03ec7d69ed238cb96292e9c}\label{classes_1_1deusto_1_1server_1_1_server_a465a6299e03ec7d69ed238cb96292e9c}} 
+\index{es.deusto.server.Server@{es.deusto.server.Server}!addSession@{addSession}}
+\index{addSession@{addSession}!es.deusto.server.Server@{es.deusto.server.Server}}
+\subsubsection{\texorpdfstring{addSession()}{addSession()}}
+{\footnotesize\ttfamily void es.\+deusto.\+server.\+Server.\+add\+Session (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classes_1_1deusto_1_1server_1_1data_1_1_movie_d_t_o}{Movie\+D\+TO}}}]{movie,  }\item[{Date}]{time }\end{DoxyParamCaption}) throws Remote\+Exception}
+
+
+
+Implements \mbox{\hyperlink{interfacees_1_1deusto_1_1server_1_1_i_server_a6dea6fa95033d6339b3da87217adad77}{es.\+deusto.\+server.\+I\+Server}}.
+
+
+
+Definition at line 46 of file Server.\+java.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classes_1_1deusto_1_1server_1_1_server_a465a6299e03ec7d69ed238cb96292e9c_cgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{classes_1_1deusto_1_1server_1_1_server_a3bbf9f19774d2fae5c831cfac1f2306c}\label{classes_1_1deusto_1_1server_1_1_server_a3bbf9f19774d2fae5c831cfac1f2306c}} 
@@ -145,7 +171,7 @@ Implements \mbox{\hyperlink{interfacees_1_1deusto_1_1server_1_1_i_server_ac3302c
 
 
 
-Definition at line 156 of file Server.\+java.
+Definition at line 159 of file Server.\+java.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -158,8 +184,8 @@ Here is the call graph for this function\+:
 \mbox{\Hypertarget{classes_1_1deusto_1_1server_1_1_server_a6501e4103fcc2ef691c15e4e02f7136c}\label{classes_1_1deusto_1_1server_1_1_server_a6501e4103fcc2ef691c15e4e02f7136c}} 
 \index{es.deusto.server.Server@{es.deusto.server.Server}!deleteMovie@{deleteMovie}}
 \index{deleteMovie@{deleteMovie}!es.deusto.server.Server@{es.deusto.server.Server}}
-\subsubsection{\texorpdfstring{deleteMovie()}{deleteMovie()}}
-{\footnotesize\ttfamily void es.\+deusto.\+server.\+Server.\+delete\+Movie (\begin{DoxyParamCaption}\item[{String}]{title }\end{DoxyParamCaption})}
+\subsubsection{\texorpdfstring{deleteMovie()}{deleteMovie()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void es.\+deusto.\+server.\+Server.\+delete\+Movie (\begin{DoxyParamCaption}\item[{String}]{title }\end{DoxyParamCaption}) throws Remote\+Exception}
 
 
 
@@ -167,7 +193,7 @@ Implements \mbox{\hyperlink{interfacees_1_1deusto_1_1server_1_1_i_server_a0b3243
 
 
 
-Definition at line 61 of file Server.\+java.
+Definition at line 63 of file Server.\+java.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -177,33 +203,77 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{classes_1_1deusto_1_1server_1_1_server_a6501e4103fcc2ef691c15e4e02f7136c_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{classes_1_1deusto_1_1server_1_1_server_aa5f1973de47331683592355aaa036bfb}\label{classes_1_1deusto_1_1server_1_1_server_aa5f1973de47331683592355aaa036bfb}} 
-\index{es.deusto.server.Server@{es.deusto.server.Server}!deleteSession@{deleteSession}}
-\index{deleteSession@{deleteSession}!es.deusto.server.Server@{es.deusto.server.Server}}
-\subsubsection{\texorpdfstring{deleteSession()}{deleteSession()}}
-{\footnotesize\ttfamily void es.\+deusto.\+server.\+Server.\+delete\+Session (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classes_1_1deusto_1_1server_1_1jdo_1_1_movie}{Movie}}}]{movie,  }\item[{Date}]{time }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classes_1_1deusto_1_1server_1_1_server_a9821a6a51f378535746f26fde396ade5}\label{classes_1_1deusto_1_1server_1_1_server_a9821a6a51f378535746f26fde396ade5}} 
+\index{es.deusto.server.Server@{es.deusto.server.Server}!deleteMovie@{deleteMovie}}
+\index{deleteMovie@{deleteMovie}!es.deusto.server.Server@{es.deusto.server.Server}}
+\subsubsection{\texorpdfstring{deleteMovie()}{deleteMovie()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void es.\+deusto.\+server.\+Server.\+delete\+Movie (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classes_1_1deusto_1_1server_1_1data_1_1_movie_d_t_o}{Movie\+D\+TO}}}]{movie }\end{DoxyParamCaption}) throws Remote\+Exception}
 
 
 
-Implements \mbox{\hyperlink{interfacees_1_1deusto_1_1server_1_1_i_server_a83edabd700f0b02d4007c28392ec7c94}{es.\+deusto.\+server.\+I\+Server}}.
+Implements \mbox{\hyperlink{interfacees_1_1deusto_1_1server_1_1_i_server_a98cc625828e17ef8b55aefcd9a3f604e}{es.\+deusto.\+server.\+I\+Server}}.
 
 
 
-Definition at line 66 of file Server.\+java.
+Definition at line 233 of file Server.\+java.
 
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classes_1_1deusto_1_1server_1_1_server_aa5f1973de47331683592355aaa036bfb_cgraph}
+\includegraphics[width=350pt]{classes_1_1deusto_1_1server_1_1_server_a9821a6a51f378535746f26fde396ade5_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classes_1_1deusto_1_1server_1_1_server_aad2637c9cecc8a8b6f89e630b3711bff}\label{classes_1_1deusto_1_1server_1_1_server_aad2637c9cecc8a8b6f89e630b3711bff}} 
+\index{es.deusto.server.Server@{es.deusto.server.Server}!deleteSession@{deleteSession}}
+\index{deleteSession@{deleteSession}!es.deusto.server.Server@{es.deusto.server.Server}}
+\subsubsection{\texorpdfstring{deleteSession()}{deleteSession()}}
+{\footnotesize\ttfamily void es.\+deusto.\+server.\+Server.\+delete\+Session (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classes_1_1deusto_1_1server_1_1data_1_1_session_d_t_o}{Session\+D\+TO}}}]{session }\end{DoxyParamCaption}) throws Remote\+Exception}
+
+
+
+Implements \mbox{\hyperlink{interfacees_1_1deusto_1_1server_1_1_i_server_a69878460a3fb5dfc077308e1cd3a8d34}{es.\+deusto.\+server.\+I\+Server}}.
+
+
+
+Definition at line 68 of file Server.\+java.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classes_1_1deusto_1_1server_1_1_server_aad2637c9cecc8a8b6f89e630b3711bff_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classes_1_1deusto_1_1server_1_1_server_a12879447707ea74459bfed6fffab514b}\label{classes_1_1deusto_1_1server_1_1_server_a12879447707ea74459bfed6fffab514b}} 
+\index{es.deusto.server.Server@{es.deusto.server.Server}!getAllMovies@{getAllMovies}}
+\index{getAllMovies@{getAllMovies}!es.deusto.server.Server@{es.deusto.server.Server}}
+\subsubsection{\texorpdfstring{getAllMovies()}{getAllMovies()}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{classes_1_1deusto_1_1server_1_1data_1_1_movie_d_t_o}{Movie\+D\+TO}}$>$ es.\+deusto.\+server.\+Server.\+get\+All\+Movies (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throws Remote\+Exception}
+
+
+
+Implements \mbox{\hyperlink{interfacees_1_1deusto_1_1server_1_1_i_server_adf8c1aa53cf63eafa97299c898539938}{es.\+deusto.\+server.\+I\+Server}}.
+
+
+
+Definition at line 221 of file Server.\+java.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classes_1_1deusto_1_1server_1_1_server_a12879447707ea74459bfed6fffab514b_cgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{classes_1_1deusto_1_1server_1_1_server_a7e4544c63bcf2b2d3abce0d2ff1567ac}\label{classes_1_1deusto_1_1server_1_1_server_a7e4544c63bcf2b2d3abce0d2ff1567ac}} 
 \index{es.deusto.server.Server@{es.deusto.server.Server}!getMovie@{getMovie}}
 \index{getMovie@{getMovie}!es.deusto.server.Server@{es.deusto.server.Server}}
 \subsubsection{\texorpdfstring{getMovie()}{getMovie()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1data_1_1_movie_d_t_o}{Movie\+D\+TO}} es.\+deusto.\+server.\+Server.\+get\+Movie (\begin{DoxyParamCaption}\item[{String}]{title }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1data_1_1_movie_d_t_o}{Movie\+D\+TO}} es.\+deusto.\+server.\+Server.\+get\+Movie (\begin{DoxyParamCaption}\item[{String}]{title }\end{DoxyParamCaption}) throws Remote\+Exception}
 
 
 
@@ -211,7 +281,7 @@ Implements \mbox{\hyperlink{interfacees_1_1deusto_1_1server_1_1_i_server_a2b7883
 
 
 
-Definition at line 53 of file Server.\+java.
+Definition at line 55 of file Server.\+java.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -233,7 +303,7 @@ Implements \mbox{\hyperlink{interfacees_1_1deusto_1_1server_1_1_i_server_aac50d6
 
 
 
-Definition at line 143 of file Server.\+java.
+Definition at line 146 of file Server.\+java.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -255,7 +325,7 @@ Implements \mbox{\hyperlink{interfacees_1_1deusto_1_1server_1_1_i_server_a33dc65
 
 
 
-Definition at line 103 of file Server.\+java.
+Definition at line 106 of file Server.\+java.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -263,6 +333,28 @@ Here is the call graph for this function\+:
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classes_1_1deusto_1_1server_1_1_server_a33a6671bb4dc4bd9e23df10e53e5632d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classes_1_1deusto_1_1server_1_1_server_ac46819596621f54e4c083d7ea49e3ff0}\label{classes_1_1deusto_1_1server_1_1_server_ac46819596621f54e4c083d7ea49e3ff0}} 
+\index{es.deusto.server.Server@{es.deusto.server.Server}!getTickets@{getTickets}}
+\index{getTickets@{getTickets}!es.deusto.server.Server@{es.deusto.server.Server}}
+\subsubsection{\texorpdfstring{getTickets()}{getTickets()}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{classes_1_1deusto_1_1server_1_1data_1_1_ticket_d_t_o}{Ticket\+D\+TO}}$>$ es.\+deusto.\+server.\+Server.\+get\+Tickets (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classes_1_1deusto_1_1server_1_1data_1_1_user_d_t_o}{User\+D\+TO}}}]{user }\end{DoxyParamCaption}) throws Remote\+Exception}
+
+
+
+Implements \mbox{\hyperlink{interfacees_1_1deusto_1_1server_1_1_i_server_ab782fc42997e35e5288e2b38a718b5c7}{es.\+deusto.\+server.\+I\+Server}}.
+
+
+
+Definition at line 209 of file Server.\+java.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classes_1_1deusto_1_1server_1_1_server_ac46819596621f54e4c083d7ea49e3ff0_cgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{classes_1_1deusto_1_1server_1_1_server_ad742fe9a45edccd8b2309be98a74baae}\label{classes_1_1deusto_1_1server_1_1_server_ad742fe9a45edccd8b2309be98a74baae}} 
@@ -277,7 +369,7 @@ Implements \mbox{\hyperlink{interfacees_1_1deusto_1_1server_1_1_i_server_a2dcd7f
 
 
 
-Definition at line 175 of file Server.\+java.
+Definition at line 178 of file Server.\+java.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -299,7 +391,7 @@ Implements \mbox{\hyperlink{interfacees_1_1deusto_1_1server_1_1_i_server_a62db15
 
 
 
-Definition at line 73 of file Server.\+java.
+Definition at line 76 of file Server.\+java.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -321,7 +413,7 @@ Implements \mbox{\hyperlink{interfacees_1_1deusto_1_1server_1_1_i_server_a479231
 
 
 
-Definition at line 85 of file Server.\+java.
+Definition at line 88 of file Server.\+java.
 
 \mbox{\Hypertarget{classes_1_1deusto_1_1server_1_1_server_a750bb0d7dbd89246a3602f2e20d03fb5}\label{classes_1_1deusto_1_1server_1_1_server_a750bb0d7dbd89246a3602f2e20d03fb5}} 
 \index{es.deusto.server.Server@{es.deusto.server.Server}!main@{main}}
@@ -331,7 +423,7 @@ Definition at line 85 of file Server.\+java.
 
 
 
-Definition at line 115 of file Server.\+java.
+Definition at line 118 of file Server.\+java.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -353,7 +445,7 @@ Implements \mbox{\hyperlink{interfacees_1_1deusto_1_1server_1_1_i_server_a998e20
 
 
 
-Definition at line 197 of file Server.\+java.
+Definition at line 200 of file Server.\+java.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -375,7 +467,7 @@ Implements \mbox{\hyperlink{interfacees_1_1deusto_1_1server_1_1_i_server_a50b7da
 
 
 
-Definition at line 91 of file Server.\+java.
+Definition at line 94 of file Server.\+java.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -397,7 +489,7 @@ Implements \mbox{\hyperlink{interfacees_1_1deusto_1_1server_1_1_i_server_aff3762
 
 
 
-Definition at line 187 of file Server.\+java.
+Definition at line 190 of file Server.\+java.
 
 Here is the call graph for this function\+:
 \nopagebreak

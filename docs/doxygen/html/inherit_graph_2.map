@@ -1,9 +1,11 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" title=" " alt="" coords="5,162,67,189"/>
-<area shape="rect" id="node2" href="$classes_1_1deusto_1_1client_1_1gui_1_1_buy_tickets.html" title=" " alt="" coords="137,5,315,47"/>
-<area shape="rect" id="node3" href="$classes_1_1deusto_1_1client_1_1gui_1_1_edit_profile.html" title=" " alt="" coords="137,71,315,112"/>
-<area shape="rect" id="node4" href="$classes_1_1deusto_1_1client_1_1gui_1_1_home_page.html" title=" " alt="" coords="115,137,337,163"/>
-<area shape="rect" id="node5" href="$classes_1_1deusto_1_1client_1_1gui_1_1_login.html" title=" " alt="" coords="132,187,320,214"/>
-<area shape="rect" id="node6" href="$classes_1_1deusto_1_1client_1_1gui_1_1_movie_search.html" title=" " alt="" coords="129,239,323,280"/>
-<area shape="rect" id="node7" href="$classes_1_1deusto_1_1client_1_1gui_1_1_register.html" title=" " alt="" coords="123,305,329,331"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,213,67,240"/>
+<area shape="rect" id="node2" href="$classes_1_1deusto_1_1client_1_1gui_1_1_admin_home.html" title=" " alt="" coords="115,5,349,32"/>
+<area shape="rect" id="node3" href="$classes_1_1deusto_1_1client_1_1gui_1_1_buy_tickets.html" title=" " alt="" coords="143,57,321,98"/>
+<area shape="rect" id="node4" href="$classes_1_1deusto_1_1client_1_1gui_1_1_edit_profile.html" title=" " alt="" coords="143,122,321,163"/>
+<area shape="rect" id="node5" href="$classes_1_1deusto_1_1client_1_1gui_1_1_home_page.html" title=" " alt="" coords="121,188,343,215"/>
+<area shape="rect" id="node6" href="$classes_1_1deusto_1_1client_1_1gui_1_1_login.html" title=" " alt="" coords="138,239,326,265"/>
+<area shape="rect" id="node7" href="$classes_1_1deusto_1_1client_1_1gui_1_1_movie_details.html" title=" " alt="" coords="135,290,329,331"/>
+<area shape="rect" id="node8" href="$classes_1_1deusto_1_1client_1_1gui_1_1_movie_search.html" title=" " alt="" coords="135,355,329,397"/>
+<area shape="rect" id="node9" href="$classes_1_1deusto_1_1client_1_1gui_1_1_register.html" title=" " alt="" coords="129,421,335,448"/>
 </map>

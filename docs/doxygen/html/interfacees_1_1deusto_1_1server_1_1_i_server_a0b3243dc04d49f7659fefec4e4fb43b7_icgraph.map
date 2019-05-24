@@ -1,4 +1,6 @@
 <map id="es.deusto.server.IServer.deleteMovie" name="es.deusto.server.IServer.deleteMovie">
-<area shape="rect" id="node1" title=" " alt="" coords="257,5,480,47"/>
-<area shape="rect" id="node2" href="$classes_1_1deusto_1_1client_1_1_client.html#a69a7526d0af9cb2341f4bf341b501152" title=" " alt="" coords="5,13,209,39"/>
+<area shape="rect" id="node1" title=" " alt="" coords="504,27,727,69"/>
+<area shape="rect" id="node2" href="$classes_1_1deusto_1_1client_1_1_client.html#a69a7526d0af9cb2341f4bf341b501152" title=" " alt="" coords="250,5,454,32"/>
+<area shape="rect" id="node3" href="$classes_1_1deusto_1_1client_1_1controller_1_1_client_controller.html#acf2fc3025cb669a68fc0de5b1e3ee243" title=" " alt="" coords="248,57,456,98"/>
+<area shape="rect" id="node4" href="$classes_1_1deusto_1_1client_1_1gui_1_1_admin_home.html#a5140cdda5a5938ba3f3763ad1fd542ca" title=" " alt="" coords="5,57,200,98"/>
 </map>

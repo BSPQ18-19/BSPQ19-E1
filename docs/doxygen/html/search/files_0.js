@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['buytickets_2ejava',['BuyTickets.java',['../_buy_tickets_8java.html',1,'']]]
+  ['adminhome_2ejava',['AdminHome.java',['../_admin_home_8java.html',1,'']]]
 ];

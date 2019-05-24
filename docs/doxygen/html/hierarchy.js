@@ -14,10 +14,12 @@ var hierarchy =
       [ "es.deusto.server.jdo.StringListToStringConverter", "classes_1_1deusto_1_1server_1_1jdo_1_1_string_list_to_string_converter.html", null ]
     ] ],
     [ "JPanel", null, [
+      [ "es.deusto.client.gui.AdminHome", "classes_1_1deusto_1_1client_1_1gui_1_1_admin_home.html", null ],
       [ "es.deusto.client.gui.BuyTickets", "classes_1_1deusto_1_1client_1_1gui_1_1_buy_tickets.html", null ],
       [ "es.deusto.client.gui.EditProfile", "classes_1_1deusto_1_1client_1_1gui_1_1_edit_profile.html", null ],
       [ "es.deusto.client.gui.HomePage", "classes_1_1deusto_1_1client_1_1gui_1_1_home_page.html", null ],
       [ "es.deusto.client.gui.Login", "classes_1_1deusto_1_1client_1_1gui_1_1_login.html", null ],
+      [ "es.deusto.client.gui.MovieDetails", "classes_1_1deusto_1_1client_1_1gui_1_1_movie_details.html", null ],
       [ "es.deusto.client.gui.MovieSearch", "classes_1_1deusto_1_1client_1_1gui_1_1_movie_search.html", null ],
       [ "es.deusto.client.gui.Register", "classes_1_1deusto_1_1client_1_1gui_1_1_register.html", null ]
     ] ],
