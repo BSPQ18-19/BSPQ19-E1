@@ -1,0 +1,17 @@
+<map id="es.deusto.client.remote.RMIServiceLocator.getClientManager" name="es.deusto.client.remote.RMIServiceLocator.getClientManager">
+<area shape="rect" id="node1" title=" " alt="" coords="775,211,1037,253"/>
+<area shape="rect" id="node2" href="$classes_1_1deusto_1_1client_1_1controller_1_1_client_controller.html#a075c2e627be920454324dacbbc72295c" title=" " alt="" coords="253,18,447,59"/>
+<area shape="rect" id="node4" href="$classes_1_1deusto_1_1client_1_1controller_1_1_client_controller.html#a9379da9c24d71d3ebafaa44e0f858340" title=" " alt="" coords="517,47,712,89"/>
+<area shape="rect" id="node5" href="$classes_1_1deusto_1_1client_1_1controller_1_1_client_controller.html#ac1bd9affe27668ee49320daae38d67a0" title=" " alt="" coords="503,178,727,219"/>
+<area shape="rect" id="node8" href="$classes_1_1deusto_1_1client_1_1controller_1_1_client_controller.html#ad1a2384c7c7f73d40d8d50c4bf77be7d" title=" " alt="" coords="513,113,716,154"/>
+<area shape="rect" id="node9" href="$classes_1_1deusto_1_1client_1_1controller_1_1_client_controller.html#a8f77e4957f536e48d7012d643d2c6cb8" title=" " alt="" coords="511,243,718,285"/>
+<area shape="rect" id="node11" href="$classes_1_1deusto_1_1client_1_1controller_1_1_client_controller.html#a06a84e0834fb21c31f4988e26ee6dedf" title=" " alt="" coords="512,309,717,350"/>
+<area shape="rect" id="node13" href="$classes_1_1deusto_1_1client_1_1controller_1_1_client_controller.html#ae371135958d6f88011239d360d936ada" title=" " alt="" coords="517,374,712,415"/>
+<area shape="rect" id="node15" href="$classes_1_1deusto_1_1client_1_1controller_1_1_client_controller.html#a92f0a66750a4f02c11de68814bc0d96f" title=" " alt="" coords="517,439,712,481"/>
+<area shape="rect" id="node3" href="$classes_1_1deusto_1_1client_1_1gui_1_1_login.html#af565f7accded6e1e3d09b03d6baeaeb4" title=" " alt="" coords="5,18,197,59"/>
+<area shape="rect" id="node6" href="$classes_1_1deusto_1_1client_1_1gui_1_1_edit_profile.html#a0302d5f1a2df66b4e4ce357ec32015bd" title=" " alt="" coords="261,113,439,154"/>
+<area shape="rect" id="node7" href="$classes_1_1deusto_1_1client_1_1gui_1_1_home_page.html#ada47f27769156f1d11578e12e651beed" title=" " alt="" coords="254,178,446,219"/>
+<area shape="rect" id="node10" href="$classes_1_1deusto_1_1client_1_1gui_1_1_register.html#a5b463722d846413a2b1e929207c0f20d" title=" " alt="" coords="245,243,455,285"/>
+<area shape="rect" id="node12" href="$classes_1_1deusto_1_1client_1_1gui_1_1_movie_search.html#a20d7badf9735287b4da03a9eb3cf09f4" title=" " alt="" coords="253,309,447,350"/>
+<area shape="rect" id="node14" href="$classes_1_1deusto_1_1client_1_1gui_1_1_buy_tickets.html#a550c5b4787c8ffd333049cf8d6c32e48" title=" " alt="" coords="261,406,439,447"/>
+</map>

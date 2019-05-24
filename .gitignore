@@ -38,3 +38,4 @@ log/
 
 # Maven outfiles
 target/
+src/main/java/es/deusto/server/data/UserDAO.java
