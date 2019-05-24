@@ -1,7 +1,0 @@
-<map id="es.deusto.client.Client.switchToHomePage" name="es.deusto.client.Client.switchToHomePage">
-<area shape="rect" id="node1" title=" " alt="" coords="247,104,460,145"/>
-<area shape="rect" id="node2" href="$classes_1_1deusto_1_1client_1_1gui_1_1_buy_tickets.html#a550c5b4787c8ffd333049cf8d6c32e48" title=" " alt="" coords="13,5,191,47"/>
-<area shape="rect" id="node3" href="$classes_1_1deusto_1_1client_1_1gui_1_1_edit_profile.html#a0302d5f1a2df66b4e4ce357ec32015bd" title=" " alt="" coords="13,71,191,112"/>
-<area shape="rect" id="node4" href="$classes_1_1deusto_1_1client_1_1gui_1_1_login.html#af565f7accded6e1e3d09b03d6baeaeb4" title=" " alt="" coords="6,136,198,177"/>
-<area shape="rect" id="node5" href="$classes_1_1deusto_1_1client_1_1gui_1_1_movie_search.html#a20d7badf9735287b4da03a9eb3cf09f4" title=" " alt="" coords="5,201,199,243"/>
-</map>
