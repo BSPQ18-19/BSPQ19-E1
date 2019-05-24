@@ -2,6 +2,7 @@ var classes_1_1deusto_1_1server_1_1jdo_1_1_user =
 [
     [ "User", "classes_1_1deusto_1_1server_1_1jdo_1_1_user.html#a3c1d7bfbedde3bad6bed8ccd3288072d", null ],
     [ "User", "classes_1_1deusto_1_1server_1_1jdo_1_1_user.html#a045d3217e3e459cd505de75ebb88243e", null ],
+    [ "User", "classes_1_1deusto_1_1server_1_1jdo_1_1_user.html#aba393844e4f390b5756de0058777f9a5", null ],
     [ "fieldsEqual", "classes_1_1deusto_1_1server_1_1jdo_1_1_user.html#a52fa0dedc394edca2c1d089ec632996b", null ],
     [ "getEmail", "classes_1_1deusto_1_1server_1_1jdo_1_1_user.html#aa1ba6d9e3d0572b90dac6ff627ee3f95", null ],
     [ "getId", "classes_1_1deusto_1_1server_1_1jdo_1_1_user.html#ac116b1ec523da06c6776eaa76c910125", null ],

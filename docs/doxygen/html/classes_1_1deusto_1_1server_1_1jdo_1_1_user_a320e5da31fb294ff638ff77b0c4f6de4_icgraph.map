@@ -1,5 +1,7 @@
 <map id="es.deusto.server.jdo.User.getPurchases" name="es.deusto.server.jdo.User.getPurchases">
-<area shape="rect" id="node1" title=" " alt="" coords="284,39,495,80"/>
-<area shape="rect" id="node2" href="$classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o.html#aa914bb9b49e39cfa9a1254ce578aaae1" title=" " alt="" coords="5,5,236,47"/>
-<area shape="rect" id="node3" href="$classes_1_1deusto_1_1server_1_1_server.html#a3bbf9f19774d2fae5c831cfac1f2306c" title=" " alt="" coords="19,71,222,112"/>
+<area shape="rect" id="node1" title=" " alt="" coords="531,71,741,112"/>
+<area shape="rect" id="node2" href="$classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o.html#aa914bb9b49e39cfa9a1254ce578aaae1" title=" " alt="" coords="252,5,483,47"/>
+<area shape="rect" id="node3" href="$classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o.html#a7bbfb6c3ed916f93425081d4a24ec6ea" title=" " alt="" coords="262,71,473,112"/>
+<area shape="rect" id="node5" href="$classes_1_1deusto_1_1server_1_1_server.html#a3bbf9f19774d2fae5c831cfac1f2306c" title=" " alt="" coords="266,136,469,177"/>
+<area shape="rect" id="node4" href="$classes_1_1deusto_1_1server_1_1_server.html#ac46819596621f54e4c083d7ea49e3ff0" title=" " alt="" coords="5,71,204,112"/>
 </map>

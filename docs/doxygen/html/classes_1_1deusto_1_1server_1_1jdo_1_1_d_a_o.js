@@ -16,6 +16,7 @@ var classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o =
     [ "getMovies", "classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o.html#a23dfafaa747b95ec24c9df6ca678e7d7", null ],
     [ "getSession", "classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o.html#a34f9e5400280bbc1a9fce9143696470e", null ],
     [ "getSessions", "classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o.html#a2f9f9eb5adc37f559d7fefe2da6544f1", null ],
+    [ "getTickets", "classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o.html#a7bbfb6c3ed916f93425081d4a24ec6ea", null ],
     [ "registerClient", "classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o.html#a783758c37658336ee1e4e995a672a0ce", null ],
     [ "rollback", "classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o.html#ac2a137746dce274ba0a89eb388820bcf", null ],
     [ "searchMovieByTitle", "classes_1_1deusto_1_1server_1_1jdo_1_1_d_a_o.html#a58c4f711e3e60688619f8a065073f4ff", null ],

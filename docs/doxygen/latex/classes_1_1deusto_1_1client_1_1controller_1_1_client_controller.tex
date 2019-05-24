@@ -20,6 +20,14 @@ List$<$ \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1data_1_1_session_d_t_o}{
 \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1data_1_1_movie_d_t_o}{Movie\+D\+TO}} \mbox{\hyperlink{classes_1_1deusto_1_1client_1_1controller_1_1_client_controller_ae371135958d6f88011239d360d936ada}{get\+Movie}} (String movie\+Title)
 \item 
 boolean \mbox{\hyperlink{classes_1_1deusto_1_1client_1_1controller_1_1_client_controller_a92f0a66750a4f02c11de68814bc0d96f}{buy\+Movie}} (\mbox{\hyperlink{classes_1_1deusto_1_1server_1_1data_1_1_session_d_t_o}{Session\+D\+TO}} session, int amount)
+\item 
+List$<$ \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1data_1_1_ticket_d_t_o}{Ticket\+D\+TO}} $>$ \mbox{\hyperlink{classes_1_1deusto_1_1client_1_1controller_1_1_client_controller_a672fc1afb95f03c33cd659345fe1ca71}{get\+Tickets}} (\mbox{\hyperlink{classes_1_1deusto_1_1server_1_1data_1_1_user_d_t_o}{User\+D\+TO}} user)
+\item 
+List$<$ \mbox{\hyperlink{classes_1_1deusto_1_1server_1_1data_1_1_movie_d_t_o}{Movie\+D\+TO}} $>$ \mbox{\hyperlink{classes_1_1deusto_1_1client_1_1controller_1_1_client_controller_ad69e183cc953af14b9d526c635eecb61}{get\+Movies}} ()
+\item 
+boolean \mbox{\hyperlink{classes_1_1deusto_1_1client_1_1controller_1_1_client_controller_acf2fc3025cb669a68fc0de5b1e3ee243}{delete\+Movie}} (\mbox{\hyperlink{classes_1_1deusto_1_1server_1_1data_1_1_movie_d_t_o}{Movie\+D\+TO}} movie)
+\item 
+boolean \mbox{\hyperlink{classes_1_1deusto_1_1client_1_1controller_1_1_client_controller_a095a09ed143856ea25f51749de71f279}{add\+Movie}} (\mbox{\hyperlink{classes_1_1deusto_1_1server_1_1data_1_1_movie_d_t_o}{Movie\+D\+TO}} movie, String\mbox{[}$\,$\mbox{]} cast)
 \end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
@@ -31,11 +39,37 @@ static \mbox{\hyperlink{classes_1_1deusto_1_1client_1_1controller_1_1_client_con
 \subsection{Detailed Description}
 
 
-Definition at line 16 of file Client\+Controller.\+java.
+Definition at line 13 of file Client\+Controller.\+java.
 
 
 
 \subsection{Member Function Documentation}
+\mbox{\Hypertarget{classes_1_1deusto_1_1client_1_1controller_1_1_client_controller_a095a09ed143856ea25f51749de71f279}\label{classes_1_1deusto_1_1client_1_1controller_1_1_client_controller_a095a09ed143856ea25f51749de71f279}} 
+\index{es.deusto.client.controller.ClientController@{es.deusto.client.controller.ClientController}!addMovie@{addMovie}}
+\index{addMovie@{addMovie}!es.deusto.client.controller.ClientController@{es.deusto.client.controller.ClientController}}
+\subsubsection{\texorpdfstring{addMovie()}{addMovie()}}
+{\footnotesize\ttfamily boolean es.\+deusto.\+client.\+controller.\+Client\+Controller.\+add\+Movie (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classes_1_1deusto_1_1server_1_1data_1_1_movie_d_t_o}{Movie\+D\+TO}}}]{movie,  }\item[{String \mbox{[}$\,$\mbox{]}}]{cast }\end{DoxyParamCaption})}
+
+
+
+Definition at line 158 of file Client\+Controller.\+java.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classes_1_1deusto_1_1client_1_1controller_1_1_client_controller_a095a09ed143856ea25f51749de71f279_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classes_1_1deusto_1_1client_1_1controller_1_1_client_controller_a095a09ed143856ea25f51749de71f279_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{classes_1_1deusto_1_1client_1_1controller_1_1_client_controller_a92f0a66750a4f02c11de68814bc0d96f}\label{classes_1_1deusto_1_1client_1_1controller_1_1_client_controller_a92f0a66750a4f02c11de68814bc0d96f}} 
 \index{es.deusto.client.controller.ClientController@{es.deusto.client.controller.ClientController}!buyMovie@{buyMovie}}
 \index{buyMovie@{buyMovie}!es.deusto.client.controller.ClientController@{es.deusto.client.controller.ClientController}}
@@ -44,7 +78,7 @@ Definition at line 16 of file Client\+Controller.\+java.
 
 
 
-Definition at line 121 of file Client\+Controller.\+java.
+Definition at line 118 of file Client\+Controller.\+java.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -62,6 +96,32 @@ Here is the caller graph for this function\+:
 \includegraphics[width=350pt]{classes_1_1deusto_1_1client_1_1controller_1_1_client_controller_a92f0a66750a4f02c11de68814bc0d96f_icgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{classes_1_1deusto_1_1client_1_1controller_1_1_client_controller_acf2fc3025cb669a68fc0de5b1e3ee243}\label{classes_1_1deusto_1_1client_1_1controller_1_1_client_controller_acf2fc3025cb669a68fc0de5b1e3ee243}} 
+\index{es.deusto.client.controller.ClientController@{es.deusto.client.controller.ClientController}!deleteMovie@{deleteMovie}}
+\index{deleteMovie@{deleteMovie}!es.deusto.client.controller.ClientController@{es.deusto.client.controller.ClientController}}
+\subsubsection{\texorpdfstring{deleteMovie()}{deleteMovie()}}
+{\footnotesize\ttfamily boolean es.\+deusto.\+client.\+controller.\+Client\+Controller.\+delete\+Movie (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classes_1_1deusto_1_1server_1_1data_1_1_movie_d_t_o}{Movie\+D\+TO}}}]{movie }\end{DoxyParamCaption})}
+
+
+
+Definition at line 148 of file Client\+Controller.\+java.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classes_1_1deusto_1_1client_1_1controller_1_1_client_controller_acf2fc3025cb669a68fc0de5b1e3ee243_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classes_1_1deusto_1_1client_1_1controller_1_1_client_controller_acf2fc3025cb669a68fc0de5b1e3ee243_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{classes_1_1deusto_1_1client_1_1controller_1_1_client_controller_aa76786bb097da98592adb6aeefa8d996}\label{classes_1_1deusto_1_1client_1_1controller_1_1_client_controller_aa76786bb097da98592adb6aeefa8d996}} 
 \index{es.deusto.client.controller.ClientController@{es.deusto.client.controller.ClientController}!getController@{getController}}
 \index{getController@{getController}!es.deusto.client.controller.ClientController@{es.deusto.client.controller.ClientController}}
@@ -70,7 +130,7 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line 31 of file Client\+Controller.\+java.
+Definition at line 28 of file Client\+Controller.\+java.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -88,8 +148,16 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line 57 of file Client\+Controller.\+java.
+Definition at line 54 of file Client\+Controller.\+java.
 
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classes_1_1deusto_1_1client_1_1controller_1_1_client_controller_ac9d06db0017e2f06d06e8669398118f4_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{classes_1_1deusto_1_1client_1_1controller_1_1_client_controller_ae371135958d6f88011239d360d936ada}\label{classes_1_1deusto_1_1client_1_1controller_1_1_client_controller_ae371135958d6f88011239d360d936ada}} 
 \index{es.deusto.client.controller.ClientController@{es.deusto.client.controller.ClientController}!getMovie@{getMovie}}
 \index{getMovie@{getMovie}!es.deusto.client.controller.ClientController@{es.deusto.client.controller.ClientController}}
@@ -98,7 +166,7 @@ Definition at line 57 of file Client\+Controller.\+java.
 
 
 
-Definition at line 110 of file Client\+Controller.\+java.
+Definition at line 107 of file Client\+Controller.\+java.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -116,6 +184,32 @@ Here is the caller graph for this function\+:
 \includegraphics[width=350pt]{classes_1_1deusto_1_1client_1_1controller_1_1_client_controller_ae371135958d6f88011239d360d936ada_icgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{classes_1_1deusto_1_1client_1_1controller_1_1_client_controller_ad69e183cc953af14b9d526c635eecb61}\label{classes_1_1deusto_1_1client_1_1controller_1_1_client_controller_ad69e183cc953af14b9d526c635eecb61}} 
+\index{es.deusto.client.controller.ClientController@{es.deusto.client.controller.ClientController}!getMovies@{getMovies}}
+\index{getMovies@{getMovies}!es.deusto.client.controller.ClientController@{es.deusto.client.controller.ClientController}}
+\subsubsection{\texorpdfstring{getMovies()}{getMovies()}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{classes_1_1deusto_1_1server_1_1data_1_1_movie_d_t_o}{Movie\+D\+TO}}$>$ es.\+deusto.\+client.\+controller.\+Client\+Controller.\+get\+Movies (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 138 of file Client\+Controller.\+java.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classes_1_1deusto_1_1client_1_1controller_1_1_client_controller_ad69e183cc953af14b9d526c635eecb61_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classes_1_1deusto_1_1client_1_1controller_1_1_client_controller_ad69e183cc953af14b9d526c635eecb61_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{classes_1_1deusto_1_1client_1_1controller_1_1_client_controller_a06a84e0834fb21c31f4988e26ee6dedf}\label{classes_1_1deusto_1_1client_1_1controller_1_1_client_controller_a06a84e0834fb21c31f4988e26ee6dedf}} 
 \index{es.deusto.client.controller.ClientController@{es.deusto.client.controller.ClientController}!getSessions@{getSessions}}
 \index{getSessions@{getSessions}!es.deusto.client.controller.ClientController@{es.deusto.client.controller.ClientController}}
@@ -124,7 +218,7 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line 93 of file Client\+Controller.\+java.
+Definition at line 90 of file Client\+Controller.\+java.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -142,6 +236,32 @@ Here is the caller graph for this function\+:
 \includegraphics[width=350pt]{classes_1_1deusto_1_1client_1_1controller_1_1_client_controller_a06a84e0834fb21c31f4988e26ee6dedf_icgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{classes_1_1deusto_1_1client_1_1controller_1_1_client_controller_a672fc1afb95f03c33cd659345fe1ca71}\label{classes_1_1deusto_1_1client_1_1controller_1_1_client_controller_a672fc1afb95f03c33cd659345fe1ca71}} 
+\index{es.deusto.client.controller.ClientController@{es.deusto.client.controller.ClientController}!getTickets@{getTickets}}
+\index{getTickets@{getTickets}!es.deusto.client.controller.ClientController@{es.deusto.client.controller.ClientController}}
+\subsubsection{\texorpdfstring{getTickets()}{getTickets()}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{classes_1_1deusto_1_1server_1_1data_1_1_ticket_d_t_o}{Ticket\+D\+TO}}$>$ es.\+deusto.\+client.\+controller.\+Client\+Controller.\+get\+Tickets (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classes_1_1deusto_1_1server_1_1data_1_1_user_d_t_o}{User\+D\+TO}}}]{user }\end{DoxyParamCaption})}
+
+
+
+Definition at line 129 of file Client\+Controller.\+java.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classes_1_1deusto_1_1client_1_1controller_1_1_client_controller_a672fc1afb95f03c33cd659345fe1ca71_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classes_1_1deusto_1_1client_1_1controller_1_1_client_controller_a672fc1afb95f03c33cd659345fe1ca71_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{classes_1_1deusto_1_1client_1_1controller_1_1_client_controller_ac1bd9affe27668ee49320daae38d67a0}\label{classes_1_1deusto_1_1client_1_1controller_1_1_client_controller_ac1bd9affe27668ee49320daae38d67a0}} 
 \index{es.deusto.client.controller.ClientController@{es.deusto.client.controller.ClientController}!getUserDetails@{getUserDetails}}
 \index{getUserDetails@{getUserDetails}!es.deusto.client.controller.ClientController@{es.deusto.client.controller.ClientController}}
@@ -150,7 +270,7 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line 61 of file Client\+Controller.\+java.
+Definition at line 58 of file Client\+Controller.\+java.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -176,7 +296,7 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line 35 of file Client\+Controller.\+java.
+Definition at line 32 of file Client\+Controller.\+java.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -202,7 +322,7 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line 46 of file Client\+Controller.\+java.
+Definition at line 43 of file Client\+Controller.\+java.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -228,7 +348,7 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line 83 of file Client\+Controller.\+java.
+Definition at line 80 of file Client\+Controller.\+java.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -254,7 +374,7 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line 72 of file Client\+Controller.\+java.
+Definition at line 69 of file Client\+Controller.\+java.
 
 Here is the call graph for this function\+:
 \nopagebreak

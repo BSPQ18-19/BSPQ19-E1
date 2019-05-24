@@ -45,8 +45,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_buy_tickets_8java.html",
-"interfacees_1_1deusto_1_1server_1_1_i_server.html#a998e20655e760b135fab601a417aa5ae"
+"_admin_home_8java.html",
+"dir_5f83e44e66ca0d65357f7de7b8518409.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
