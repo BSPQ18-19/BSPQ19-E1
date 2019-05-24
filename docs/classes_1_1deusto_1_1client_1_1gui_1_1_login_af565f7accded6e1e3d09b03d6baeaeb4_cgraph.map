@@ -1,0 +1,15 @@
+<map id="es.deusto.client.gui.Login.Login" name="es.deusto.client.gui.Login.Login">
+<area shape="rect" id="node1" title=" " alt="" coords="5,201,197,243"/>
+<area shape="rect" id="node2" href="$classes_1_1deusto_1_1client_1_1controller_1_1_client_controller.html#aa76786bb097da98592adb6aeefa8d996" title=" " alt="" coords="253,5,465,47"/>
+<area shape="rect" id="node3" href="$classes_1_1deusto_1_1client_1_1controller_1_1_client_controller.html#a075c2e627be920454324dacbbc72295c" title=" " alt="" coords="262,71,457,112"/>
+<area shape="rect" id="node9" href="$classes_1_1deusto_1_1server_1_1data_1_1_user_d_t_o.html#a4e7fdc51138f595198b84687dadd3388" title=" " alt="" coords="261,136,457,177"/>
+<area shape="rect" id="node10" href="$classes_1_1deusto_1_1client_1_1_client.html#aff17deef622ce410b473d4dadad36343" title=" " alt="" coords="253,201,466,243"/>
+<area shape="rect" id="node11" href="$classes_1_1deusto_1_1client_1_1_client.html#a3fbd67bddee7a6c6ed8466ed5b2415a7" title=" " alt="" coords="253,267,466,308"/>
+<area shape="rect" id="node12" href="$classes_1_1deusto_1_1client_1_1_client.html#a8bbc4a71a4aaff50bfe419a724898790" title=" " alt="" coords="245,332,473,373"/>
+<area shape="rect" id="node13" href="$classes_1_1deusto_1_1client_1_1_client.html#a8b292db7d6ec16eaa53b224bb7a33ab4" title=" " alt="" coords="253,397,466,439"/>
+<area shape="rect" id="node4" href="$classes_1_1deusto_1_1client_1_1controller_1_1_client_controller.html#a9379da9c24d71d3ebafaa44e0f858340" title=" " alt="" coords="531,71,726,112"/>
+<area shape="rect" id="node5" href="$classes_1_1deusto_1_1client_1_1remote_1_1_r_m_i_service_locator.html#ade08376a63a3e1a5ca512986e86478d5" title=" " alt="" coords="784,12,1047,53"/>
+<area shape="rect" id="node8" href="$interfacees_1_1deusto_1_1server_1_1_i_server.html#a62db155ac744b9712e303ceea76a3560" title=" " alt="" coords="521,137,736,163"/>
+<area shape="rect" id="node6" href="$interfacees_1_1deusto_1_1server_1_1_i_server.html#a479231082cae13f9c651c0ec2cb2cece" title=" " alt="" coords="803,78,1028,105"/>
+<area shape="rect" id="node7" href="$classes_1_1deusto_1_1server_1_1data_1_1_user_d_t_o.html#ae04b78d874974f7f3307b68fa2a15210" title=" " alt="" coords="817,129,1013,171"/>
+</map>
