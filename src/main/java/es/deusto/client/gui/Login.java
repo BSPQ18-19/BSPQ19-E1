@@ -101,6 +101,8 @@ public class Login extends JPanel {
 		springLayout.putConstraint(SpringLayout.WEST, languageBox, 6, SpringLayout.EAST, lblLanguage);
 		languageBox.addItem("English");
 		languageBox.addItem("Euskara");
+		languageBox.addItem("Polski");
+		languageBox.addItem("Español");
 		languageBox.setSelectedItem(client.language);
 		languageBox.addActionListener (new ActionListener () {
 			public void actionPerformed(ActionEvent e) {
@@ -112,6 +114,14 @@ public class Login extends JPanel {
 					Locale aLocale = new Locale("en", "ES");
 					client.text = ResourceBundle.getBundle("text", aLocale);
 					client.language = "English";
+				} else if(languageBox.getSelectedItem().equals("Polski")) {
+					Locale aLocale = new Locale("pl", "ES");
+					client.text = ResourceBundle.getBundle("text", aLocale);
+					client.language = "Polski";
+				} else if(languageBox.getSelectedItem().equals("Español")) {
+					Locale aLocale = new Locale("es", "ES");
+					client.text = ResourceBundle.getBundle("text", aLocale);
+					client.language = "Español";
 				}
 				btnLogin.setText(client.text.getString("login"));
 				btnRegister.setText(client.text.getString("register"));
